@@ -1,0 +1,43 @@
+@import "../base/global";
+
+.gallery {
+    display: grid;
+    padding: $pad-l;
+    background-color: $color-secondary;
+    grid-gap: $pad-l;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    
+    &__item {
+        position: relative;
+        padding-top: 100%;
+        overflow: hidden;
+        cursor: pointer;
+
+        >amp-img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: block;
+            min-width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%) scale(1,1);
+        }
+        &--big {
+            grid-column-end: span 2;
+            grid-row-end: span 2;
+        }
+
+        &--long {
+            padding-top: 50%;
+            grid-column-end: span 4;
+            grid-row-end: span 2;
+        }
+
+        &--tall {
+            padding-top: 200%;
+            grid-column-end: span 2;
+            grid-row-end: span 4;
+        }
+    }
+}
