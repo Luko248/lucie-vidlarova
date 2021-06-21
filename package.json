@@ -1,25 +1,26 @@
 {
-  "version": "2.0.0",
+  "version": "2.0.1",
   "name": "lucie_vidlarova_portfolio",
-  "description": "NPM confiwg with stylelint. Updated on 4.5.2021",
+  "description": "NPM config with stylelint. Updated on 21.6.2021",
   "private": true,
   "main": "./postcss.config.js",
   "author": "Lukáš Chylík",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^10.2.5",
+    "autoprefixer": "^10.2.6",
     "browser-sync": "^2.26.14",
     "clean-css-cli": "^5.3.0",
-    "node-sass": "^5.0.0",
-    "nunjucks": "^3.2.1",
-    "postcss": "^8.2.13",
+    "node-sass": "^6.0.0",
+    "nunjucks": "^3.2.3",
+    "postcss": "^8.3.5",
     "postcss-cli": "^8.3.1",
     "postcss-value-parser": "^4.1.0",
-    "stylelint": "^13.12.0",
+    "stylelint": "^13.13.1",
     "stylelint-order": "^4.1.0",
-    "typescript": "^4.2.4",
-    "uglify-js": "^3.13.5",
-    "watch": "1.0.2"
+    "tailwindcss": "^2.2.2",
+    "typescript": "^4.3.2",
+    "uglify-js": "^3.13.9",
+    "watch": "^1.0.2"
   },
   "browserslist": {
     "production": [
