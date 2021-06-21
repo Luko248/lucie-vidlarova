@@ -40,14 +40,15 @@
   "scripts": {
     "version": "npm --version && node --version",
     "bundle": "npm run bundle:css && npm run bundle:js",
-    "postcss": "npm run compile:scss && postcss wwwroot/CSS/style.css --config ./postcss.config.js -o wwwroot/CSS/style.css",
-    "bundle:css": "npm run stylelint && npm run compile:scss && postcss wwwroot/CSS/style.css --config ./postcss.config.js | cleancss -o wwwroot/CSS/style.min.css",
+    "postcss": "npm run compile:scss && postcss wwwroot/css/style.css --config ./postcss.config.js -o wwwroot/css/style.css",
+    "bundle:css": "npm run stylelint && npm run compile:scss && postcss wwwroot/css/style.css --config ./postcss.config.js | cleancss -o wwwroot/css/style.min.css",
+    "build-tailwind:css": "tailwindcss build Resources/TailwindCSS/tailwind-style.css -o  wwwroot/css/tailwind-style.css ",
     "bundle:js": "npm run compile:ts && uglifyjs -o wwwroot/JS/app.min.js -c -m -- wwwroot/JS/app.js",
-    "compile:scss": "node-sass --source-map=true Resources/Stylesheets/SCSS/style.scss wwwroot/CSS/style.css",
+    "compile:scss": "node-sass --source-map=true Resources/Stylesheets/Scss/style.scss wwwroot/css/style.css",
     "compile:ts": "tsc -p Resources",
-    "stylelint": "stylelint --fix Resources/Stylesheets/SCSS/**/*.scss",
+    "stylelint": "stylelint --fix Resources/Stylesheets/Scss/**/*.scss",
     "watch": "npm run watch:scss",
-    "watch:scss": "npm run bundle:css & watch \"npm run bundle:css\" Resources/Stylesheets/SCSS",
+    "watch:scss": "npm run bundle:css & watch \"npm run bundle:css\" Resources/Stylesheets/Scss",
     "watch:ts": "npm run compile:ts -- -w && npm run bundle:js",
     "browser-sync": "browser-sync start --proxy https://localhost:44302/ --files=\"wwwroot/css/*.css\" \"wwwroot/js/*.js\""
   }
