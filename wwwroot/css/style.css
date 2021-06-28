@@ -539,11 +539,6 @@ small {
   --color-border: rgba(0,0,0,1);
   --border-width: .1rem; }
 
-header {
-  position: relative;
-  height: 100vh;
-  max-height: 2048px; }
-
 :root {
   --color-border: rgba(0,0,0,1);
   --border-width: .1rem; }
