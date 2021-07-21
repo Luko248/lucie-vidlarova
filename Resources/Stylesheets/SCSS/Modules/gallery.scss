@@ -2,9 +2,9 @@
 
 .gallery {
     display: grid;
-    padding: $pad-l;
+    padding: $gap-l;
     background-color: $color-secondary;
-    grid-gap: $pad-l;
+    grid-gap: $gap-l;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr;
     

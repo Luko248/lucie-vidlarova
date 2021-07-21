@@ -1,5 +1,6 @@
 @import "mixins/border";
-@import "Mixins/grid-flex";
+@import "Mixins/grid";
+@import "Mixins/flex";
 @import "Mixins/responsive";
 
 @mixin center-item {

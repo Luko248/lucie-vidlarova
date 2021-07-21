@@ -29,6 +29,8 @@
 
     <link type="text/css" href="wwwroot/css/style.css" rel="stylesheet" />
     <link type="text/css" href="wwwroot/css/tailwind-style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.typekit.net/vht7mgx.css">
+
     <style amp-custom>
     </style>
     <style amp-boilerplate>
@@ -114,8 +116,12 @@
     <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
+            <symbol id="icon-detail" viewBox="0 0 32 32">
+                <path
+                    d="M21.548 5.338c-0.206-0.207-0.491-0.336-0.806-0.336-0.627 0-1.136 0.508-1.136 1.136 0 0.312 0.126 0.595 0.33 0.8l8.178 8.174h-26.986c-0.001 0-0.003 0-0.004 0-0.621 0-1.124 0.503-1.124 1.124 0 0.006 0 0.011 0 0.017v-0.001c-0 0.003-0 0.006-0 0.010 0 0.625 0.504 1.131 1.128 1.136h26.986l-8.178 8.152c-0.202 0.208-0.327 0.493-0.327 0.806s0.125 0.598 0.327 0.806l-0-0c0.205 0.209 0.49 0.338 0.806 0.338s0.601-0.129 0.806-0.338l10.114-10.11c0.21-0.202 0.341-0.486 0.341-0.8s-0.13-0.598-0.34-0.8l-0-0z">
+                </path>
+            </symbol>
             <symbol id="icon-menu" viewBox="0 0 32 32">
-                <title>menu</title>
                 <path
                     d="M31.333 6h-30.667c-0.368 0-0.667 0.299-0.667 0.667s0.299 0.667 0.667 0.667h30.667c0.368 0 0.667-0.299 0.667-0.667s-0.299-0.667-0.667-0.667z">
                 </path>
@@ -126,8 +132,12 @@
                     d="M31.333 24.667h-30.667c-0.368 0-0.667 0.299-0.667 0.667s0.299 0.667 0.667 0.667h30.667c0.368 0 0.667-0.299 0.667-0.667s-0.299-0.667-0.667-0.667z">
                 </path>
             </symbol>
+            <symbol id="icon-close" viewBox="0 0 32 32">
+                <path
+                    d="M28.75 5.253l-2.003-2.003-10.747 10.747-10.746-10.747-2.003 2.003 10.747 10.747-10.746 10.746 2.003 2.003 10.746-10.747 10.746 10.746 2.003-2.003-10.747-10.746z">
+                </path>
+            </symbol>
             <symbol id="icon-email" viewBox="0 0 32 32">
-                <title>email</title>
                 <path
                     d="M20.735 17.328l-2.68 2.689c-1.087 1.091-2.999 1.114-4.109 0l-2.68-2.689-9.626 9.657c0.358 0.166 0.753 0.265 1.173 0.265h26.375c0.42 0 0.815-0.099 1.173-0.265l-9.626-9.657z">
                 </path>
@@ -142,25 +152,16 @@
                 </path>
             </symbol>
             <symbol id="icon-phone" viewBox="0 0 32 32">
-                <title>phone</title>
                 <path
                     d="M21.083 32c0 0 2.905 0 2.905-2.909v-26.182c-0-2.909-2.905-2.909-2.905-2.909h-10.166c0 0-2.905 0-2.905 2.909v26.182c0 2.909 2.905 2.909 2.905 2.909h10.166zM16 30.789c-0.802 0-1.452-0.651-1.452-1.452s0.651-1.452 1.452-1.452c0.802 0 1.452 0.651 1.452 1.452s-0.651 1.452-1.452 1.452zM13.822 1.773c0-0.18 0.086-0.321 0.193-0.321h3.971c0.106 0 0.193 0.144 0.193 0.321v0.086c0 0.18-0.087 0.321-0.193 0.321h-3.971c-0.106 0-0.193-0.144-0.193-0.321v-0.086zM9.465 3.631h13.071v23.237h-13.071v-23.237z">
                 </path>
             </symbol>
             <symbol id="icon-facebook" viewBox="0 0 32 32">
-                <title>facebook</title>
                 <path
                     d="M23.999 0.007l-4.15-0.007c-4.662 0-7.675 3.091-7.675 7.875v3.631h-4.172c-0.361 0-0.652 0.292-0.652 0.653v5.261c0 0.361 0.292 0.652 0.652 0.652h4.172v13.275c0 0.361 0.292 0.653 0.652 0.653h5.444c0.361 0 0.652-0.292 0.652-0.652v-13.275h4.878c0.361 0 0.652-0.292 0.652-0.652l0.002-5.261c0-0.173-0.069-0.339-0.191-0.461s-0.289-0.191-0.462-0.191h-4.88v-3.078c0-1.479 0.353-2.23 2.28-2.23l2.795-0.001c0.36 0 0.652-0.292 0.652-0.652v-4.885c0-0.36-0.292-0.652-0.651-0.652z">
                 </path>
             </symbol>
-            <symbol id="icon-close" viewBox="0 0 32 32">
-                <title>close</title>
-                <path
-                    d="M18.83 16l12.584-12.584c0.782-0.781 0.782-2.049 0-2.83s-2.048-0.782-2.83 0l-12.584 12.584-12.584-12.584c-0.782-0.782-2.048-0.782-2.83 0s-0.782 2.049 0 2.83l12.584 12.584-12.584 12.584c-0.782 0.781-0.782 2.049 0 2.83 0.391 0.39 0.903 0.586 1.415 0.586s1.024-0.195 1.415-0.586l12.584-12.584 12.584 12.584c0.391 0.391 0.903 0.586 1.415 0.586s1.024-0.195 1.415-0.586c0.782-0.781 0.782-2.049 0-2.83l-12.584-12.583z">
-                </path>
-            </symbol>
             <symbol id="icon-instagram" viewBox="0 0 32 32">
-                <title>instagram</title>
                 <path
                     d="M24 0h-16c-4.399 0-8 3.6-8 8v16c0 4.398 3.6 8 8 8h16c4.399 0 8-3.601 8-8v-16c0-4.399-3.6-8-8-8zM29.333 24c0 2.94-2.392 5.333-5.333 5.333h-16c-2.94 0-5.333-2.393-5.333-5.333v-16c0-2.941 2.393-5.333 5.333-5.333h16c2.942 0 5.333 2.392 5.333 5.333v16z">
                 </path>
@@ -169,62 +170,127 @@
                     d="M16 8c-4.419 0-8 3.581-8 8 0 4.417 3.581 8.001 8 8.001 4.418 0 8-3.584 8-8.001 0-4.419-3.582-8-8-8zM16 21.333c-2.945 0-5.333-2.388-5.333-5.334s2.388-5.333 5.333-5.333 5.333 2.387 5.333 5.333-2.388 5.334-5.333 5.334z">
                 </path>
             </symbol>
+            <symbol id="icon-linkedin" viewBox="0 0 32 32">
+                <path
+                    d="M32 32v-11.72c0-5.76-1.24-10.16-7.96-10.16-0.084-0.004-0.182-0.006-0.281-0.006-2.546 0-4.772 1.37-5.982 3.413l-0.018 0.032h-0.080v-2.92h-6.36v21.36h6.64v-10.6c0-2.8 0.52-5.48 3.96-5.48 3.4 0 3.44 3.16 3.44 5.64v10.4h6.64z">
+                </path>
+                <path d="M0.52 10.64h6.64v21.36h-6.64z"></path>
+                <path
+                    d="M3.84 0c-0.008-0-0.017-0-0.027-0-2.135 0-3.867 1.731-3.867 3.867s1.731 3.867 3.867 3.867c2.135 0 3.867-1.731 3.867-3.867 0-0.009-0-0.019-0-0.028v0.001c-0.001-2.12-1.72-3.839-3.84-3.84h-0z">
+                </path>
+            </symbol>
+            <symbol id="icon-twitter" viewBox="0 0 32 32">
+                <path
+                    d="M32 6.078c-1.19 0.522-2.458 0.868-3.78 1.036 1.36-0.812 2.398-2.088 2.886-3.626-1.268 0.756-2.668 1.29-4.16 1.588-1.204-1.282-2.92-2.076-4.792-2.076-3.632 0-6.556 2.948-6.556 6.562 0 0.52 0.044 1.020 0.152 1.496-5.454-0.266-10.28-2.88-13.522-6.862-0.566 0.982-0.898 2.106-0.898 3.316 0 2.272 1.17 4.286 2.914 5.452-1.054-0.020-2.088-0.326-2.964-0.808 0 0.020 0 0.046 0 0.072 0 3.188 2.274 5.836 5.256 6.446-0.534 0.146-1.116 0.216-1.72 0.216-0.42 0-0.844-0.024-1.242-0.112 0.85 2.598 3.262 4.508 6.13 4.57-2.232 1.746-5.066 2.798-8.134 2.798-0.538 0-1.054-0.024-1.57-0.090 2.906 1.874 6.35 2.944 10.064 2.944 12.072 0 18.672-10 18.672-18.668 0-0.29-0.010-0.57-0.024-0.848 1.302-0.924 2.396-2.078 3.288-3.406z">
+                </path>
+            </symbol>
         </defs>
     </svg>
 
-    <header>
-        <div class="container pt-40">
-            <img src="wwwroot/images/profile/luc.jpg" alt="Lucie Vidlářová profile photo"
-                class="rounded-full h-80 w-80">
-            <div class="inline-flex items-center justify-start gap-2 pt-16 ">
-                <a href="http://aaa" target="_blank" rel="noreferrer" class="block w-12 h-12 bg-black rounded-full">
-                    <svg class="icon icon-facebook block w-8 h-8 text-white">
-                        <use xlink:href="#icon-facebook"></use>
-                    </svg>
-                </a>
-                <a href="http://aaa" target="_blank" rel="noreferrer" class="block w-12 h-12 bg-black rounded-full">
-                    <svg class="icon icon-instagram block w-8 h-8 text-white">
-                        <use xlink:href="#icon-instagram"></use>
-                    </svg>
-                </a>
-                <a href="http://aaa" target="_blank" rel="noreferrer" class="block w-12 h-12 bg-black rounded-full">
-                    <svg class="icon icon-facebook block w-8 h-8 text-white">
-                        <use xlink:href="#icon-facebook"></use>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <main>
-
-        </section>
-        <section>
-            <!-- <div class="container">
-                <div class="gallery">
-                    <div class="gallery__item gallery__item--big">
-                        <amp-img lightbox src="./wwwroot/images/gallery/drawings/night-butterfly.png" data-amp-auto-lightbox-disable width="300" height="300" layout="responsive"></amp-img>
-                    </div>      
-                    <div class="gallery__item">
-                        <amp-img lightbox src="./wwwroot/images/gallery/drawings/abst-1.png" width="150" height="150" layout="responsive"></amp-img>
+    <main class="parallax">
+        <section class="parallax__section" id="group1">
+            <div class="parallax__layer parallax__layer--base">
+                <div class="container header__container">
+                    <div class="header__content">
+                        <div class="header__title">
+                            <h1>Lucie Vidlářová</h1>
+                            <strong>Tatér | Grafický designer</strong>
+                            <p>Ahoj! Jmenuji se Lucie Vidlářová a pracuji jako tatérka.<br>
+                                Pokud máte záujem o konzultaci, neváhejte mě <a href="#">kontaktovat</a>.
+                            </p>
+                        </div>
+                        <div class="social">
+                            <a href="http://aaa" target="_blank" rel="noreferrer" class="social__item">
+                                <svg class="icon icon-facebook">
+                                    <use xlink:href="#icon-facebook"></use>
+                                </svg>
+                            </a>
+                            <a href="http://aaa" target="_blank" rel="noreferrer" class="social__item">
+                                <svg class="icon icon-instagram">
+                                    <use xlink:href="#icon-instagram"></use>
+                                </svg>
+                            </a>
+                            <a href="http://aaa" target="_blank" rel="noreferrer" class="social__item">
+                                <svg class="icon icon-linkedin">
+                                    <use xlink:href="#icon-linkedin"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <a href="#group2" class="button">
+                            See my work
+                        </a>
                     </div>
-                    <div class="gallery__item">
-                        <amp-img lightbox src="./wwwroot/images/gallery/drawings/abst-2.png" width="150" height="150" layout="responsive"></amp-img>
-                    </div> 
-                    <div class="gallery__item gallery__item--tall">
-                        <amp-img lightbox src="./wwwroot/images/gallery/drawings/rose.png" width="300" height="600" layout="responsive"></amp-img>
-                    </div>
-                    <div class="gallery__item">
-                        <amp-img lightbox src="./wwwroot/images/gallery/drawings/abst-3.png" width="150" height="150" layout="responsive"></amp-img>
-                    </div>
-                    <div class="gallery__item">
-                        <amp-img lightbox src="./wwwroot/images/gallery/drawings/abst-4.png" width="150" height="150" layout="responsive"></amp-img>
-                    </div>
-                    <div class="gallery__item gallery__item--long">
-                        <amp-img lightbox src="./wwwroot/images/gallery/drawings/kapustnak.png" width="600" height="300" layout="responsive"></amp-img>
+                    <div class="header__content">
+                        <div class="header__bg">
+                            <!-- <svg class="blob" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="a" x1="0.803" y1="0.077" x2="0.069" y2="0.977"
+                                        gradientUnits="objectBoundingBox">
+                                        <stop offset="0" stop-color="grey" />
+                                        <stop offset="1" stop-color="black" />
+                                    </linearGradient>
+                                </defs>
+                                <g transform="translate(300,300)">
+                                    <path
+                                        d="M120,-157.6C152.7,-141.5,174.3,-102.6,194.8,-58.8C215.3,-14.9,234.6,33.8,228.4,80.8C222.2,127.8,190.4,173.1,148.1,184C105.8,195,52.9,171.5,-2.4,174.8C-57.8,178.2,-115.6,208.4,-137.5,190.9C-159.3,173.3,-145.3,108,-153,56.3C-160.7,4.6,-190.2,-33.4,-178.3,-54.2C-166.4,-75.1,-113.2,-78.8,-76.6,-93.6C-40,-108.3,-20,-134.2,11.9,-150.5C43.7,-166.8,87.4,-173.6,120,-157.6Z"
+                                        fill="url(#a)" />
+                                </g>
+                            </svg> -->
+                            <div class="header__picture">
+                                <img src="wwwroot/images/profile/luc.PNG" alt="Profile photo">
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
+        </section>
+        <section class="parallax__section" id="group2">
+            <div class="parallax__layer parallax__layer--base">
+                <h2>Base Layer</h2>
+            </div>
+            <div class="parallax__layer parallax__layer--back">
+                <h2>Back Layer</h2>
+            </div>
+        </section>
+        <section class="parallax__section" id="group3">
+            <div class="parallax__layer parallax__layer--fore">
+                <h2>Foreground Layer Layer</h2>
+            </div>
+            <div class="parallax__layer parallax__layer--base">
+                <h2>Base Layer</h2>
+            </div>
+        </section>
+        <section class="parallax__section" id="group4">
+            <div class="parallax__layer parallax__layer--base">
+                <h2>Base Layer</h2>
+            </div>
+            <div class="parallax__layer parallax__layer--back">
+                <h2>Back Layer</h2>
+            </div>
+            <div class="parallax__layer parallax__layer--deep">
+                <h2>Deep Layer</h2>
+            </div>
+        </section>
+        <section class="parallax__section" id="group5">
+            <div class="parallax__layer parallax__layer--for">
+                <h2>Foreground Layer</h2>
+            </div>
+            <div class="parallax__layer parallax__layer--base">
+                <h2>Base Layer</h2>
+            </div>
+        </section>
+        <section class="parallax__section" id="group6">
+            <div class="parallax__layer parallax__layer--back">
+                <h2>Back Layer</h2>
+            </div>
+            <div class="parallax__layer parallax__layer--base">
+                <h2>Base Layer</h2>
+            </div>
+        </section>
+        <section class="parallax__section" id="group7">
+            <div class="parallax__layer parallax__layer--base">
+                <h2>Base Layer</h2>
+            </div>
         </section>
     </main>
 
@@ -232,5 +298,30 @@
 
     </footer>
 </body>
+<!-- <div class="container">
+        <div class="gallery">
+            <div class="gallery__item gallery__item--big">
+                <amp-img lightbox src="./wwwroot/images/gallery/drawings/night-butterfly.png" data-amp-auto-lightbox-disable width="300" height="300" layout="responsive"></amp-img>
+            </div>      
+            <div class="gallery__item">
+                <amp-img lightbox src="./wwwroot/images/gallery/drawings/abst-1.png" width="150" height="150" layout="responsive"></amp-img>
+            </div>
+            <div class="gallery__item">
+                <amp-img lightbox src="./wwwroot/images/gallery/drawings/abst-2.png" width="150" height="150" layout="responsive"></amp-img>
+            </div> 
+            <div class="gallery__item gallery__item--tall">
+                <amp-img lightbox src="./wwwroot/images/gallery/drawings/rose.png" width="300" height="600" layout="responsive"></amp-img>
+            </div>
+            <div class="gallery__item">
+                <amp-img lightbox src="./wwwroot/images/gallery/drawings/abst-3.png" width="150" height="150" layout="responsive"></amp-img>
+            </div>
+            <div class="gallery__item">
+                <amp-img lightbox src="./wwwroot/images/gallery/drawings/abst-4.png" width="150" height="150" layout="responsive"></amp-img>
+            </div>
+            <div class="gallery__item gallery__item--long">
+                <amp-img lightbox src="./wwwroot/images/gallery/drawings/kapustnak.png" width="600" height="300" layout="responsive"></amp-img>
+            </div>
+        </div>
+    </div> -->
 
 </html>
