@@ -1,0 +1,12 @@
+@import "../base/global";
+
+.button{
+    @include flex-set(inline, row, nowrap, $gap-m, center, center, center);
+    @include border('def', .2rem, $color-black);
+    min-width: 20rem;
+    padding: 1.2rem $gap-l;
+    font-family: $font-title;
+    font-size: large;
+    font-weight: 400;
+    text-transform: uppercase;
+}
