@@ -1,0 +1,10 @@
+@import "../base/global";
+
+.icon{  
+    --icon-size: #{$gap-l};
+   display: block;
+   width: var(--icon-size);;
+   min-width: var(--icon-size);
+   height: var(--icon-size);
+   fill: currentColor;
+}
