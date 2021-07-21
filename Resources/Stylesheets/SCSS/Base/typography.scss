@@ -41,3 +41,18 @@ p {
 small {
     font-size: xx-small;
 }
+
+.title{
+    margin-bottom: $gap-xxl;
+    font-family: $font-title;
+    font-size: 5.6rem;
+    font-weight: 400;
+    color: $color-black;
+    text-align: center;
+}
+
+.desc{
+    font-size: large;
+    line-height: 1.8;
+    text-align: center;
+}
