@@ -5,7 +5,6 @@
         require('autoprefixer')({
             grid: true,
             flex: true
-        }),
-        require('tailwindcss')({})
+        })
     ]
 })
