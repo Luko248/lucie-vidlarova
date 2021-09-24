@@ -21,8 +21,8 @@
   src: url("../../../../wwwroot/Fonts/Cassandra.ttf") format("opentype"); }
 
 :root {
-  --color-border: rgba(0,0,0,1);
-  --border-width: .1rem; }
+  --color-border: rgba(0, 0, 0, 1);
+  --border-width: 0.1rem; }
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -62,8 +62,8 @@ address {
   font-style: normal; }
 
 :root {
-  --color-border: rgba(0,0,0,1);
-  --border-width: .1rem; }
+  --color-border: rgba(0, 0, 0, 1);
+  --border-width: 0.1rem; }
 
 body {
   display: flex;
@@ -81,8 +81,8 @@ body {
     width: 100%; }
 
 :root {
-  --color-border: rgba(0,0,0,1);
-  --border-width: .1rem; }
+  --color-border: rgba(0, 0, 0, 1);
+  --border-width: 0.1rem; }
 
 .element-to-middle {
   position: absolute;
@@ -152,8 +152,8 @@ body {
   display: inline-block; }
 
 :root {
-  --color-border: rgba(0,0,0,1);
-  --border-width: .1rem; }
+  --color-border: rgba(0, 0, 0, 1);
+  --border-width: 0.1rem; }
 
 h1 {
   margin-bottom: 2rem;
@@ -201,12 +201,12 @@ small {
   text-align: center; }
 
 :root {
-  --color-border: rgba(0,0,0,1);
-  --border-width: .1rem; }
+  --color-border: rgba(0, 0, 0, 1);
+  --border-width: 0.1rem; }
 
 :root {
-  --color-border: rgba(0,0,0,1);
-  --border-width: .1rem; }
+  --color-border: rgba(0, 0, 0, 1);
+  --border-width: 0.1rem; }
 
 .container {
   width: 65%;
@@ -264,8 +264,8 @@ small {
       grid-template-rows: max-content; } }
 
 :root {
-  --color-border: rgba(0,0,0,1);
-  --border-width: .1rem; }
+  --color-border: rgba(0, 0, 0, 1);
+  --border-width: 0.1rem; }
 
 .icon {
   --icon-size: 1.6rem;
@@ -276,8 +276,8 @@ small {
   fill: currentColor; }
 
 :root {
-  --color-border: rgba(0,0,0,1);
-  --border-width: .1rem; }
+  --color-border: rgba(0, 0, 0, 1);
+  --border-width: 0.1rem; }
 
 .button {
   display: inline-flex;
@@ -298,12 +298,12 @@ small {
   text-transform: uppercase; }
 
 :root {
-  --color-border: rgba(0,0,0,1);
-  --border-width: .1rem; }
+  --color-border: rgba(0, 0, 0, 1);
+  --border-width: 0.1rem; }
 
 :root {
-  --color-border: rgba(0,0,0,1);
-  --border-width: .1rem; }
+  --color-border: rgba(0, 0, 0, 1);
+  --border-width: 0.1rem; }
 
 .gallery {
   display: grid;
@@ -337,8 +337,8 @@ small {
       grid-row-end: span 4; }
 
 :root {
-  --color-border: rgba(0,0,0,1);
-  --border-width: .1rem; }
+  --color-border: rgba(0, 0, 0, 1);
+  --border-width: 0.1rem; }
 
 .header__container {
   --col-count: 2;
@@ -461,12 +461,12 @@ small {
     d: path("M120,-157.6C152.7,-141.5,174.3,-102.6,194.8,-58.8C215.3,-14.9,234.6,33.8,228.4,80.8C222.2,127.8,190.4,173.1,148.1,184C105.8,195,52.9,171.5,-2.4,174.8C-57.8,178.2,-115.6,208.4,-137.5,190.9C-159.3,173.3,-145.3,108,-153,56.3C-160.7,4.6,-190.2,-33.4,-178.3,-54.2C-166.4,-75.1,-113.2,-78.8,-76.6,-93.6C-40,-108.3,-20,-134.2,11.9,-150.5C43.7,-166.8,87.4,-173.6,120,-157.6Z"); } }
 
 :root {
-  --color-border: rgba(0,0,0,1);
-  --border-width: .1rem; }
+  --color-border: rgba(0, 0, 0, 1);
+  --border-width: 0.1rem; }
 
 :root {
-  --color-border: rgba(0,0,0,1);
-  --border-width: .1rem; }
+  --color-border: rgba(0, 0, 0, 1);
+  --border-width: 0.1rem; }
 
 .parallax {
   height: 100vh;

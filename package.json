@@ -7,19 +7,19 @@
   "author": "Lukáš Chylík",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^10.2.6",
-    "browser-sync": "^2.26.14",
-    "clean-css-cli": "^5.3.0",
-    "node-sass": "^6.0.0",
+    "autoprefixer": "^10.3.5",
+    "browser-sync": "^2.27.5",
+    "clean-css-cli": "^5.3.3",
+    "node-sass": "^6.0.1",
     "nunjucks": "^3.2.3",
-    "postcss": "^8.3.5",
+    "postcss": "^8.3.7",
     "postcss-cli": "^8.3.1",
     "postcss-value-parser": "^4.1.0",
     "stylelint": "^13.13.1",
     "stylelint-order": "^4.1.0",
-    "tailwindcss": "^2.2.2",
-    "typescript": "^4.3.4",
-    "uglify-js": "^3.13.9",
+    "tailwindcss": "^2.2.15",
+    "typescript": "^4.4.3",
+    "uglify-js": "^3.14.2",
     "watch": "^1.0.2"
   },
   "browserslist": {
@@ -34,7 +34,7 @@
   },
   "stylelint": {
     "enabled": true,
-    "rules": "Resources/.stylelintrc.json",
+    "rules": ".stylelintrc.json",
     "fileExtensions": "scss"
   },
   "scripts": {
