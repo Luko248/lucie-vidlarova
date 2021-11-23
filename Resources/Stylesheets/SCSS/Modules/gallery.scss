@@ -2,7 +2,7 @@
 
 .gallery {
     --col-count: 2;
-    @include grid-columns(def, repeat(var(--col-count), minmax($gap-m, 1fr)), $gap-l);
+    @include grid-columns(def, repeat(var(--col-count), minmax($gap-m, 1fr)), $gap-xl);
     
     > div{
         @include grid-columns(def, minmax($gap-m, 1fr), $gap-l);
@@ -14,7 +14,7 @@
         height: 100vh;
         padding: 5vh 0;
         overflow: auto;
-        @include grid-columns(def, minmax($gap-m, 8fr) minmax($gap-m, 5fr), 5rem);
+        @include grid-columns(def, minmax($gap-m, 8fr) minmax($gap-m, 5fr), 7rem);
 
         >div:not([class]){
             position: sticky;
