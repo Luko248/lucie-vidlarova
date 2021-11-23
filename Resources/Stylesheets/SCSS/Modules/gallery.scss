@@ -1,42 +1,71 @@
 @import "../base/global";
 
 .gallery {
-    display: grid;
-    padding: 8rem 0;
-    grid-gap: $gap-xl;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr;
+    --col-count: 2;
+    @include grid-columns(def, repeat(var(--col-count), minmax($gap-m, 1fr)), $gap-l);
     
-    &__item {
-        position: relative;
-        padding-top: 100%;
-        overflow: hidden;
-        cursor: pointer;
+    > div{
+        @include grid-columns(def, minmax($gap-m, 1fr), $gap-l);
+    }
+    
+    &__layout{
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        padding: 5vh 0;
+        overflow: auto;
+        @include grid-columns(def, minmax($gap-m, 8fr) minmax($gap-m, 5fr), 5rem);
 
-        >amp-img{
-            position: absolute;
-            top: 50%;
-            left: 50%;
+        >div:not([class]){
+            position: sticky;
+            top: 20%;
+        }
+
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+    }
+
+    &__item{
+        --aspect-ratio: 1 / 1;
+       position: relative;
+
+       &--2-3{
+            --aspect-ratio: 2 / 3; 
+        }
+
+        > img{ 
             display: block;
-            min-width: 100%;
-            min-height: 100%;
-            transform: translate(-50%, -50%) scale(1,1);
-        }
-        &--big {
-            grid-column-end: span 2;
-            grid-row-end: span 2;
+            width: 100%;
+            cursor: pointer;
+            aspect-ratio: var(--aspect-ratio);
         }
 
-        &--long {
-            padding-top: 50%;
-            grid-column-end: span 4;
-            grid-row-end: span 2;
-        }
+        > div{
+            @include grid-columns(def, minmax($gap-m, 1fr) auto);
+            padding: $gap-m;
+            column-gap: $gap-l;
+            
+            > small{
+                font-size: small;
+                text-transform: uppercase;
+            }
 
-        &--tall {
-            padding-top: 200%;
-            grid-column-end: span 2;
-            grid-row-end: span 4;
+            > strong{
+                font-size: large;
+                line-height: 1;
+                text-transform: uppercase;
+                grid-row-start: 2;
+            }
+
+            > a{
+                color: black;
+                text-decoration: none;
+            }
+
+            .icon{
+                --icon-size: #{$gap-xl};
+            }
         }
     }
 }

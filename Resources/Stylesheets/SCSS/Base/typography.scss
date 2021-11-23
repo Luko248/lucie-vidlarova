@@ -48,11 +48,19 @@ small {
     font-size: 5.6rem;
     font-weight: 400;
     color: $color-black;
-    text-align: center;
 }
 
 .desc{
+    --border-width: 0;
+    --padding: 0;
+    @include border('left');
+    padding: var(--padding);
+    padding-right: 0;
     font-size: large;
     line-height: 1.8;
-    text-align: center;
+    
+    &--line{
+        --padding: #{$gap-l};
+        --border-width: .3rem;
+    }
 }
