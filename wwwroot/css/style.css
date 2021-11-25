@@ -14,7 +14,8 @@
   --pad-m: 0.8rem;
   --pad-s: 0.4rem;
   --font-text: Open Sans, sans-serif;
-  --font-title: rig-sans, sans-serif; }
+  --font-title: rig-sans, sans-serif;
+  --nav-height: 7rem; }
 
 @font-face {
   font-family: 'Cassandra';
@@ -24,35 +25,20 @@
   --color-border: rgba(0, 0, 0, 1);
   --border-width: 0.1rem; }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  border: 0;
-  font-display: fallback; }
+* {
+  box-sizing: border-box; }
 
 html {
   height: 100%;
+  margin: 0;
   font-size: 62.5%; }
 
 body {
+  padding: 0;
+  margin: 0;
   font-family: var(--font-text);
-  overflow-x: hidden; }
-
-ol, ul {
-  list-style: none; }
+  overflow-x: hidden;
+  scroll-behavior: smooth; }
 
 table {
   border-collapse: collapse;
@@ -155,37 +141,8 @@ body {
   --color-border: rgba(0, 0, 0, 1);
   --border-width: 0.1rem; }
 
-h1 {
-  margin-bottom: 2rem;
-  font-size: xx-large; }
-
-h2 {
-  margin-bottom: 2rem;
-  font-size: x-large; }
-
-h3 {
-  font-size: large; }
-
-h4 {
-  font-size: medium; }
-
-h5 {
-  font-size: small; }
-
-h6 {
-  font-size: x-small; }
-
-span, a {
-  font-size: medium; }
-  @media only screen and (max-width: 425px) {
-    span, a {
-      font-size: small; } }
-
-p {
-  font-size: medium; }
-
-small {
-  font-size: xx-small; }
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0; }
 
 .title {
   margin-bottom: 3.2rem;
@@ -209,6 +166,19 @@ small {
 :root {
   --color-border: rgba(0, 0, 0, 1);
   --border-width: 0.1rem; }
+
+.burger {
+  --icon-fill: black;
+  --burger-size: 5rem;
+  border: var(--border-width) solid var(--icon-fill);
+  position: relative;
+  display: block;
+  width: var(--burger-size);
+  height: var(--burger-size);
+  background: rgba(0, 0, 0, 0);
+  cursor: pointer; }
+  .burger--open {
+    --icon-fill: white; }
 
 :root {
   --color-border: rgba(0, 0, 0, 1);
@@ -486,6 +456,8 @@ small {
   display: block;
   width: 90vw;
   max-height: 90vh; }
+  .blob path {
+    animation: blobAnim 20s infinite linear; }
 
 @keyframes blobAnim {
   0% {
@@ -502,5 +474,96 @@ small {
 :root {
   --color-border: rgba(0, 0, 0, 1);
   --border-width: 0.1rem; }
+
+.nav {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  align-content: normal;
+  justify-content: space-between;
+  gap: 2.4rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: var(--nav-height);
+  padding: 0 2.4rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 999; }
+  .nav ul {
+    padding: 0;
+    list-style: none; }
+  .nav__right {
+    --menu-gap: 2.4rem;
+    display: inline-flex;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: normal;
+    justify-content: flex-start;
+    gap: var(--menu-gap);
+    list-style: none; }
+    .nav__right a {
+      display: block;
+      font-size: large;
+      color: black;
+      text-decoration: none;
+      text-transform: uppercase;
+      white-space: nowrap; }
+      .nav__right a:hover {
+        text-decoration: underline; }
+  .nav__menu {
+    --menu-display: none;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: var(--menu-display);
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    z-index: -1; }
+    .nav__menu--open {
+      --menu-display: flex; }
+  .nav__options {
+    --col-count: 4;
+    display: grid;
+    grid-gap: 2.4rem;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: center;
+    grid-template-columns: repeat(var(--col-count), minmax(1.6rem, 1fr));
+    width: 90vw;
+    height: 80vh;
+    list-style: none; }
+  .nav__item {
+    --text-width: 66%;
+    position: relative;
+    display: block;
+    height: 100%;
+    background: #181818;
+    text-decoration: none; }
+    .nav__item:after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, black 100%);
+      z-index: 5; }
+    .nav__item > strong {
+      position: absolute;
+      bottom: 2.4rem;
+      left: 2.4rem;
+      max-width: var(--text-width);
+      font-size: x-large;
+      color: white;
+      z-index: 10; }
 
 /*# sourceMappingURL=style.css.map */

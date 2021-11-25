@@ -1,45 +1,7 @@
 @import "../Base/global";
 
-h1 {
-    margin-bottom: 2rem;
-    font-size: xx-large;
-}
-
-h2 {
-    margin-bottom: 2rem;
-    font-size: x-large;
-}
-
-h3 {
-    font-size: large;
-}
-
-h4 {
-    font-size: medium;
-}
-
-h5 {
-    font-size: small;
-}
-
-h6 {
-    font-size: x-small;
-}
-
-span, a {
-    font-size: medium;
-
-    @include res-max-mobile-l {
-        font-size: small;
-    }
-}
-
-p {
-    font-size: medium;
-}
-
-small {
-    font-size: xx-small;
+h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
 }
 
 .title{

@@ -105,9 +105,9 @@
     width: 90vw;
     max-height: 90vh;
 
-    // path{
-    //     animation: blobAnim 20s infinite linear;
-    // }
+    path{
+        animation: blobAnim 20s infinite linear;
+    }
   }
   
   @keyframes blobAnim {
