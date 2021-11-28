@@ -10,22 +10,26 @@
 
     &__item{
         --item-scale: 1;
+        --item-color: var(--color-white);
+        @include transition(transform);
         position: relative;
         display: block;
         padding: $gap-l;
         text-decoration: none;
         transform: scale(var(--item-scale));
-        transition: transform var(--trans-time) ease-in-out;
+        
         aspect-ratio: 1 / 1;
         
         &:hover{
             --item-scale: 1.1;
+            --item-color: var(--color-primary);
         }
         
         > .icon{
             --icon-size: #{$gap-xl};
             @include center-item;
-            fill: $color-primary;
+            @include transition(fill);
+            fill: var(--item-color);       
         }
     }
 }

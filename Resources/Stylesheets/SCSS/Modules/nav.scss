@@ -26,8 +26,8 @@
         a {
             @include transition(color);
             display: block;
-            font-family: $font-highlight;
-            font-size: large;
+            font-family: $font-text;
+            font-size: medium;
             color: var(--nav__item-color);
             text-decoration: none;
             text-transform: uppercase;
@@ -47,11 +47,14 @@
         left: 0;
         display: var(--nav__menu-display);    
         width: 100vw;
-        background: $color-black;     
+        background: $color-black;
+        opacity: 0;     
         z-index: -1;
 
         &--open{
             --nav__menu-display: flex;
+            animation: showMenu .5s forwards;
+            animation-delay: .1s;  
         }
     }
 
@@ -128,5 +131,15 @@
             white-space: break-spaces;
             z-index: 10;
         }
+    }
+}
+
+@keyframes showMenu{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
     }
 }
