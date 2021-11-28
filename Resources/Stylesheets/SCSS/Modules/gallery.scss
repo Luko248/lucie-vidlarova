@@ -57,6 +57,7 @@
             column-gap: $gap-l;
             
             > small{
+                font-family: $font-highlight;
                 font-size: small;
                 text-transform: uppercase;
             }

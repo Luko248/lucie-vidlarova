@@ -442,6 +442,7 @@ p, span, small {
       padding: 0.8rem;
       column-gap: 1.6rem; }
       .gallery__item > div > small, .gallery__item > figcaption > small {
+        font-family: "times-new-roman";
         font-size: small;
         text-transform: uppercase; }
       .gallery__item > div > strong, .gallery__item > figcaption > strong {
