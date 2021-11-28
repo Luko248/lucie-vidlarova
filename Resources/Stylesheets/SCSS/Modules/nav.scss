@@ -3,12 +3,12 @@
 
 .nav{
     @include flex-set(def, row, nowrap, $gap-xl, center, space-between);
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
     height: var(--nav-height);
     padding: 0 $gap-xl;
-    background-color: hsla(0, 0%, 100%, .3);
     z-index: 999;  
 
     ul{
@@ -24,7 +24,7 @@
         a {
             display: block;
             font-size: large;
-            color: $color-black;
+            color: $color-white;
             text-decoration: none;
             text-transform: uppercase;
             white-space: nowrap;
@@ -59,20 +59,20 @@
         list-style: none;
     }
     
-    &__item{
-        --text-width: 66%;
+    &__item {
         --filter-blur: #{$gap-l};
         position: relative;
         display: block;
-        height: 100%;
-        background: rgb(24, 24, 24);
-        text-decoration: none;
         overflow: hidden;
 
-        &:hover{
-            --filter-blur: 0;
+        &:nth-child(1):before{
+            background-image: url('../images/backgrounds/dotwork-bg.jpg');
         }
-        
+
+        &:nth-child(2):before{
+            background-image: url('../images/backgrounds/handpoke-bg.jpg'); background-image: url('../images/backgrounds/handpoke-bg.jpg');
+        }
+
         &:before{
             position: absolute;
             top: 0;
@@ -81,9 +81,11 @@
             left: 0;
             display: block;
             content: '';
-            background: url('../images/backgrounds/handpoke-bg.jpg') no-repeat center;
+            background-repeat: no-repeat;
+            background-position: center;   
             filter: blur(var(--filter-blur));
             transition: filter $trans-time ease-in-out;
+            background-size: cover;
         }  
 
         &:after{
@@ -98,7 +100,20 @@
             z-index: 5;
         }
 
-        >strong{
+        &:hover{
+            --filter-blur: 0;
+        }
+
+        > a{
+            --text-width: 66%;       
+            position: relative;
+            display: block;
+            height: 100%;
+            text-decoration: none;    
+            z-index: 10;
+        }
+
+        strong{
             position: absolute;
             bottom: $gap-xxl;
             left: $gap-xl;
@@ -109,6 +124,5 @@
             white-space: break-spaces;
             z-index: 10;
         }
-        
     }
 }
