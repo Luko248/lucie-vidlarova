@@ -1,7 +1,3 @@
-:root {
-  --color-border: hsl(0, 0%, 100%);
-  --border-width: 1px;
-}
 
 @mixin border(
   $var-direction: 'def',
