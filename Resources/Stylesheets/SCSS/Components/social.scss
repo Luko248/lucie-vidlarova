@@ -1,11 +1,30 @@
 @import "../base/global";
 
 .social{
-    >a{
+    @include flex-set(def, column, wrap, $gap-xxl, center, center, center);
+    position: fixed;
+    top: 50%;
+    right: $gap-xl;
+    transform: translateY(-50%);
 
-    }
-
-    .icon{
-
+    &__item{
+        --item-scale: 1;
+        position: relative;
+        display: block;
+        padding: $gap-l;
+        text-decoration: none;
+        transform: scale(var(--item-scale));
+        transition: transform var(--trans-time) ease-in-out;
+        aspect-ratio: 1 / 1;
+        
+        &:hover{
+            --item-scale: 1.1;
+        }
+        
+        > .icon{
+            --icon-size: #{$gap-xl};
+            @include center-item;
+            fill: $color-primary;
+        }
     }
 }

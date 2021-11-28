@@ -1,10 +1,12 @@
 @import "../base/global";
 
 .button{
+    --bn-bg-color: #{$color-trans};
     @include flex-set(inline, row, nowrap, $gap-m, center, center, center);
-    @include border('def', 1px , var(--color-white));
+    @include border;
     min-width: 20rem;
     padding: $gap-l $gap-xl;
+    background-color: var(--bn-bg-color);
     font-family: $font-title;
     font-size: large;
     font-weight: 400;
@@ -12,4 +14,9 @@
     color: var(--color-primary);
     text-decoration: none;
     text-transform: uppercase;
+    transition: background-color var(--trans-time) ease-in-out;
+
+    &:hover{
+        --bn-bg-color: #{$color-bg};
+    }
 }

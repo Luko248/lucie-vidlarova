@@ -23,6 +23,7 @@
 
         a {
             display: block;
+            font-family: $font-title;
             font-size: large;
             color: $color-white;
             text-decoration: none;
@@ -44,6 +45,7 @@
         display: var(--menu-display);    
         width: 100vw;
         background: $color-black;
+        
         z-index: -1;
 
         &--open{

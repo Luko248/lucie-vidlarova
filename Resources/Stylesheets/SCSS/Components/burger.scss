@@ -1,17 +1,23 @@
 @import "../base/global";
 
 .burger {
-    --icon-fill: #{$color-black};
+    --icon-fill: var(--color-white);
     --burger-size: 5rem;
-    @include border(def, var(--border-width), var(--icon-fill));
     position: relative;
     display: block;
     width: var(--burger-size);
-    height: var(--burger-size);
-    background: $color-trans;
+    background-color: var(--color-trans);
+    border-width: 0;
     cursor: pointer;
+    aspect-ratio: 1 / 1;
     
     &--open{
         --icon-fill: #{$color-white};
+    }
+
+    >.icon{
+        --icon-size: #{$gap-xxl};
+        @include center-item;
+        fill: var(--icon-fill);
     }
 }
