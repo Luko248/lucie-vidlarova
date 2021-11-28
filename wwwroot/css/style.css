@@ -34,16 +34,16 @@
   font-weight: 700;
   font-display: fallback;
   font-style: normal;
-  src: url("../fonts/segoe-ui/regular/segoe-ui-bold.eot");
-  src: url("../fonts/segoe-ui/regular/segoe-ui-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/segoe-ui/regular/segoe-ui-bold.woff2") format("woff2"), url("../fonts/segoe-ui/regular/segoe-ui-bold.woff") format("woff"), url("../fonts/segoe-ui/regular/segoe-ui-bold.ttf") format("truetype"), url("../fonts/segoe-ui/regular/segoe-ui-bold.otf") format("opentype"), url("../fonts/segoe-ui/regular/segoe-ui-bold.svg?#webfont") format("svg"); }
+  src: url("../fonts/segoe-ui/bold/segoe-ui-bold.eot");
+  src: url("../fonts/segoe-ui/bold/segoe-ui-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/segoe-ui/bold/segoe-ui-bold.woff2") format("woff2"), url("../fonts/segoe-ui/bold/segoe-ui-bold.woff") format("woff"), url("../fonts/segoe-ui/bold/segoe-ui-bold.ttf") format("truetype"), url("../fonts/segoe-ui/bold/segoe-ui-bold.otf") format("opentype"), url("../fonts/segoe-ui/bold/segoe-ui-bold.svg?#webfont") format("svg"); }
 
 @font-face {
   font-family: "segoe-ui-light";
-  font-weight: 300;
+  font-weight: 100;
   font-display: fallback;
   font-style: normal;
-  src: url("../fonts/segoe-ui/regular/segoe-ui.eot");
-  src: url("../fonts/segoe-ui/regular/segoe-ui.eot?#iefix") format("embedded-opentype"), url("../fonts/segoe-ui/regular/segoe-ui.woff2") format("woff2"), url("../fonts/segoe-ui/regular/segoe-ui.woff") format("woff"), url("../fonts/segoe-ui/regular/segoe-ui.ttf") format("truetype"), url("../fonts/segoe-ui/regular/segoe-ui.otf") format("opentype"), url("../fonts/segoe-ui/regular/segoe-ui.svg?#webfont") format("svg"); }
+  src: url("../fonts/segoe-ui/light/segoe-ui-light.eot");
+  src: url("../fonts/segoe-ui/light/segoe-ui-light.eot?#iefix") format("embedded-opentype"), url("../fonts/segoe-ui/light/segoe-ui-light.woff2") format("woff2"), url("../fonts/segoe-ui/light/segoe-ui-light.woff") format("woff"), url("../fonts/segoe-ui/light/segoe-ui-light.ttf") format("truetype"), url("../fonts/segoe-ui/light/segoe-ui-light.otf") format("opentype"), url("../fonts/segoe-ui/light/segoe-ui-light.svg?#webfont") format("svg"); }
 
 @font-face {
   font-family: "times-new-roman";
@@ -58,8 +58,8 @@
   font-weight: 700;
   font-display: fallback;
   font-style: normal;
-  src: url("../fonts/times-new-roman/regular/times-new-roman-bold.eot");
-  src: url("../fonts/times-new-roman/regular/times-new-roman-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/times-new-roman/regular/times-new-roman-bold.woff2") format("woff2"), url("../fonts/times-new-roman/regular/times-new-roman-bold.woff") format("woff"), url("../fonts/times-new-roman/regular/times-new-roman-bold.ttf") format("truetype"), url("../fonts/times-new-roman/regular/times-new-roman-bold.otf") format("opentype"), url("../fonts/times-new-roman/regular/times-new-roman-bold.svg?#webfont") format("svg"); }
+  src: url("../fonts/times-new-roman/bold/times-new-roman-bold.eot");
+  src: url("../fonts/times-new-roman/bold/times-new-roman-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/times-new-roman/bold/times-new-roman-bold.woff2") format("woff2"), url("../fonts/times-new-roman/bold/times-new-roman-bold.woff") format("woff"), url("../fonts/times-new-roman/bold/times-new-roman-bold.ttf") format("truetype"), url("../fonts/times-new-roman/bold/times-new-roman-bold.otf") format("opentype"), url("../fonts/times-new-roman/bold/times-new-roman-bold.svg?#webfont") format("svg"); }
 
 * {
   box-sizing: border-box; }
@@ -75,7 +75,9 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  scroll-behavior: smooth; }
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory; }
   body:before {
     position: absolute;
     content: '';
@@ -89,6 +91,8 @@ body {
     font-family: var(--font-text);
     z-index: -1;
     background-size: cover; }
+  body > * {
+    scroll-snap-align: start; }
 
 table {
   border-collapse: collapse;
@@ -217,7 +221,7 @@ p, span, small {
 .desc {
   --border-width: 0;
   --padding: 0;
-  border-left: 0.2rem solid var(--color-primary);
+  border-left: 0.2rem solid var(--color-black);
   padding: var(--padding);
   padding-right: 0;
   font-family: "segoe-ui-light", sans-serif;
@@ -326,7 +330,7 @@ p, span, small {
   --border-width: 1px; }
 
 .button {
-  --bn-bg-color: rgba(0, 0, 0, 0);
+  --btn-bg-color: rgba(0, 0, 0, 0);
   display: inline-flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -336,8 +340,8 @@ p, span, small {
   border: var(--border-width) solid var(--color-border);
   min-width: 20rem;
   padding: 1.6rem 2.4rem;
-  background-color: var(--bn-bg-color);
-  font-family: "times-new-roman-bold";
+  background-color: var(--btn-bg-color);
+  font-family: "times-new-roman";
   font-size: large;
   font-weight: 400;
   line-height: 1;
@@ -346,7 +350,7 @@ p, span, small {
   text-transform: uppercase;
   transition: background-color var(--trans-time) ease-in-out; }
   .button:hover {
-    --bn-bg-color: rgba(0, 0, 0, 0.85); }
+    --btn-bg-color: rgba(255, 255, 255, 0.1); }
 
 :root {
   --color-border: hsl(0, 0%, 100%);
@@ -427,12 +431,21 @@ p, span, small {
     justify-content: flex-start;
     grid-template-columns: minmax(0.8rem, 1fr); }
   .gallery__sec {
-    background-color: rgba(255, 255, 255, 0.85); }
+    display: grid;
+    grid-gap: 1.6rem;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+    grid-template-columns: minmax(0.8rem, 1fr);
+    height: 100vh;
+    max-height: 2048px;
+    background-color: rgba(255, 255, 255, 0.7);
+    overflow-y: hidden; }
   .gallery__layout {
     position: sticky;
     top: 0;
-    height: 100vh;
-    padding: 5vh 0;
+    height: 90%;
+    margin: auto;
     overflow: auto;
     display: grid;
     grid-gap: 7rem;
@@ -447,15 +460,16 @@ p, span, small {
       width: 0; }
   .gallery__item {
     --aspect-ratio: 1 / 1;
-    position: relative; }
+    position: relative;
+    margin: 0; }
     .gallery__item--2-3 {
       --aspect-ratio: 2 / 3; }
-    .gallery__item > img {
+    .gallery__item > img, .gallery__item > amp-img {
       display: block;
       width: 100%;
       cursor: pointer;
       aspect-ratio: var(--aspect-ratio); }
-    .gallery__item > div {
+    .gallery__item > div, .gallery__item > figcaption {
       display: grid;
       align-items: flex-start;
       align-content: flex-start;
@@ -463,18 +477,18 @@ p, span, small {
       grid-template-columns: minmax(0.8rem, 1fr) auto;
       padding: 0.8rem;
       column-gap: 1.6rem; }
-      .gallery__item > div > small {
+      .gallery__item > div > small, .gallery__item > figcaption > small {
         font-size: small;
         text-transform: uppercase; }
-      .gallery__item > div > strong {
+      .gallery__item > div > strong, .gallery__item > figcaption > strong {
         font-size: large;
         line-height: 1;
         text-transform: uppercase;
         grid-row-start: 2; }
-      .gallery__item > div > a {
+      .gallery__item > div > a, .gallery__item > figcaption > a {
         color: black;
         text-decoration: none; }
-      .gallery__item > div .icon {
+      .gallery__item > div .icon, .gallery__item > figcaption .icon {
         --icon-size: 2.4rem; }
 
 :root {
@@ -536,8 +550,8 @@ header {
     font-size: 1.1em;
     line-height: 1; }
   .header__title > strong {
+    font-family: "times-new-roman";
     font-size: .35em;
-    font-weight: 300;
     text-transform: uppercase; }
   .header__title > p {
     margin-top: 2.4rem;
@@ -558,7 +572,7 @@ header {
     content: '';
     width: 100%;
     margin: 0 auto;
-    background: radial-gradient(#f4efeb, #dac8b9 70%, #dac8b9);
+    background: radial-gradient(#f4efeb, #dac8b9);
     border-radius: 50%;
     transform: translateX(-50%);
     z-index: 1;
@@ -602,7 +616,7 @@ header {
     list-style: none; }
     .nav__right a {
       display: block;
-      font-family: "times-new-roman-bold";
+      font-family: "times-new-roman";
       font-size: large;
       color: white;
       text-decoration: none;

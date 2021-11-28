@@ -10,14 +10,18 @@
     }
 
     &__sec{
+        @include grid-columns(def, minmax($gap-m, 1fr), $gap-l);
+        height: 100vh;
+        max-height: 2048px;
         background-color: $color-bg--light;
+        overflow-y: hidden;    
     }
     
     &__layout{
         position: sticky;
         top: 0;
-        height: 100vh;
-        padding: 5vh 0;
+        height: 90%;
+        margin: auto;
         overflow: auto;
         @include grid-columns(def, minmax($gap-m, 8fr) minmax($gap-m, 5fr), 7rem);
 
@@ -34,19 +38,20 @@
     &__item{
         --aspect-ratio: 1 / 1;
        position: relative;
+       margin: 0;
 
        &--2-3{
             --aspect-ratio: 2 / 3; 
         }
 
-        > img{ 
+        > img, > amp-img{ 
             display: block;
             width: 100%;
             cursor: pointer;
             aspect-ratio: var(--aspect-ratio);
         }
 
-        > div{
+        > div, > figcaption{
             @include grid-columns(def, minmax($gap-m, 1fr) auto);
             padding: $gap-m;
             column-gap: $gap-l;

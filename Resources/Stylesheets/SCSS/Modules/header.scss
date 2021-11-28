@@ -51,8 +51,8 @@ header{
         }
 
         >strong{
+            font-family: $font-highlight;
             font-size: .35em;
-            font-weight: 300;
             text-transform: uppercase;
         }
 
@@ -80,7 +80,7 @@ header{
             content: '';
             width: 100%;
             margin: 0 auto;
-            background: radial-gradient($color-primary--lighten, $color-primary 70%, $color-primary);
+            background: radial-gradient($color-primary--lighten, $color-primary);
             border-radius: 50%;
             transform: translateX(-50%);
             z-index: 1;
