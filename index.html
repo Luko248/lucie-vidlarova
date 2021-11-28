@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ⚡ lang="cs-CZ" [class]="menuOpen ? 'overflow-hidden' : ''">
 
 <head>
     <meta charset="utf-8" />
@@ -32,9 +32,8 @@
     <meta name="twitter:image" content="" />
 
     <link type="text/css" href="wwwroot/css/style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://use.typekit.net/vht7mgx.css">
 
-    <!-- <style amp-custom>
+    <style amp-custom>
     </style>
     <style amp-boilerplate>
         body {
@@ -107,14 +106,13 @@
 
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
-    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
     <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
     <script async custom-element="amp-lightbox-gallery"
-        src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script> -->
+        src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
 </head>
 
-<body>
+<body [class]="menuOpen ? 'overflow-hidden' : ''">
     <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
         <symbol id="icon-close" viewBox="0 0 36 32">
@@ -147,7 +145,6 @@
         </defs>
         </svg>
      
-        
     <nav class="nav">
         <a href="/" class="logo">
             <img src="wwwroot/images/logos/logo-dark.svg" alt="logo">
@@ -159,13 +156,16 @@
             <li>
                 <a href="#gallery">Kontakt</a>
             </li>
-            <button class="burger" id="menuBtn">
+            <button class="burger"
+                    [class]="menuOpen ? 'burger burger--open' : 'burger'"
+                    on="tap:AMP.setState({menuOpen: !menuOpen})">
                 <svg class="icon icon-menu">
                     <use xlink:href="#icon-menu"></use>
                 </svg>
             </button>
         </ul>
-        <div class="nav__menu" id="menu">
+        <div class="nav__menu" 
+             [class]="menuOpen ? 'nav__menu nav__menu--open' : 'nav__menu'">
             <ul class="nav__options">
                 <li  class="nav__item"><a href="">
                         <strong>Dotwork &
@@ -181,6 +181,26 @@
             </ul>
         </div>
     </nav>
+    <div class="social">       
+        <a href="https://www.instagram.com/lucie___________________/" target="_blank" rel="noreferrer"
+            class="social__item" title="Instagram link">
+            <svg class="icon icon-instagram">
+                <use xlink:href="#icon-instagram"></use>
+            </svg>
+        </a>
+        <a href="https://cs-cz.facebook.com/lucka.vidlarova" target="_blank" rel="noreferrer"
+            class="social__item" title="Facebok link">
+            <svg class="icon icon-facebook">
+                <use xlink:href="#icon-facebook"></use>
+            </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/lucie-vidl%C3%A1%C5%99ov%C3%A1-757496203/?originalSubdomain=cz"
+            target="_blank" rel="noreferrer" class="social__item" title="LinkedIn link">
+            <svg class="icon icon-linkedin">
+                <use xlink:href="#icon-linkedin"></use>
+            </svg>
+        </a>
+    </div>
     <header>    
         <div class="container header__container">
             <div class="header__content">
@@ -199,31 +219,11 @@
                 <div class="header__photo">
                     <img src="wwwroot/images/profile/profile.png" alt="Profile photo">
                 </div>
-            </div>
-            <div class="social">       
-                <a href="https://www.instagram.com/lucie___________________/" target="_blank" rel="noreferrer"
-                    class="social__item" title="Instagram link">
-                    <svg class="icon icon-instagram">
-                        <use xlink:href="#icon-instagram"></use>
-                    </svg>
-                </a>
-                <a href="https://cs-cz.facebook.com/lucka.vidlarova" target="_blank" rel="noreferrer"
-                    class="social__item" title="Facebok link">
-                    <svg class="icon icon-facebook">
-                        <use xlink:href="#icon-facebook"></use>
-                    </svg>
-                </a>
-                <a href="https://www.linkedin.com/in/lucie-vidl%C3%A1%C5%99ov%C3%A1-757496203/?originalSubdomain=cz"
-                    target="_blank" rel="noreferrer" class="social__item" title="LinkedIn link">
-                    <svg class="icon icon-linkedin">
-                        <use xlink:href="#icon-linkedin"></use>
-                    </svg>
-                </a>
-            </div>
+            </div> 
         </div>
     </header>
     <main>
-        <section id="gallery">
+        <section id="gallery" class="gallery__sec">
             <div class="container gallery__layout">
                 <div class="gallery">
                     <div>
@@ -389,7 +389,9 @@
 
                 </div>
                 <div>
-                    <h2 class="title">.WORK</h2>
+                    <h2 class="title">
+                        WORK
+                    </h2>
                     <p class="desc desc--line">
                         Lorem Ipsum is simply dummy text of
                         the printing and typesetting industry.
@@ -471,26 +473,6 @@
     <footer>
 
     </footer>
-    <script>
-        const body = document.querySelector('body');
-        const menu = document.getElementById('menu');
-        const menuBtn = document.getElementById('menuBtn');
-        const navItem = document.querySelectorAll('.nav__options > li > a')
-
-        menuBtn.addEventListener('click', () => {
-            body.classList.toggle('overflow-hidden');
-            menuBtn.classList.toggle('burger--open');
-            menu.classList.toggle('nav__menu--open');
-        });
-
-        for(let i; i <= navItem.length; i++){
-                 nav.navItem[i].addEventListener('click', () => {
-                    body.classList.toggle('overflow-hidden');
-                    menuBtn.classList.toggle('burger--open');
-                    menu.classList.toggle('nav__menu--open');
-                });
-            }
-    </script>   
 </body>
 
 </html>

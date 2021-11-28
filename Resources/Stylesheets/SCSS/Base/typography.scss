@@ -16,17 +16,17 @@ p, span, small{
 }
 
 .title{
+    @include flex-set;
     margin-bottom: $gap-xxl;
     font-family: $font-title;
     font-size: 5.6rem;
-    font-weight: 400;
     color: $color-black;
 }
 
 .desc{
     --border-width: 0;
     --padding: 0;
-    @include border('left');
+    @include border('left', .2rem, var(--color-primary));
     padding: var(--padding);
     padding-right: 0;
     font-family:  $font-text;
