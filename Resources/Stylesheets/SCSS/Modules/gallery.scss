@@ -3,10 +3,10 @@
 
 .gallery {
     --col-count: 2;
-    @include grid-columns(def, repeat(var(--col-count), minmax($gap-m, 1fr)), $gap-xl);
+    @include grid-columns(def, repeat(var(--col-count), minmax($gap-m, 1fr)), $gap-xxl);
     
     > div{
-        @include grid-columns(def, minmax($gap-m, 1fr), $gap-l);
+        @include grid-columns(def, minmax($gap-m, 1fr), $gap-xxl);
     }
 
     &__sec{
@@ -18,21 +18,21 @@
     }
     
     &__layout{
+        @include grid-columns(def, minmax($gap-m, 8fr) minmax($gap-m, 5fr), 8rem);
         position: sticky;
         top: 0;
         height: 90%;
         margin: auto;
-        overflow: auto;
-        @include grid-columns(def, minmax($gap-m, 8fr) minmax($gap-m, 5fr), 7rem);
-
-        >div:not([class]){
-            position: sticky;
-            top: 20%;
-        }
+        overflow: auto;    
 
         &::-webkit-scrollbar {
             width: 0;
         }
+    }
+
+    &__info{
+        position: sticky;
+            top: 20%;
     }
 
     &__item{
@@ -78,4 +78,8 @@
             }
         }
     }
+}
+
+.amp-lightbox-gallery-caption{
+    font-size: medium;
 }

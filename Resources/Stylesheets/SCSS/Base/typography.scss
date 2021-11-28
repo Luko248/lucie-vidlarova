@@ -29,6 +29,7 @@ p, span, small{
     @include border('left', .2rem, var(--color-black));
     padding: var(--padding);
     padding-right: 0;
+    margin-bottom: 5rem;
     font-family:  $font-text;
     font-size: large;
     line-height: 1.8;

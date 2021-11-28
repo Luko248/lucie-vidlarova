@@ -1,15 +1,17 @@
 @import "../Base/global";
 
 
-.nav{
-    @include flex-set(def, row, nowrap, $gap-xl, center, space-between);
+.nav{  
+    --nav__item-color: var(--color-white);
+    --nav__menu-display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: var(--nav-height);
     padding: 0 $gap-xl;
-    z-index: 999;  
+    z-index: 999;
+    @include flex-set(def, row, nowrap, $gap-xl, center, space-between);
 
     ul{
         padding: 0;
@@ -18,47 +20,47 @@
 
     &__right{
         --menu-gap: #{$gap-xl};
-        @include flex-set(inline, row, wrap, var(--menu-gap), center);
         list-style: none;
+        @include flex-set(inline, row, wrap, var(--menu-gap), center);
 
         a {
+            @include transition(color);
             display: block;
             font-family: $font-highlight;
             font-size: large;
-            color: $color-white;
+            color: var(--nav__item-color);
             text-decoration: none;
             text-transform: uppercase;
-            white-space: nowrap;
+            white-space: nowrap;   
 
             &:hover{
-                text-decoration: underline;
+                --nav__item-color: var(--color-primary);
+                text-decoration: underline;      
             }
         }
     }
 
-    &__menu{
-        --menu-display: none;
+    &__menu{ 
         @include flex-set(def, column, nowrap, 0, center, center, center);
         position: fixed;
         top: 0;
         left: 0;
-        display: var(--menu-display);    
+        display: var(--nav__menu-display);    
         width: 100vw;
-        background: $color-black;
-        
+        background: $color-black;     
         z-index: -1;
 
         &--open{
-            --menu-display: flex;
+            --nav__menu-display: flex;
         }
     }
 
     &__options{
         --col-count: 4;
-        @include grid-columns(def, repeat(var(--col-count), minmax($gap-l, 1fr)), $gap-xl, stretch, center, stretch);
         width: 90%;
         height: 100vh;
         list-style: none;
+        @include grid-columns(def, repeat(var(--col-count), minmax($gap-l, 1fr)), $gap-xl, stretch, center, stretch);
     }
     
     &__item {
@@ -104,6 +106,7 @@
 
         &:hover{
             --filter-blur: 0;
+            --nav__item-color: var(--color-primary);
         }
 
         > a{
@@ -121,8 +124,7 @@
             left: $gap-xl;
             max-width: var(--text-width);
             font-size: x-large;
-            line-height: .6;
-            color: $color-white;
+            color: var(--nav__item-color);
             white-space: break-spaces;
             z-index: 10;
         }
