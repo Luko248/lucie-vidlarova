@@ -1,4 +1,7 @@
-@font-face {
-    font-family: 'Cassandra';
-    src: url('../../../../wwwroot/Fonts/Cassandra.ttf') format('opentype');
-}
+@import "mixins";
+
+@include font-face('segoe-ui', '../fonts/segoe-ui/regular/segoe-ui');
+@include font-face('segoe-ui-bold', '../fonts/segoe-ui/regular/segoe-ui-bold', 700);
+@include font-face('segoe-ui-light', '../fonts/segoe-ui/regular/segoe-ui', 300);
+@include font-face('times-new-roman', '../fonts/times-new-roman/regular/times-new-roman');
+@include font-face('times-new-roman-bold', '../fonts/times-new-roman/regular/times-new-roman-bold', 700);
