@@ -1,9 +1,8 @@
 @import "../base/global";
 
 .container {
-    width: 65%;
+    width: 75%;
     min-width: 115rem;
-    max-width: $width-laptop-l;
     margin: 0 auto;
 
     @include res-max-laptop-l {
@@ -56,7 +55,7 @@
 
 .grid-container {
     display: grid;
-    width: 65%;
+    width: 80%;
     min-width: 115rem;
     max-width: $width-laptop-l;
     margin: 0 auto;
