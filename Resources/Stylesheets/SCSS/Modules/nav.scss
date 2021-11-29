@@ -67,20 +67,29 @@
     }
     
     &__item {
-        --filter-blur: #{$gap-l};
         position: relative;
         display: block;
         overflow: hidden;
 
         &:nth-child(1):before{
-            background-image: url('../images/backgrounds/dotwork-bg.jpg');
+
+            background-image: url('../images/backgrounds/menu/dotwork-bg.png')
         }
 
         &:nth-child(2):before{
-            background-image: url('../images/backgrounds/handpoke-bg.jpg'); background-image: url('../images/backgrounds/handpoke-bg.jpg');
+            background-image: url('../images/backgrounds/menu/handpoke-bg.png')
+        }
+
+        &:nth-child(3):before{
+            background-image: url('../images/backgrounds/menu/abstraction-bg.png')
+        }
+
+        &:nth-child(4):before{
+            background-image: url('../images/backgrounds/menu/lettering-bg.png');
         }
 
         &:before{
+            @include transition(filter);
             position: absolute;
             top: 0;
             right: 0;
@@ -90,8 +99,7 @@
             content: '';
             background-repeat: no-repeat;
             background-position: center;   
-            filter: blur(var(--filter-blur));
-            transition: filter $trans-time ease-in-out;
+            filter: blur($gap-l) grayscale(1);
             background-size: cover;
         }  
 
@@ -103,17 +111,20 @@
             content: '';
             width: 100%;
             height: 100%;
-            background: linear-gradient(to bottom, $color-black 10%, $color-trans 40%, $color-trans 60%, $color-black 90%);    
+            background: linear-gradient(to bottom, $color-black 10%, $color-trans 50%, $color-black 90%);    
             z-index: 5;
         }
 
         &:hover{
-            --filter-blur: 0;
             --nav__item-color: var(--color-primary);
+
+            &:before{
+                filter: blur(0) grayscale(0);
+            }
         }
 
         > a{
-            --text-width: 66%;       
+            --text-width: 50%;       
             position: relative;
             display: block;
             height: 100%;
@@ -122,6 +133,7 @@
         }
 
         strong{
+            @include transition(color);
             position: absolute;
             bottom: $gap-xxl;
             left: $gap-xl;
