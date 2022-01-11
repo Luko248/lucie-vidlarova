@@ -37,6 +37,7 @@
         "height",
         "min-height",
         "max-height",
+        "aspect-ratio",
         "float",
         "box-sizing",
         "padding",

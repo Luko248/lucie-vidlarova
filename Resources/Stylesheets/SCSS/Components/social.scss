@@ -14,11 +14,11 @@
         @include transition(transform);
         position: relative;
         display: block;
+        
+        aspect-ratio: 1 / 1;
         padding: $gap-l;
         text-decoration: none;
         transform: scale(var(--item-scale));
-        
-        aspect-ratio: 1 / 1;
         
         &:hover{
             --item-scale: 1.1;

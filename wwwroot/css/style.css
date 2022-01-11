@@ -195,6 +195,7 @@ p, span, small {
     font-weight: inherit; }
 
 .title {
+  --title-color: black;
   display: flex;
   flex-flow: row nowrap;
   align-items: stretch;
@@ -204,7 +205,9 @@ p, span, small {
   margin-bottom: 3.2rem;
   font-family: "times-new-roman-bold";
   font-size: 5.6rem;
-  color: black; }
+  color: var(--title-color); }
+  .title--white {
+    --title-color: rgba(255, 255, 255, 0.1); }
 
 .desc {
   --border-width: 0;
@@ -366,8 +369,7 @@ p, span, small {
   --icon-size: 1.6rem;
   display: block;
   width: var(--icon-size);
-  min-width: var(--icon-size);
-  height: var(--icon-size);
+  aspect-ratio: 1 / 1;
   fill: currentColor; }
 
 .button {
@@ -434,10 +436,10 @@ p, span, small {
     transition: transform var(--trans-time) var(--trans-fnc) 0s;
     position: relative;
     display: block;
+    aspect-ratio: 1 / 1;
     padding: 1.6rem;
     text-decoration: none;
-    transform: scale(var(--item-scale));
-    aspect-ratio: 1 / 1; }
+    transform: scale(var(--item-scale)); }
     .social__item:hover {
       --item-scale: 1.1;
       --item-color: var(--color-primary); }
@@ -449,6 +451,59 @@ p, span, small {
       transform: translate(-50%, -50%);
       transition: fill var(--trans-time) var(--trans-fnc) 0s;
       fill: var(--item-color); }
+
+.contact__sec {
+  display: grid;
+  grid-gap: 1.6rem;
+  align-items: stretch;
+  align-content: stretch;
+  justify-content: flex-start;
+  grid-template-columns: minmax(0.8rem, 1fr);
+  min-height: 80vh;
+  max-height: 2048px;
+  padding: 10vh 0;
+  background-color: #252525;
+  color: white; }
+  .contact__sec > .container {
+    display: grid;
+    grid-gap: 2.4rem;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: flex-start;
+    grid-template-columns: minmax(1.6rem, 8fr) minmax(1.6rem, 5fr);
+    position: relative; }
+
+.contact__title {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  font-size: 7rem; }
+
+.contact__form {
+  padding: 3.2rem;
+  display: grid;
+  grid-gap: 3.2rem;
+  align-items: stretch;
+  align-content: stretch;
+  justify-content: flex-start;
+  grid-template-columns: max-content;
+  background: white; }
+
+.contact__item {
+  position: relative;
+  display: block;
+  width: 10rem;
+  min-width: 10rem;
+  height: 10rem;
+  background-color: #252525;
+  border-radius: 100%;
+  color: white; }
+  .contact__item > .icon {
+    --icon-size: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
 .gallery {
   --col-count: 2;
@@ -502,8 +557,8 @@ p, span, small {
     .gallery__item > img, .gallery__item > amp-img {
       display: block;
       width: 100%;
-      cursor: pointer;
-      aspect-ratio: var(--aspect-ratio); }
+      aspect-ratio: var(--aspect-ratio);
+      cursor: pointer; }
     .gallery__item > div, .gallery__item > figcaption {
       display: grid;
       align-items: flex-start;
@@ -540,11 +595,11 @@ header {
     left: 0;
     content: '';
     width: 50vw;
+    aspect-ratio: 1 / 1;
     background-image: url("../images/backgrounds/butterfly-bg.png");
     background-repeat: no-repeat;
     background-position: center center;
     transform: translate(-50%, -50%);
-    aspect-ratio: 1 / 1;
     background-size: contain; }
 
 .header__container {
@@ -606,12 +661,12 @@ header {
     left: 50%;
     content: '';
     width: 100%;
+    aspect-ratio: 1 / 1;
     margin: 0 auto;
     background: radial-gradient(#f4efeb, #dac8b9);
     border-radius: 50%;
     transform: translateX(-50%);
     z-index: 1;
-    aspect-ratio: 1 / 1;
     box-shadow: 0 0 10rem 0 rgba(0, 0, 0, 0.85); }
   .header__photo > img {
     position: relative;

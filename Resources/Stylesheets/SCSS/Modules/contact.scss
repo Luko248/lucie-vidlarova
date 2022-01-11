@@ -1,0 +1,47 @@
+@import "../base/global";
+
+.contact {
+    &__sec{
+        @include grid-columns(def, minmax($gap-m, 1fr), $gap-l, stretch, flex-start, stretch);
+        min-height: 80vh;
+        max-height: 2048px;
+        padding: 10vh 0;
+        background-color: #252525;
+        color: $color-white;
+        
+        > .container{
+            @include grid-columns(def, minmax($gap-l, 8fr) minmax($gap-l, 5fr), $gap-xl, stretch, flex-start, stretch);
+            position: relative;    
+        }
+    }
+
+    &__title{
+        position: absolute;
+        bottom: 0;
+        margin: 0;
+        font-size: 7rem;
+    }
+
+    &__form{
+        padding: $gap-xxl;
+        @include grid-columns(def, max-content, $gap-xxl, stretch, flex-start, stretch);
+        background: $color-white;
+    }
+
+    &__item{
+        position: relative;
+        display: block;
+        width: 10rem;
+        min-width: 10rem;
+        height: 10rem;
+        background-color: #252525;
+        border-radius: 100%;
+        color: $color-white;
+        
+        > .icon{
+            --icon-size: 50%;
+            @include center-item;
+        }
+    }
+    
+}

@@ -3,8 +3,7 @@
 .icon{  
     --icon-size: #{$gap-l};
    display: block;
-   width: var(--icon-size);;
-   min-width: var(--icon-size);
-   height: var(--icon-size);
+   width: var(--icon-size);
+   aspect-ratio: 1 / 1;;  
    fill: currentColor;
 }

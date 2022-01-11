@@ -47,8 +47,8 @@
         > img, > amp-img{ 
             display: block;
             width: 100%;
-            cursor: pointer;
             aspect-ratio: var(--aspect-ratio);
+            cursor: pointer;
         }
 
         > div, > figcaption{
