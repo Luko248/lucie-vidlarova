@@ -32,6 +32,7 @@
     <meta name="twitter:image" content="" />
 
     <link type="text/css" href="wwwroot/css/style.css" rel="stylesheet" />
+    <link type="text/css" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.17/dist/fancybox.css" rel="stylesheet">
 </head>
 
 <body>
@@ -174,27 +175,135 @@
             <div class="container gallery__layout">
                 <div class="gallery">
                     <div>
-                        <figure class="gallery__item">
-                            <img src="./wwwroot/images/gallery/minimalism/sloth.webp" alt="Sloth" />
-                            </amp-img>
-                            <figcaption>
-                                <small>Minimalism, Animals</small>
-                                <strong>Sloth</strong>
+                        <div class="gallery-item" id="dotwork">
+                            <a class="gallery-item__pic"
+                                data-fancybox="minimalism"
+                                data-type="image"
+                                data-caption="Circle | #minimalism, #dotwork"
+                                data-srcset="./wwwroot/images/gallery/minimalism/circle-2_320.webp 375px,
+                                            ./wwwroot/images/gallery/minimalism/circle-2_425.webp 768px,
+                                            ./wwwroot/images/gallery/minimalism/circle-2.webp 1024px"
+                                href="./wwwroot/images/gallery/minimalism/circle-2.webp">
+                                <picture>
+                                    <source type="image/webp" sizes="(max-width: 320px) 320px, (max-width: 375px) 375px, 425px" srcset ="./wwwroot/images/gallery/minimalism/circle-2_320.webp 320w, ./wwwroot/images/gallery/minimalism/circle-2_375.webp 375w, ./wwwroot/images/gallery/minimalism/circle-2_425.webp 425w">
+                                    <source type="image/png" sizes="(max-width: 320px) 320px, (max-width: 375px) 375px, 425px" srcset="./wwwroot/images/gallery/minimalism/circle-2_320.png 320w, ./wwwroot/images/gallery/minimalism/circle-2_375.png 375w, ./wwwroot/images/gallery/minimalism/circle-2_425.png 425w">
+                                    <img alt="Circle 2 425" sizes="(max-width: 320px) 320px, (max-width: 375px) 375px, 425px" src="./wwwroot/images/gallery/minimalism/circle-2_425.png" srcset="./wwwroot/images/gallery/minimalism/circle-2_320.png 320w, ./wwwroot/images/gallery/minimalism/circle-2_375.png 375w, ./wwwroot/images/gallery/minimalism/circle-2_425.png 425w">
+                                </picture>       
+                            </a>
+                            <div class="gallery-item__detail">
+                                <small>Minimalism, Dotwork</small>
+                                <strong>Circle</strong>
                                 <a href="https://www.instagram.com/lucie___________________/" target="_blank"
                                     title="insta-link">
                                     <svg class="icon icon-instagram">
                                         <use xlink:href="#icon-instagram"></use>
                                     </svg>
                                 </a>
-                            </figcaption>
-                        </figure>
-                        <figure class="gallery__item gallery__item--2-3">
-                            <amp-img src="./wwwroot/images/gallery/minimalism/leafs.webp" width="2" height="3" layout="responsive"
-                                alt="Leafs" lightbox >
-                                <amp-img fallback src="./wwwroot/images/gallery/minimalism/leafs.png" layout="responsive"></amp-img>
-                            </amp-img>
-                            <figcaption>
-                                <small>Minimalism, Plants</small>
+                            </div>     
+                        </div>
+
+                        <div class="gallery-item gallery-item--2-3">
+                            <a class="gallery-item__pic"
+                                data-fancybox="minimalism"
+                                data-type="image"
+                                data-caption="Krtek | #minimalism, #dotwork"
+                                data-srcset="./wwwroot/images/gallery/minimalism/mole_320.webp 375px,
+                                            ./wwwroot/images/gallery/minimalism/mole_425.webp 768px,
+                                            ./wwwroot/images/gallery/minimalism/mole.webp 1024px"
+                                href="./wwwroot/images/gallery/minimalism/mole.webp">
+                                <picture>
+                                    <source type="image/webp" sizes="(max-width: 320px) 320px, (max-width: 375px) 375px, 425px" srcset ="./wwwroot/images/gallery/minimalism/mole_320.webp 320w, ./wwwroot/images/gallery/minimalism/mole_375.webp 375w, ./wwwroot/images/gallery/minimalism/mole_425.webp 425w">
+                                    <source type="image/png" sizes="(max-width: 320px) 320px, (max-width: 375px) 375px, 425px" srcset="./wwwroot/images/gallery/minimalism/mole_320.png 320w, ./wwwroot/images/gallery/minimalism/mole_375.png 375w, ./wwwroot/images/gallery/minimalism/mole_425.png 425w">
+                                    <img alt="mole 425" sizes="(max-width: 320px) 320px, (max-width: 375px) 375px, 425px" src="./wwwroot/images/gallery/minimalism/mole_425.png" srcset="./wwwroot/images/gallery/minimalism/mole_320.png 320w, ./wwwroot/images/gallery/minimalism/mole_375.png 375w, ./wwwroot/images/gallery/minimalism/mole_425.png 425w">
+                                </picture>  
+                            </a>
+                            <div class="gallery-item__detail">
+                                <small>Minimalism, Dotwork</small>
+                                <strong>Krtek</strong>
+                                <a href="https://www.instagram.com/lucie___________________/" target="_blank"
+                                    title="insta-link">
+                                    <svg class="icon icon-instagram">
+                                        <use xlink:href="#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </div>     
+                        </div>
+
+                        <div class="gallery-item">
+                            <a class="gallery-item__pic"
+                                data-fancybox="minimalism"
+                                data-type="image"
+                                data-caption="Včelka | #minimalism, #dotwork"
+                                data-srcset="./wwwroot/images/gallery/minimalism/bee_320.webp 375px,
+                                            ./wwwroot/images/gallery/minimalism/bee_425.webp 768px,
+                                            ./wwwroot/images/gallery/minimalism/bee.webp 1024px"
+                                href="./wwwroot/images/gallery/minimalism/bee.webp">
+                                <picture>
+                                    <source type="image/webp" sizes="(max-width: 320px) 320px, (max-width: 375px) 375px, 425px" srcset ="./wwwroot/images/gallery/minimalism/bee_320.webp 320w, ./wwwroot/images/gallery/minimalism/bee_375.webp 375w, ./wwwroot/images/gallery/minimalism/bee_425.webp 425w">
+                                    <source type="image/png" sizes="(max-width: 320px) 320px, (max-width: 375px) 375px, 425px" srcset="./wwwroot/images/gallery/minimalism/bee_320.png 320w, ./wwwroot/images/gallery/minimalism/bee_375.png 375w, ./wwwroot/images/gallery/minimalism/bee_425.png 425w">
+                                    <img alt="bee 425" sizes="(max-width: 320px) 320px, (max-width: 375px) 375px, 425px" src="./wwwroot/images/gallery/minimalism/bee_425.png" srcset="./wwwroot/images/gallery/minimalism/bee_320.png 320w, ./wwwroot/images/gallery/minimalism/bee_375.png 375w, ./wwwroot/images/gallery/minimalism/bee_425.png 425w">
+                                </picture>
+                            </a>
+                            <div class="gallery-item__detail">
+                                <small>Minimalism, Dotwork</small>
+                                <strong>Včelka</strong>
+                                <a href="https://www.instagram.com/lucie___________________/" target="_blank"
+                                    title="insta-link">
+                                    <svg class="icon icon-instagram">
+                                        <use xlink:href="#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </div>     
+                        </div>
+
+                        <div class="gallery-item gallery-item--2-3">
+                            <a class="gallery-item__pic"
+                                data-fancybox="abstractions"
+                                data-type="image"
+                                data-caption="Triangle, [Minimalism, Abstractions]"
+                                data-srcset="./wwwroot/images/gallery/abstractions/triangle_320.webp 375px,
+                                            ./wwwroot/images/gallery/abstractions/triangle_425.webp 768px,
+                                            ./wwwroot/images/gallery/abstractions/triangle.webp 1024px"
+                                href="./wwwroot/images/gallery/abstractions/triangle.webp">
+                                <picture>
+                                    <source type="image/webp" sizes="(max-width: 320px) 320px, (max-width: 375px) 375px, 425px" srcset ="./wwwroot/images/gallery/abstractions/triangle_320.webp 320w, ./wwwroot/images/gallery/abstractions/triangle_375.webp 375w, ./wwwroot/images/gallery/abstractions/triangle_425.webp 425w">
+                                    <source type="image/png" sizes="(max-width: 320px) 320px, (max-width: 375px) 375px, 425px" srcset="./wwwroot/images/gallery/abstractions/triangle_320.png 320w, ./wwwroot/images/gallery/abstractions/triangle_375.png 375w, ./wwwroot/images/gallery/abstractions/triangle_425.png 425w">
+                                    <img alt="line 425" sizes="(max-width: 320px) 320px, (max-width: 375px) 375px, 425px" src="./wwwroot/images/gallery/abstractions/triangle_425.png" srcset="./wwwroot/images/gallery/abstractions/triangle_320.png 320w, ./wwwroot/images/gallery/abstractions/triangle_375.png 375w, ./wwwroot/images/gallery/abstractions/triangle_425.png 425w">
+                                </picture>          
+                            </a>
+                            <div class="gallery-item__detail">
+                                <small>Minimalism, Abstractions</small>
+                                <strong>Triangle</strong>
+                                <a href="https://www.instagram.com/lucie___________________/" target="_blank"
+                                    title="insta-link">
+                                    <svg class="icon icon-instagram">
+                                        <use xlink:href="#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </div>     
+                        </div>
+                       
+                    </div>
+
+                    <!-- second col -->
+                    <div>
+                        <div class="gallery-item gallery-item--2-3">
+                            <a class="gallery-item__pic"
+                                data-fancybox="minimalism"
+                                data-type="image"
+                                data-caption="Leafs | #minimalism, #dotwork"
+                                data-srcset="./wwwroot/images/gallery/minimalism/leafs_320.webp 375px,
+                                            ./wwwroot/images/gallery/minimalism/leafs_425.webp 768px,
+                                            ./wwwroot/images/gallery/minimalism/leafs.webp 1024px"
+                                href="./wwwroot/images/gallery/minimalism/leafs.webp">
+                                <picture>
+                                    <source type="image/webp" sizes="(max-width: 320px) 320px, (max-width: 375px) 375px, 425px" srcset ="./wwwroot/images/gallery/minimalism/leafs_320.webp 320w, ./wwwroot/images/gallery/minimalism/leafs_375.webp 375w, ./wwwroot/images/gallery/minimalism/leafs_425.webp 425w">
+                                    <source type="image/png" sizes="(max-width: 320px) 320px, (max-width: 375px) 375px, 425px" srcset="./wwwroot/images/gallery/minimalism/leafs_320.png 320w, ./wwwroot/images/gallery/minimalism/leafs_375.png 375w, ./wwwroot/images/gallery/minimalism/leafs_425.png 425w">
+                                    <img alt="leafs 425" sizes="(max-width: 320px) 320px, (max-width: 375px) 375px, 425px" src="./wwwroot/images/gallery/minimalism/leafs_425.png" srcset="./wwwroot/images/gallery/minimalism/leafs_320.png 320w, ./wwwroot/images/gallery/minimalism/leafs_375.png 375w, ./wwwroot/images/gallery/minimalism/leafs_425.png 425w">
+                                </picture>   
+                            </a>
+                            <div class="gallery-item__detail">
+                                <small>Minimalism, Dotwork</small>
                                 <strong>Leafs</strong>
                                 <a href="https://www.instagram.com/lucie___________________/" target="_blank"
                                     title="insta-link">
@@ -202,199 +311,63 @@
                                         <use xlink:href="#icon-instagram"></use>
                                     </svg>
                                 </a>
-                            </figcaption>
-                        </figure>
-                        <figure class="gallery__item">
-                            <amp-img id="img0" srcset="
-                                    https://picsum.photos/100 100w,
-                                    https://picsum.photos/200 200w,
-                                    https://picsum.photos/400 400w,
-                                    https://picsum.photos/800 800w" width="100" height="100" layout="responsive"
-                                alt="This is a sample description" lightbox role="button" tabindex="0">
-                            </amp-img>
-                            <figcaption>
-                                <small>Abstrakce, Handpoke</small>
-                                <strong>Tattoo name</strong>
-                                <a href="https://www.instagram.com/lucie___________________/" target="_blank"
-                                    title="insta-link">
-                                    <svg class="icon icon-instagram">
-                                        <use xlink:href="#icon-instagram"></use>
-                                    </svg>
-                                </a>
-                            </figcaption>
-                        </figure>
-                        <figure class="gallery__item gallery__item--2-3">
-                            <amp-img id="img0" srcset="
-                                    https://picsum.photos/100 100w,
-                                    https://picsum.photos/200 200w,
-                                    https://picsum.photos/400 400w,
-                                    https://picsum.photos/800 800w" width="100" height="100" layout="responsive"
-                                alt="This is a sample description" lightbox role="button" tabindex="0">
-                            </amp-img>
-                            <figcaption>
-                                <small>Abstrakce, Handpoke</small>
-                                <strong>Tattoo name</strong>
-                                <a href="https://www.instagram.com/lucie___________________/" target="_blank"
-                                    title="insta-link">
-                                    <svg class="icon icon-instagram">
-                                        <use xlink:href="#icon-instagram"></use>
-                                    </svg>
-                                </a>
-                            </figcaption>
-                        </figure>
-                        <figure class="gallery__item">
-                            <amp-img id="img0" srcset="
-                                    https://picsum.photos/100 100w,
-                                    https://picsum.photos/200 200w,
-                                    https://picsum.photos/400 400w,
-                                    https://picsum.photos/800 800w" width="100" height="100" layout="responsive"
-                                alt="This is a sample description" lightbox role="button" tabindex="0">
-                            </amp-img>
-                            <figcaption>
-                                <small>Abstrakce, Handpoke</small>
-                                <strong>Tattoo name</strong>
-                                <a href="https://www.instagram.com/lucie___________________/" target="_blank"
-                                    title="insta-link">
-                                    <svg class="icon icon-instagram">
-                                        <use xlink:href="#icon-instagram"></use>
-                                    </svg>
-                                </a>
-                            </figcaption>
-                        </figure>
-                        <figure class="gallery__item gallery__item--2-3">
-                            <amp-img id="img0" srcset="
-                                https://picsum.photos/100 100w,
-                                https://picsum.photos/200 200w,
-                                https://picsum.photos/400 400w,
-                                https://picsum.photos/800 800w" width="100" height="100" layout="responsive"
-                                alt="This is a sample description" lightbox role="button" tabindex="0">
-                            </amp-img>
-                            <figcaption>
-                                <small>Abstrakce, Handpoke</small>
-                                <strong>Tattoo name</strong>
-                                <a href="https://www.instagram.com/lucie___________________/" target="_blank"
-                                    title="insta-link">
-                                    <svg class="icon icon-instagram">
-                                        <use xlink:href="#icon-instagram"></use>
-                                    </svg>
-                                </a>
-                            </figcaption>
-                        </figure>
-                    </div>
+                            </div>     
+                        </div>
 
-                    <!-- second col -->
-                    <div>
-                        <figure class="gallery__item gallery__item--2-3">
-                            <amp-img src="./wwwroot/images/gallery/dotwork/fingers.webp" width="2" height="3" layout="responsive"
-                                alt="Fingers" lightbox >
-                                <amp-img fallback src="./wwwroot/images/gallery/dotwork/fingers.png" layout="responsive"></amp-img>
-                            </amp-img>
-                            <figcaption>
-                                <small>Dotwork</small>
-                                <strong>Fingers</strong>
+                        <div class="gallery-item">
+                            <a class="gallery-item__pic"
+                                data-fancybox="minimalism"
+                                data-type="image"
+                                data-caption="Lenochod | #minimalism, #dotwork"
+                                data-srcset="./wwwroot/images/gallery/minimalism/sloth_320.webp 375px,
+                                            ./wwwroot/images/gallery/minimalism/sloth_425.webp 768px,
+                                            ./wwwroot/images/gallery/minimalism/sloth.webp 1024px"
+                                href="./wwwroot/images/gallery/minimalism/sloth.webp">
+                                <picture>
+                                    <source type="image/webp" sizes="(max-width: 320px) 320px, (max-width: 375px) 375px, 425px" srcset ="./wwwroot/images/gallery/minimalism/sloth_320.webp 320w, ./wwwroot/images/gallery/minimalism/sloth_375.webp 375w, ./wwwroot/images/gallery/minimalism/sloth_425.webp 425w">
+                                    <source type="image/png" sizes="(max-width: 320px) 320px, (max-width: 375px) 375px, 425px" srcset="./wwwroot/images/gallery/minimalism/sloth_320.png 320w, ./wwwroot/images/gallery/minimalism/sloth_375.png 375w, ./wwwroot/images/gallery/minimalism/sloth_425.png 425w">
+                                    <img alt="sloth 425" sizes="(max-width: 320px) 320px, (max-width: 375px) 375px, 425px" src="./wwwroot/images/gallery/minimalism/sloth_425.png" srcset="./wwwroot/images/gallery/minimalism/sloth_320.png 320w, ./wwwroot/images/gallery/minimalism/sloth_375.png 375w, ./wwwroot/images/gallery/minimalism/sloth_425.png 425w">
+                                </picture>            
+                            </a>
+                            <div class="gallery-item__detail">
+                                <small>Minimalism, Dotwork</small>
+                                <strong>Lenochod</strong>
                                 <a href="https://www.instagram.com/lucie___________________/" target="_blank"
                                     title="insta-link">
                                     <svg class="icon icon-instagram">
                                         <use xlink:href="#icon-instagram"></use>
                                     </svg>
                                 </a>
-                            </figcaption>
-                        </figure>
-                        <figure class="gallery__item">
-                            <amp-img src="./wwwroot/images/gallery/lettering/inhale-exale.webp" width="1" height="1" layout="responsive"
-                                alt="Inhale - Exale" lightbox >
-                                <amp-img fallback src="./wwwroot/images/gallery/lettering/inhale-exale.png" layout="responsive"></amp-img>
-                            </amp-img>
-                            <figcaption>
-                                <small>Lettering</small>
-                                <strong>Inhale - Exale</strong>
+                            </div>     
+                        </div>
+
+                        <div class="gallery-item gallery-item--2-3" id="abstractions">
+                            <a class="gallery-item__pic"
+                                data-fancybox="abstractions"
+                                data-type="image"
+                                data-caption="Line, [Minimalism, Abstractions]"
+                                data-srcset="./wwwroot/images/gallery/abstractions/line_320.webp 375px,
+                                            ./wwwroot/images/gallery/abstractions/line_425.webp 768px,
+                                            ./wwwroot/images/gallery/abstractions/line.webp 1024px"
+                                href="./wwwroot/images/gallery/abstractions/line.webp">
+                                <picture>
+                                    <source type="image/webp" sizes="(max-width: 320px) 320px, (max-width: 375px) 375px, 425px" srcset ="./wwwroot/images/gallery/abstractions/line_320.webp 320w, ./wwwroot/images/gallery/abstractions/line_375.webp 375w, ./wwwroot/images/gallery/abstractions/line_425.webp 425w">
+                                    <source type="image/png" sizes="(max-width: 320px) 320px, (max-width: 375px) 375px, 425px" srcset="./wwwroot/images/gallery/abstractions/line_320.png 320w, ./wwwroot/images/gallery/abstractions/line_375.png 375w, ./wwwroot/images/gallery/abstractions/line_425.png 425w">
+                                    <img alt="line 425" sizes="(max-width: 320px) 320px, (max-width: 375px) 375px, 425px" src="./wwwroot/images/gallery/abstractions/line_425.png" srcset="./wwwroot/images/gallery/abstractions/line_320.png 320w, ./wwwroot/images/gallery/abstractions/line_375.png 375w, ./wwwroot/images/gallery/abstractions/line_425.png 425w">
+                                </picture>          
+                            </a>
+                            <div class="gallery-item__detail">
+                                <small>Minimalism, Abstractions</small>
+                                <strong>Line</strong>
                                 <a href="https://www.instagram.com/lucie___________________/" target="_blank"
                                     title="insta-link">
                                     <svg class="icon icon-instagram">
                                         <use xlink:href="#icon-instagram"></use>
                                     </svg>
                                 </a>
-                            </figcaption>
-                        </figure>
-                        <figure class="gallery__item gallery__item--2-3">
-                            <amp-img id="img0" srcset="
-                                    https://picsum.photos/100 100w,
-                                    https://picsum.photos/200 200w,
-                                    https://picsum.photos/400 400w,
-                                    https://picsum.photos/800 800w" width="100" height="100" layout="responsive"
-                                alt="This is a sample description" lightbox role="button" tabindex="0">
-                            </amp-img>
-                            <figcaption>
-                                <small>Abstrakce, Handpoke</small>
-                                <strong>Tattoo name</strong>
-                                <a href="https://www.instagram.com/lucie___________________/" target="_blank"
-                                    title="insta-link">
-                                    <svg class="icon icon-instagram">
-                                        <use xlink:href="#icon-instagram"></use>
-                                    </svg>
-                                </a>
-                            </figcaption>
-                        </figure>
-                        <figure class="gallery__item" id="handpoke">
-                            <amp-img id="img0" srcset="
-                                    https://picsum.photos/100 100w,
-                                    https://picsum.photos/200 200w,
-                                    https://picsum.photos/400 400w,
-                                    https://picsum.photos/800 800w" width="100" height="100" layout="responsive"
-                                alt="This is a sample description" lightbox role="button" tabindex="0">
-                            </amp-img>
-                            <figcaption>
-                                <small>Abstrakce, Handpoke</small>
-                                <strong>Tattoo name</strong>
-                                <a href="https://www.instagram.com/lucie___________________/" target="_blank"
-                                    title="insta-link">
-                                    <svg class="icon icon-instagram">
-                                        <use xlink:href="#icon-instagram"></use>
-                                    </svg>
-                                </a>
-                            </figcaption>
-                        </figure>
-                        <figure class="gallery__item gallery__item--2-3">
-                            <amp-img id="img0" srcset="
-                                    https://picsum.photos/100 100w,
-                                    https://picsum.photos/200 200w,
-                                    https://picsum.photos/400 400w,
-                                    https://picsum.photos/800 800w" width="100" height="100" layout="responsive"
-                                alt="This is a sample description" lightbox role="button" tabindex="0">
-                            </amp-img>
-                            <figcaption>
-                                <small>Abstrakce, Handpoke</small>
-                                <strong>Tattoo name</strong>
-                                <a href="https://www.instagram.com/lucie___________________/" target="_blank"
-                                    title="insta-link">
-                                    <svg class="icon icon-instagram">
-                                        <use xlink:href="#icon-instagram"></use>
-                                    </svg>
-                                </a>
-                            </figcaption>
-                        </figure>
-                        <figure class="gallery__item">
-                            <amp-img id="img0" srcset="
-                                https://picsum.photos/100 100w,
-                                https://picsum.photos/200 200w,
-                                https://picsum.photos/400 400w,
-                                https://picsum.photos/800 800w" width="100" height="100" layout="responsive"
-                                alt="This is a sample description" lightbox role="button" tabindex="0">
-                            </amp-img>
-                            <figcaption>
-                                <small>Abstrakce, Handpoke</small>
-                                <strong>Tattoo name</strong>
-                                <a href="https://www.instagram.com/lucie___________________/" target="_blank"
-                                    title="insta-link">
-                                    <svg class="icon icon-instagram">
-                                        <use xlink:href="#icon-instagram"></use>
-                                    </svg>
-                                </a>
-                            </figcaption>
-                        </figure>
+                            </div>     
+                        </div>
                     </div>
-                    <amp-image-lightbox id="image-lightbox1" layout="nodisplay" data-close-button-aria-label="Close">
-                    </amp-image-lightbox>
                 </div>
                 <div class="gallery__info">
                     <h2 class="title">
@@ -515,6 +488,7 @@
     <footer></footer>
 
     <script src="./wwwroot/js/init.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.17/dist/fancybox.umd.js" type="text/javascript" async></script>
 </body>
 
 </html>

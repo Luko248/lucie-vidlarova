@@ -55,5 +55,8 @@
     "watch": "npm run watch:scss && npm run build-watch",
     "watch:scss": "npm run bundle:css & watch \"npm run bundle:css\" Resources/Stylesheets/Scss",
     "browser-sync": "browser-sync start --proxy https://localhost:44302/ --files=\"wwwroot/css/*.css\" \"wwwroot/js/*.js\""
+  },
+  "dependencies": {
+    "@fancyapps/ui": "^4.0.17"
   }
 }
