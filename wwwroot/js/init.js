@@ -17,7 +17,6 @@ const menu = document.querySelector('.nav__menu');
 const navItems = document.querySelectorAll('.nav__item');
 const htmlDoc = document.querySelector('body');
 const gallery = document.getElementById('gallery');
-const contact = document.getElementById('contact');
 const social = document.querySelector('.social');
 const halfDisplayHeight = window.innerHeight / 2;
 function toggleOpenMenuClasses() {
@@ -48,11 +47,22 @@ function toggleSocialColors() {
         social.classList.remove('social--dark');
     }
 }
-// Optimize scroll function
 function toggleNavClassesOnScroll() {
-    window.addEventListener('scroll', () => {
+    let lastKnownScrollPosition = 0;
+    let ticking = false;
+    function toggleNavClasses(scrollPosition) {
         toggleNavColors();
         toggleSocialColors();
+    }
+    document.addEventListener('scroll', (e) => {
+        lastKnownScrollPosition = window.scrollY;
+        if (!ticking) {
+            window.requestAnimationFrame(function () {
+                toggleNavClasses(lastKnownScrollPosition);
+                ticking = false;
+            });
+            ticking = true;
+        }
     });
 }
 function initNav() {
