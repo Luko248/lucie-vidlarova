@@ -234,7 +234,7 @@ p, span, small {
     display: block;
     width: 100%;
     height: 6px;
-    background: #fff;
+    background: var(--nav-color);
     border-radius: 2px;
     transition: all .3s;
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3); }
@@ -419,6 +419,7 @@ p, span, small {
   background: #c8ae98; }
 
 .social {
+  --social-item-color: var(--color-white);
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -430,9 +431,12 @@ p, span, small {
   right: 2.4rem;
   transform: translateY(-50%);
   z-index: 999; }
+  .social--dark {
+    --social-item-color: var(--color-black); }
+  .social--menu-open {
+    --social-item-color: var(--color-white); }
   .social__item {
     --item-scale: 1;
-    --item-color: var(--color-white);
     transition: transform var(--trans-time) var(--trans-fnc) 0s;
     position: relative;
     display: block;
@@ -450,7 +454,7 @@ p, span, small {
       left: 50%;
       transform: translate(-50%, -50%);
       transition: fill var(--trans-time) var(--trans-fnc) 0s;
-      fill: var(--item-color); }
+      fill: var(--social-item-color); }
 
 .contact__sec {
   display: grid;
@@ -683,33 +687,38 @@ header {
     z-index: 2; }
 
 .nav {
-  --nav__item-color: var(--color-white);
+  --nav-color: var(--color-white);
   --nav__menu-display: none;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  align-content: normal;
+  justify-content: space-between;
+  gap: 2.4rem;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: var(--nav-height);
   padding: 0 2.4rem;
-  z-index: 999;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  align-content: normal;
-  justify-content: space-between;
-  gap: 2.4rem; }
+  color: var(--nav-color);
+  z-index: 999; }
+  .nav--dark {
+    --nav-color: var(--color-black); }
+  .nav--menu-open {
+    --nav-color: var(--color-white); }
   .nav ul {
     padding: 0;
     list-style: none; }
   .nav__right {
     --menu-gap: 2.4rem;
-    list-style: none;
     display: inline-flex;
     flex-flow: row wrap;
     align-items: center;
     align-content: normal;
     justify-content: flex-start;
-    gap: var(--menu-gap); }
+    gap: var(--menu-gap);
+    list-style: none; }
     .nav__right a {
       transition: color var(--trans-time) var(--trans-fnc) 0s;
       display: block;
@@ -796,6 +805,7 @@ header {
       position: relative;
       display: block;
       height: 100%;
+      color: currentColor;
       text-decoration: none;
       z-index: 10; }
     .nav__item strong {

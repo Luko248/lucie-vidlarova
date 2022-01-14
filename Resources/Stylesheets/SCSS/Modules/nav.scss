@@ -2,16 +2,25 @@
 
 
 .nav{  
-    --nav__item-color: var(--color-white);
+    --nav-color: var(--color-white);
     --nav__menu-display: none;
+    @include flex-set(def, row, nowrap, $gap-xl, center, space-between);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: var(--nav-height);
     padding: 0 $gap-xl;
+    color: var(--nav-color);
     z-index: 999;
-    @include flex-set(def, row, nowrap, $gap-xl, center, space-between);
+
+    &--dark{
+        --nav-color: var(--color-black);
+    }
+
+    &--menu-open{
+        --nav-color: var(--color-white);
+    }
 
     ul{
         padding: 0;
@@ -20,8 +29,8 @@
 
     &__right{
         --menu-gap: #{$gap-xl};
-        list-style: none;
         @include flex-set(inline, row, wrap, var(--menu-gap), center);
+        list-style: none;
 
         a {
             @include transition(color);
@@ -128,6 +137,7 @@
             position: relative;
             display: block;
             height: 100%;
+            color: currentColor;
             text-decoration: none;    
             z-index: 10;
         }
