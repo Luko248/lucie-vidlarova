@@ -31,8 +31,12 @@ function toggleNavColors(){
 function toggleSocialColors(){
     if(window.pageYOffset >= gallery.offsetTop - halfDisplayHeight){
         social.classList.add('social--dark')
-    }
+    }    
     else{ 
+        social.classList.remove('social--dark')
+    }
+
+    if (window.pageYOffset >= gallery.offsetTop + halfDisplayHeight){
         social.classList.remove('social--dark')
     }
 }

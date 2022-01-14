@@ -44,6 +44,9 @@ function toggleSocialColors() {
     else {
         social.classList.remove('social--dark');
     }
+    if (window.pageYOffset >= gallery.offsetTop + halfDisplayHeight) {
+        social.classList.remove('social--dark');
+    }
 }
 // Optimize scroll function
 function toggleNavClassesOnScroll() {
