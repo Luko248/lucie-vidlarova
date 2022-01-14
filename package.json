@@ -1,7 +1,7 @@
 {
-  "version": "2.1.1",
+  "version": "3.0.0",
   "name": "lucie_vidlarova_portfolio",
-  "description": "NPM config with stylelint. Updated on 11.1.2022",
+  "description": "webpack with stylelint config. Updated on 14.1.2022",
   "private": true,
   "main": "./postcss.config.js",
   "author": "Lukáš Chylík",
@@ -17,12 +17,15 @@
     "postcss-loader": "^6.2.1",
     "postcss-scss": "^4.0.3",
     "postcss-value-parser": "^4.2.0",
-    "stylelint": "^14.1.0",
+    "stylelint": "^14.2.0",
     "stylelint-order": "^5.0.0",
-    "tailwindcss": "^3.0.13",
+    "ts-loader": "^9.2.6",
     "typescript": "^4.5.4",
     "uglify-js": "^3.14.5",
-    "watch": "^1.0.2"
+    "watch": "^1.0.2",
+    "webpack": "^5.66.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.3"
   },
   "browserslist": {
     "production": [
@@ -40,17 +43,17 @@
     "fileExtensions": "scss"
   },
   "scripts": {
-    "version": "npm --version && node --version",
-    "bundle": "npm run bundle:css && npm run bundle:js",
+    "bundle": "npm run bundle:css && npm run build-prod",
+    "build-dev": "webpack --mode=development",
+    "build-prod": "webpack --mode=production",
+    "build-watch": "webpack --mode=development --watch",
     "postcss": "npm run compile:scss && postcss wwwroot/css/style.css --config ./postcss.config.js -o wwwroot/css/style.css",
     "bundle:css": "npm run stylelint && npm run compile:scss && postcss wwwroot/css/style.css --config ./postcss.config.js | cleancss -o wwwroot/css/style.min.css",
-    "bundle:js": "npm run compile:ts && uglifyjs -o wwwroot/JS/app.min.js -c -m -- wwwroot/JS/app.js",
     "compile:scss": "node-sass --source-map=true Resources/Stylesheets/Scss/style.scss wwwroot/css/style.css",
     "compile:ts": "tsc -p Resources",
     "stylelint": "stylelint --fix Resources/Stylesheets/Scss/**/*.scss --custom-syntax postcss-scss",
-    "watch": "npm run watch:scss && npm run watch:ts",
+    "watch": "npm run watch:scss && npm run build-watch",
     "watch:scss": "npm run bundle:css & watch \"npm run bundle:css\" Resources/Stylesheets/Scss",
-    "watch:ts": "npm run compile:ts -- -w && npm run bundle:js",
     "browser-sync": "browser-sync start --proxy https://localhost:44302/ --files=\"wwwroot/css/*.css\" \"wwwroot/js/*.js\""
   }
 }

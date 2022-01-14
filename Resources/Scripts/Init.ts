@@ -1,3 +1,5 @@
-﻿document.addEventListener("DOMContentLoaded", function (e) {
+﻿import {initNav} from './navigation'
 
+document.addEventListener("DOMContentLoaded", function () {
+    initNav();
 });

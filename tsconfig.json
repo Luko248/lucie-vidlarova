@@ -1,17 +1,23 @@
 ﻿{
-  "compilerOptions": {
-    "outFile": "./wwwroot/JS/app.js",
-    "lib": [ "dom", "es5", "es2015.core", "es2015.promise" ],
-    "strictNullChecks": false,
-    "noEmitOnError": true,
-    "noImplicitReturns": true,
-    "removeComments": true,
-    "sourceMap": true,
-    "target": "es5"
-  },
   "compileOnSave": false,
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "noEmitHelpers": false,
+    "module": "CommonJS",
+    "target": "ES6",
+    "esModuleInterop": true,
+    "lib": [
+      "DOM",
+      "ES2021",
+      "ESNext"
+    ],
+  },
+  "include": [
+    "./Resources/**/*"
+  ],
   "exclude": [
-    "node_modules",
-    "Scripts/typings"
-  ]
+    "node_modules"
+  ],
+  "sourceMap": true
 }
