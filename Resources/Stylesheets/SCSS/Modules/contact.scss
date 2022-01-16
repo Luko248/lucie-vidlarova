@@ -3,6 +3,7 @@
 .contact {
     &__sec{
         @include grid-columns(def, minmax($gap-m, 1fr), $gap-l, stretch, flex-start, stretch);
+        position: relative;
         min-height: 80vh;
         max-height: 2048px;
         padding: 10vh 0;
@@ -13,7 +14,14 @@
             @include grid-columns(def, minmax($gap-l, 8fr) minmax($gap-l, 5fr), $gap-xl, stretch, flex-start, stretch);
             position: relative;    
         }
+
     }
+
+        &__map{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
 
     &__title{
         position: absolute;
