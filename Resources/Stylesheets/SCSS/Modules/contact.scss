@@ -1,55 +1,79 @@
 @import "../base/global";
 
 .contact {
-    &__sec{
-        @include grid-columns(def, minmax($gap-m, 1fr), $gap-l, stretch, flex-start, stretch);
+    &__sec {
+        @include grid-columns(
+            def,
+            minmax($gap-m, 1fr),
+            $gap-l,
+            stretch,
+            flex-start,
+            stretch
+        );
         position: relative;
-        min-height: 80vh;
+        min-height: 70vh;
         max-height: 2048px;
-        padding: 10vh 0;
-        background-color: #252525;
+        padding: 6vh 0;
+        background-color: $color-footer-bg;
         color: $color-white;
-        
-        > .container{
-            @include grid-columns(def, minmax($gap-l, 8fr) minmax($gap-l, 5fr), $gap-xl, stretch, flex-start, stretch);
-            position: relative;    
-        }
 
+        > .container {
+            @include grid-columns(
+                def,
+                minmax($gap-l, 8fr) minmax($gap-l, 5fr),
+                $gap-xl,
+                stretch,
+                flex-start,
+                stretch
+            );
+            position: relative;
+        }
     }
 
-        &__map{
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-
-    &__title{
+    &__map {
         position: absolute;
-        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__title {
+        position: absolute;
+        bottom: $gap-l;
         margin: 0;
-        font-size: 7rem;
+        font-size: 5rem;
     }
 
-    &__form{
+    &__form {
+        position: absolute;
+        top: 0;
+        bottom: -20vh;
+        width: 100%;
         padding: $gap-xxl;
-        @include grid-columns(def, max-content, $gap-xxl, stretch, flex-start, stretch);
         background: $color-white;
+
+        @include grid-columns(
+            def,
+            max-content,
+            $gap-xxl,
+            stretch,
+            flex-start,
+            stretch
+        );
     }
 
-    &__item{
+    &__item {
         position: relative;
         display: block;
         width: 10rem;
         min-width: 10rem;
         height: 10rem;
-        background-color: #252525;
+        background-color: $color-footer-bg;
         border-radius: 100%;
         color: $color-white;
-        
-        > .icon{
+
+        > .icon {
             --icon-size: 50%;
             @include center-item;
         }
     }
-    
 }

@@ -24,7 +24,7 @@ p, span, small{
     color: var(--title-color);
 
     &--white{
-        --title-color: #{$color-white--trans};
+        --title-color: #{$color-white};
     }
 }
 

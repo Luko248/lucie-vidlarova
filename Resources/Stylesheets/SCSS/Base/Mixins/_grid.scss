@@ -21,7 +21,7 @@
     }
 
     @if $gap != 0 {
-        grid-gap: $gap;
+        gap: $gap;
     }
 
     align-items: $align-items;
@@ -48,7 +48,7 @@
     }
 
     @if $gap != 0 {
-        grid-gap: $gap;
+        gap: $gap;
     }
 
     align-items: $align-items;

@@ -69,10 +69,10 @@
 
     &__options{
         --col-count: 4;
+        @include grid-columns(def, repeat(var(--col-count), minmax($gap-l, 1fr)), 0, stretch, center, stretch);
         width: 90%;
         height: 100vh;
-        list-style: none;
-        @include grid-columns(def, repeat(var(--col-count), minmax($gap-l, 1fr)), $gap-xl, stretch, center, stretch);
+        list-style: none;  
     }
     
     &__item {
@@ -148,7 +148,7 @@
             bottom: $gap-xxl;
             left: $gap-xl;
             max-width: var(--text-width);
-            font-size: x-large;
+            font-size: xx-large;
             color: var(--nav__item-color);
             white-space: break-spaces;
             z-index: 10;
