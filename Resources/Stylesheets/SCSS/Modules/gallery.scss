@@ -22,8 +22,6 @@
 
   &__layout {
     @include grid-columns(def, minmax($gap-m, 8fr) minmax($gap-m, 5fr), 8rem);
-    position: sticky;
-    top: 0;
     height: 90%;
     margin: auto;
     overflow: auto;

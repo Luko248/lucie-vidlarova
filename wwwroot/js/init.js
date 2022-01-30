@@ -2,6 +2,26 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./Resources/Scripts/footer.ts":
+/*!*************************************!*\
+  !*** ./Resources/Scripts/footer.ts ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.setCopyright = void 0;
+const copy = document.getElementById('copy');
+function setCopyright() {
+    if (copy) {
+        copy.innerText = `© ${new Date().getFullYear()} Lucie Vidářová. All rights reserved.`;
+    }
+}
+exports.setCopyright = setCopyright;
+
+
+/***/ }),
+
 /***/ "./Resources/Scripts/navigation.ts":
 /*!*****************************************!*\
   !*** ./Resources/Scripts/navigation.ts ***!
@@ -118,8 +138,10 @@ var exports = __webpack_exports__;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const navigation_1 = __webpack_require__(/*! ./navigation */ "./Resources/Scripts/navigation.ts");
+const footer_1 = __webpack_require__(/*! ./footer */ "./Resources/Scripts/footer.ts");
 document.addEventListener("DOMContentLoaded", function () {
     (0, navigation_1.initNav)();
+    (0, footer_1.setCopyright)();
 });
 
 })();

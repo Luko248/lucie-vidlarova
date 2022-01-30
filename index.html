@@ -140,37 +140,37 @@
         </a>
     </div>
 
-    <header>
-        <div class="container header__container">
-            <div class="header__content">
-                <div class="header__title">
-                    <h1>Jsem Lucie</h1>
-                    <strong>TATÉRKA</strong>
-                    <p>
-                        Ahoj! Jmenuji se Lucie Vidlářová a jsem tatérka.
-                        <br />
-                        Primárně se zaměřuji na
-                        <strong>dotwork</strong>
-                        ,
-                        <strong>minimalismus</strong>
-                        a
-                        <strong>abstrakce</strong>
-                        .
-                    </p>
+    <div class="content-scroll">    
+        <header>
+            <div class="container header__container">
+                <div class="header__content">
+                    <div class="header__title">
+                        <h1>Jsem Lucie</h1>
+                        <strong>TATÉRKA</strong>
+                        <p>
+                            Ahoj! Jmenuji se Lucie Vidlářová a jsem tatérka.
+                            <br />
+                            Primárně se zaměřuji na
+                            <strong>dotwork</strong>
+                            ,
+                            <strong>minimalismus</strong>
+                            a
+                            <strong>abstrakce</strong>
+                            .
+                        </p>
+                    </div>
+                    <a href="#gallery" class="button">
+                        Moje Práce
+                    </a>
                 </div>
-                <a href="#gallery" class="button">
-                    Moje Práce
-                </a>
-            </div>
-            <div class="header__content">
-                <div class="header__photo">
-                    <img src="wwwroot/images/profile/profile.png" alt="Profile photo" />
+                <div class="header__content">
+                    <div class="header__photo">
+                        <img src="wwwroot/images/profile/profile.png" alt="Profile photo" />
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <main>    
         <section id="gallery" class="gallery__sec">
             <div class="container gallery__layout">
                 <div class="gallery">
@@ -439,14 +439,36 @@
         <section id="contact" class="contact__sec">
             <div id="map" class="contact__map"></div>
             <div class="container">
-                <div>
-                    <h2 class="title title--white contact__title">Kontaktuj mě</h2>
-                </div>
+                <h2 class="title title--white contact__title">Kontaktuj mě</h2>
                <div class="relative">
                 <div class="contact__form">
                     <p>Možnost online konzultace před tetováním</p>
+                        <form action="">
+                            <div class="form__item">
+                                <label for="fname">Jméno</label>
+                                <input type="text" name="fname" id="fname" required>
+                            </div>
+                            <div class="form__item">
+                                <label for="lname">Příjmení</label>
+                                <input type="text" name="lname" id="lname" required>
+                            </div>
+                            <div class="form__item">
+                                <label for="email">E-mail</label>
+                                <input type="email" name="email" id="email" required>
+                            </div>
+                            <div class="form__item">
+                                <label for="phone">Telefon</label>
+                                <input type="tel" name="phone" id="phone">
+                            </div>
+                            <div class="form__item form__item--col-2">
+                                <label for="phone">Tvoje zpráva</label>
+                                <textarea name="message" id="message" rows="10" required></textarea>
+                            </div>
 
-                    <a href="https://meet.google.com/" target="_blank" class="contact__item" 
+                            <input type="submit" >
+                        </form>
+                                            
+                        <!-- <a href="https://meet.google.com/" target="_blank" class="contact__item" 
                         rel="noreferer" aria-label="Google Meet" title="Google Meet">
                         <svg class="icon icon-meet">
                             <use xlink:href="#icon-meet"></use>
@@ -465,127 +487,59 @@
                         <svg class="icon icon-skype">
                             <use xlink:href="#icon-skype"></use>
                         </svg>
-                    </a>
+                    </a> -->
                 </div>
                </div>
             </div>
         </section>
-    </main>
-    <footer class="footer">
-        <div class="container">
-        <div class="footer__inner">
-           <div>
-            <h4>Adresa</h4>
-            <address>
-                Hybešova 308/61<br>
-                602 00, Staré Brno<br>
-                1. Patro, Dveře Adm 2.7
-            </address>
-           </div>
-           <div>
-               <h4>Kontakty</h4>
-               <a class="link" href="mailto:vidlarova.lucie@gmail.com">vidlarova.lucie@gmail.com</a>
-           </div>
-        </div>
-       
-        <div class="footer__inner footer__inner--end">
-            <div class="footer__social">
-                <a href="https://www.instagram.com/lucie___________________/" target="_blank" rel="noreferrer"
-                    class="social__item" title="Instagram link">
-                    <svg class="icon icon-instagram">
-                        <use xlink:href="#icon-instagram"></use>
-                    </svg>
-                </a>
-                <a href="https://cs-cz.facebook.com/lucka.vidlarova" target="_blank" rel="noreferrer" class="social__item"
-                    title="Facebok link">
-                    <svg class="icon icon-facebook">
-                        <use xlink:href="#icon-facebook"></use>
-                    </svg>
-                </a>
-                <a href="https://www.linkedin.com/in/lucie-vidl%C3%A1%C5%99ov%C3%A1-757496203/?originalSubdomain=cz"
-                    target="_blank" rel="noreferrer" class="social__item" title="LinkedIn link">
-                    <svg class="icon icon-linkedin">
-                        <use xlink:href="#icon-linkedin"></use>
-                    </svg>
-                </a>
+        <footer class="footer">
+            <div class="container">
+            <div class="footer__inner">
+               <div>
+                <h4>Adresa</h4>
+                <address>
+                    Hybešova 308/61<br>
+                    602 00, Staré Brno<br>
+                    1. Patro, Dveře Adm 2.7
+                </address>
+               </div>
+               <div>
+                   <h4>Kontakty</h4>
+                   <a class="link" href="mailto:vidlarova.lucie@gmail.com">vidlarova.lucie@gmail.com</a>
+               </div>
             </div>
-            <h4 class="lower text-to-right">
-                - sleduj mě
-            </h4>
-        </div>
-        </div>
-        <div class="footer__copy">
-            <small>© 2022 Lucie Vidářová. All rights reserved.</small>
-        </div>
-    </footer>
-    <!-- <main class="parallax">
-        <section class="parallax__section" id="group1">
-            <div class="parallax__layer parallax__layer--base">
-             
-            </div>
-        </section>
-        <section class="parallax__section" id="group2">
-            <div class="parallax__layer parallax__layer--base">
-                <div class="container">
-                    <h2 class="title">
-                        My Work
-                    </h2>
-                    <p class="desc">
-                        There are many variations of passages of Lorem Ipsum available,<br>
-                        but the majority have suffered alteration in some form, by injected humour, or randomised words
-                        <br>
-                        which don't look even slightly believable.
-                    </p>
-                    
+           
+            <div class="footer__inner footer__inner--end">
+                <div class="footer__social">
+                    <a href="https://www.instagram.com/lucie___________________/" target="_blank" rel="noreferrer"
+                        class="social__item" title="Instagram link">
+                        <svg class="icon icon-instagram">
+                            <use xlink:href="#icon-instagram"></use>
+                        </svg>
+                    </a>
+                    <a href="https://cs-cz.facebook.com/lucka.vidlarova" target="_blank" rel="noreferrer" class="social__item"
+                        title="Facebok link">
+                        <svg class="icon icon-facebook">
+                            <use xlink:href="#icon-facebook"></use>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/lucie-vidl%C3%A1%C5%99ov%C3%A1-757496203/?originalSubdomain=cz"
+                        target="_blank" rel="noreferrer" class="social__item" title="LinkedIn link">
+                        <svg class="icon icon-linkedin">
+                            <use xlink:href="#icon-linkedin"></use>
+                        </svg>
+                    </a>
                 </div>
+                <h4 class="lower text-to-right">
+                    - sleduj mě
+                </h4>
             </div>
-            <div class="parallax__layer parallax__layer--back">
-
             </div>
-        </section>
-        <section class="parallax__section" id="group3">
-            <div class="parallax__layer parallax__layer--fore">
-                <h2>Foreground Layer Layer</h2>
+            <div class="footer__copy">
+                <small id="copy"></small>
             </div>
-            <div class="parallax__layer parallax__layer--base">
-                <h2>Base Layer</h2>
-            </div>
-        </section>
-        <section class="parallax__section" id="group4">
-            <div class="parallax__layer parallax__layer--base">
-                <h2>Base Layer</h2>
-            </div>
-            <div class="parallax__layer parallax__layer--back">
-                <h2>Back Layer</h2>
-            </div>
-            <div class="parallax__layer parallax__layer--deep">
-                <h2>Deep Layer</h2>
-            </div>
-        </section>
-        <section class="parallax__section" id="group5">
-            <div class="parallax__layer parallax__layer--for">
-                <h2>Foreground Layer</h2>
-            </div>
-            <div class="parallax__layer parallax__layer--base">
-                <h2>Base Layer</h2>
-            </div>
-        </section>
-        <section class="parallax__section" id="group6">
-            <div class="parallax__layer parallax__layer--back">
-                <h2>Back Layer</h2>
-            </div>
-            <div class="parallax__layer parallax__layer--base">
-                <h2>Base Layer</h2>
-            </div>
-        </section>
-        <section class="parallax__section" id="group7">
-            <div class="parallax__layer parallax__layer--base">
-                <h2>Base Layer</h2>
-            </div>
-        </section>
-    </main> -->
-
-    
+        </footer>
+    </main>
 
     <script src="./wwwroot/js/init.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.17/dist/fancybox.umd.js" type="text/javascript" async></script>
@@ -595,8 +549,9 @@
             function initMap() {
             map = new google.maps.Map(document.getElementById("map"), {
                 mapId: "1406e53bf9ae68ff",
-                center: { lat: 49.18920, lng: 16.60250 },
+                center: { lat: 49.18900, lng: 16.60100 },
                 zoom: 18,
+                draggable: false,
                 disableDefaultUI: true
             });
             }

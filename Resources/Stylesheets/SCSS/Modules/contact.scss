@@ -27,8 +27,13 @@
                 stretch
             );
             position: relative;
+            
+         > .relative{
+                grid-column-start: 2;
+            }
         }
     }
+    
 
     &__map {
         position: absolute;
