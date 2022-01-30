@@ -360,47 +360,6 @@ p, span, small {
       width: 100%;
       min-width: 0;
       padding: 0 var(--pad-base); } }
-  @media only screen and (max-width: 1360px) {
-    .container--no-padding {
-      padding: 0; } }
-  .container--small {
-    min-width: 0;
-    max-width: 768px; }
-    @media only screen and (max-width: 768px) {
-      .container--small {
-        width: 80%; } }
-    @media only screen and (max-width: 425px) {
-      .container--small {
-        width: 100%; } }
-  .container--smaller {
-    width: 100%;
-    min-width: 0;
-    max-width: 425px; }
-    @media only screen and (max-width: 768px) {
-      .container--smaller {
-        max-width: none; } }
-
-.grid-container {
-  display: grid;
-  width: 80%;
-  min-width: 115rem;
-  max-width: 1440px;
-  margin: 0 auto;
-  grid-template-columns: repeat(2, 1fr); }
-  .grid-container--items-center {
-    align-items: center; }
-  @media only screen and (max-width: 1440px) {
-    .grid-container {
-      width: 80%; } }
-  @media only screen and (max-width: 1360px) {
-    .grid-container {
-      align-items: stretch;
-      width: 100%;
-      min-width: 0;
-      padding: 0 var(--pad-base);
-      grid-gap: 3rem;
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: max-content; } }
 
 .form {
   --col-count: 2;

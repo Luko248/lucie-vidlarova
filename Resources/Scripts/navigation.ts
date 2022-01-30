@@ -1,11 +1,12 @@
 const menuBtn = document.getElementById('nebuBtn')
 const nav = document.querySelector('nav')
 const menu = document.querySelector('.nav__menu')
-const navItems = document.querySelectorAll('.nav__item')
+const menuItems = document.querySelectorAll('.nav__item')
+const navItems = document.querySelectorAll('.nav__right > li > a')
 const htmlDoc = document.querySelector('body')
 const gallery = document.getElementById('gallery')
 const social = document.querySelector('.social')
-const halfDisplayHeight = window.innerHeight / 2
+const contentScroll = document.querySelector('.content-scroll') as HTMLDivElement
 
 function toggleOpenMenuClasses(){
     menuBtn.classList.toggle('burger--open')
@@ -19,7 +20,7 @@ function toggleOpenMenuClasses(){
 }
 
 function toggleNavColors(){
-    if(window.pageYOffset >= gallery.offsetTop){
+    if(contentScroll.scrollTop >= gallery.offsetTop && contentScroll.scrollTop <= gallery.offsetTop + (window.innerHeight * .95)){
         nav.classList.add('nav--dark')
     }
     else{ 
@@ -28,14 +29,10 @@ function toggleNavColors(){
 }
 
 function toggleSocialColors(){
-    if(window.pageYOffset >= gallery.offsetTop - halfDisplayHeight){
+    if(contentScroll.scrollTop >= gallery.offsetTop - (window.innerHeight / 2) && contentScroll.scrollTop <= gallery.offsetTop + (window.innerHeight / 2)){
         social.classList.add('social--dark')
     }    
     else{ 
-        social.classList.remove('social--dark')
-    }
-
-    if (window.pageYOffset >= gallery.offsetTop + halfDisplayHeight){
         social.classList.remove('social--dark')
     }
 }
@@ -49,9 +46,9 @@ function toggleNavClassesOnScroll(){
         toggleSocialColors()
     }
     
-    document.addEventListener('scroll', (e)=>{
-        lastKnownScrollPosition = window.scrollY;
-
+    contentScroll.addEventListener('scroll', (e)=>{
+        lastKnownScrollPosition = contentScroll.scrollTop;
+        console.log(lastKnownScrollPosition)
         if (!ticking) {
             window.requestAnimationFrame(function() {
                 toggleNavClasses(lastKnownScrollPosition);
@@ -68,9 +65,17 @@ export function initNav(){
         toggleOpenMenuClasses()
     })
 
-    navItems.forEach(navItems => {
-        navItems.addEventListener('click', () => {
+    menuItems.forEach(item => {
+        item.addEventListener('click', () => {
             toggleOpenMenuClasses()
+        })
+    })
+
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            if (menu.classList.contains('nav__menu--open')){
+                toggleOpenMenuClasses()
+            }           
         })
     })
 
