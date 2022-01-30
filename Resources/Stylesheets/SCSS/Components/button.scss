@@ -33,13 +33,13 @@
         }
     }
 
-    &--black{
+    &--dark{
         --btn-color: var(--color-white);
-        --btn-bg-color: var(--color-black); 
+        --btn-bg-color: var(--color-secondary); 
 
         &:hover{
             --btn-color: var(--color-primary);
-            --btn-bg-color: var(--color-black);
+            --btn-bg-color: var(--color-secondary);
         }
     }
 }

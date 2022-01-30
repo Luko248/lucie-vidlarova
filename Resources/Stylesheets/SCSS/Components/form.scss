@@ -4,6 +4,7 @@
     --col-count: 2;
     @include grid-columns(def, repeat(var(--col-count), minmax($gap-l, 1fr)), $gap-xxl);
     width: 100%;
+    margin-top: 5rem;
 
     &__item{
         --border-color: currentColor;
@@ -13,8 +14,9 @@
 
         >label{
             @include flex-set(def, row, nowrap, $gap-s, center);
-            font-size: medium;
+            font-size: small;
             color: currentColor;
+            text-transform: uppercase;
             &:after{
                 content: attr(data-required);
             }
@@ -32,9 +34,14 @@
                 --border-color: var(--color-primary);
                 outline: none;
             } 
-        }    
+        }   
+        textarea{
+            min-height: 18.5rem;
+            max-height: 18.5rem;
+            resize: vertical;
+        } 
     }
-    
+
     >input[type="submit"]{
         grid-column-start: var(--col-count);
     }
