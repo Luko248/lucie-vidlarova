@@ -1,0 +1,38 @@
+@import "../base/global";
+
+.form{
+    --col-count: 2;
+    @include grid-columns(def, repeat(var(--col-count), minmax($gap-l, 1fr)), $gap-xxl);
+    width: 100%;
+
+    &__item{
+        --border-color: currentColor;
+        &--col-2{
+            @include grid-col-span(var(--col-count));
+        }
+
+        >label{
+            @include flex-set(def, row, nowrap, $gap-s, center);
+            font-size: medium;
+            color: currentColor;
+            &:after{
+                content: attr(data-required);
+            }
+        }
+
+        >input, > textarea{
+            @include border('def', 0, var(--border-color));
+            width: 100%;
+            padding: $gap-m 0;
+            border-radius: 0;
+            border-bottom-width: 1px;
+            font-family: $font-text;  
+            font-size: medium;       
+            &:focus{
+                --border-color: var(--color-primary);
+                outline: none;
+            } 
+        }
+    }
+
+}

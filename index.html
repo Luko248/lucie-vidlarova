@@ -443,29 +443,29 @@
                <div class="relative">
                 <div class="contact__form">
                     <p>Možnost online konzultace před tetováním</p>
-                        <form action="">
+                        <form action="" class="form">
                             <div class="form__item">
-                                <label for="fname">Jméno</label>
-                                <input type="text" name="fname" id="fname" required>
+                                <label for="fname" data-required="*">Jméno</label>
+                                <input type="text" name="fname" id="fname" required autocomplete="name">
                             </div>
                             <div class="form__item">
-                                <label for="lname">Příjmení</label>
-                                <input type="text" name="lname" id="lname" required>
+                                <label for="lname" data-required="*">Příjmení</label>
+                                <input type="text" name="lname" id="lname" required autocomplete="family-name">
                             </div>
                             <div class="form__item">
-                                <label for="email">E-mail</label>
-                                <input type="email" name="email" id="email" required>
+                                <label for="email" data-required="*">E-mail</label>
+                                <input type="email" name="email" id="email" required autocomplete="email">
                             </div>
                             <div class="form__item">
                                 <label for="phone">Telefon</label>
-                                <input type="tel" name="phone" id="phone">
+                                <input type="tel" name="phone" id="phone" autocomplete="tel">
                             </div>
                             <div class="form__item form__item--col-2">
-                                <label for="phone">Tvoje zpráva</label>
-                                <textarea name="message" id="message" rows="10" required></textarea>
+                                <label for="message" data-required="*">Tvoje zpráva</label>
+                                <textarea name="message" id="message" rows="8" required ></textarea>
                             </div>
 
-                            <input type="submit" >
+                            <input type="submit" class="button button--black" value="Odeslat">
                         </form>
                                             
                         <!-- <a href="https://meet.google.com/" target="_blank" class="contact__item" 

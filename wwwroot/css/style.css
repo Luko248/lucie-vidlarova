@@ -244,7 +244,8 @@ p, span, small {
   line-height: 1;
   color: var(--btn-color);
   text-decoration: none;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  cursor: pointer; }
   .button:hover {
     --btn-bg-color: rgba(255, 255, 255, 0.1); }
   .button--secondary {
@@ -252,6 +253,12 @@ p, span, small {
     --btn-border-color: var(--color-black); }
     .button--secondary:hover {
       --btn-bg-color: var(--color-primary); }
+  .button--black {
+    --btn-color: var(--color-white);
+    --btn-bg-color: var(--color-black); }
+    .button--black:hover {
+      --btn-color: var(--color-primary);
+      --btn-bg-color: var(--color-black); }
 
 .burger {
   width: 80px;
@@ -395,6 +402,42 @@ p, span, small {
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: max-content; } }
 
+.form {
+  --col-count: 2;
+  display: grid;
+  gap: 3.2rem;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: flex-start;
+  grid-template-columns: repeat(var(--col-count), minmax(1.6rem, 1fr));
+  width: 100%; }
+  .form__item {
+    --border-color: currentColor; }
+    .form__item--col-2 {
+      grid-column-end: span var(--col-count); }
+    .form__item > label {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      align-content: normal;
+      justify-content: flex-start;
+      gap: 0.4rem;
+      font-size: medium;
+      color: currentColor; }
+      .form__item > label:after {
+        content: attr(data-required); }
+    .form__item > input, .form__item > textarea {
+      border: 0 solid var(--border-color);
+      width: 100%;
+      padding: 0.8rem 0;
+      border-radius: 0;
+      border-bottom-width: 1px;
+      font-family: "segoe-ui-light", sans-serif;
+      font-size: medium; }
+      .form__item > input:focus, .form__item > textarea:focus {
+        --border-color: var(--color-primary);
+        outline: none; }
+
 .icon {
   --icon-size: 1.6rem;
   display: block;
@@ -502,14 +545,9 @@ p, span, small {
   top: 0;
   bottom: -20vh;
   width: 100%;
-  padding: 3.2rem;
+  padding: 6rem 4rem;
   background: white;
-  display: grid;
-  gap: 3.2rem;
-  align-items: stretch;
-  align-content: stretch;
-  justify-content: flex-start;
-  grid-template-columns: max-content; }
+  color: black; }
 
 .contact__item {
   position: relative;

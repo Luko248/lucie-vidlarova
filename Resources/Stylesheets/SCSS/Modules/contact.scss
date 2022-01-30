@@ -27,7 +27,7 @@
                 stretch
             );
             position: relative;
-            
+
          > .relative{
                 grid-column-start: 2;
             }
@@ -53,17 +53,9 @@
         top: 0;
         bottom: -20vh;
         width: 100%;
-        padding: $gap-xxl;
+        padding: 6rem 4rem;
         background: $color-white;
-
-        @include grid-columns(
-            def,
-            max-content,
-            $gap-xxl,
-            stretch,
-            flex-start,
-            stretch
-        );
+        color: $color-black;
     }
 
     &__item {
