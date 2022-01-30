@@ -155,8 +155,7 @@
                             ,
                             <strong>minimalismus</strong>
                             a
-                            <strong>abstrakce</strong>
-                            .
+                            <strong>abstrakce</strong>.
                         </p>
                     </div>
                     <a href="#gallery" class="button">
@@ -422,7 +421,7 @@
                 </div>
                 <div class="gallery__info">
                     <h2 class="title">
-                        WORK
+                        Moje práce
                     </h2>
                     <p class="desc desc--line">
                         Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -430,7 +429,7 @@
                         ever since the 1500s
                     </p>
                     <a href="#contact" class="button button--secondary">
-                        CTA Button
+                        Chci tetování
                     </a>
                 </div>
             </div>
@@ -547,14 +546,32 @@
         let map;
     
             function initMap() {
-            map = new google.maps.Map(document.getElementById("map"), {
+            const myAddress = { lat: 49.18899, lng: 16.59914 };
+
+            let mapOptions = {
                 mapId: "1406e53bf9ae68ff",
                 center: { lat: 49.18900, lng: 16.60100 },
                 zoom: 18,
                 draggable: false,
                 disableDefaultUI: true
-            });
             }
+
+            map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+            const marker = {
+                url: './wwwroot/images/icons/marker.png',
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(0, 32)
+            }
+
+
+            new google.maps.Marker({
+                position: myAddress,
+                map,
+                icon: marker,
+                title: "Hello World!",
+            });
+        }
     </script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVGs8MwGzeMC71ifwhjRNyfMagjqyTbP8&callback=initMap&v=weekly" async ></script>
 </body>

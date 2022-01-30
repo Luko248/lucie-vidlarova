@@ -233,7 +233,6 @@ p, span, small {
   align-content: center;
   justify-content: center;
   gap: 0.8rem;
-  transition: background-color var(--trans-time) var(--trans-fnc) 0s;
   border: var(--border-width) solid var(--btn-border-color);
   min-width: 20rem;
   padding: 1.6rem 2.4rem;
@@ -245,6 +244,7 @@ p, span, small {
   color: var(--btn-color);
   text-decoration: none;
   text-transform: uppercase;
+  transition: background-color var(--trans-time) var(--trans-fnc), color var(--trans-time) var(--trans-fnc);
   cursor: pointer; }
   .button:hover {
     --btn-bg-color: rgba(255, 255, 255, 0.1); }
@@ -437,6 +437,8 @@ p, span, small {
       .form__item > input:focus, .form__item > textarea:focus {
         --border-color: var(--color-primary);
         outline: none; }
+  .form > input[type="submit"] {
+    grid-column-start: var(--col-count); }
 
 .icon {
   --icon-size: 1.6rem;

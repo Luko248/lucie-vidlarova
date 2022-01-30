@@ -32,7 +32,10 @@
                 --border-color: var(--color-primary);
                 outline: none;
             } 
-        }
+        }    
     }
-
+    
+    >input[type="submit"]{
+        grid-column-start: var(--col-count);
+    }
 }
