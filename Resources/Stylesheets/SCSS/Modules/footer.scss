@@ -1,6 +1,7 @@
 @import '../base/global';
 
 .footer {
+  position: relative;
   padding: 8rem 0;
   background-color: $color-footer-bg;
   font-family: $font-text;
@@ -64,7 +65,7 @@
     transform: translateX(-50%);
 
     >small{
-      font-size: x-small;
+      font-size: small;
     }
   }
 }

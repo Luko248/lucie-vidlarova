@@ -73,28 +73,34 @@
         width: 90%;
         height: 100vh;
         list-style: none;  
+        @include res-max-tablet{
+            --col-count: 1;
+        }
     }
     
     &__item {
+        --color-tb: #{$color-black}; 
+        --filter-blur: blur(#{$gap-l});
+        --filter-grayscale: grayscale(1);
         position: relative;
         display: block;
         overflow: hidden;
 
-        &:nth-child(1):before{
-
-            background-image: url('../images/backgrounds/menu/dotwork-bg.png')
+        @include res-max-tablet{
+            --color-tb: #{$color-black--trans-dark}; 
+            --filter-blur: blur(0);
         }
 
-        &:nth-child(2):before{
-            background-image: url('../images/backgrounds/menu/handpoke-bg.png')
-        }
+        &:hover{
+            --filter-blur: blur(0);
+            --filter-grayscale: grayscale(0);
+            --nav__item-color: var(--color-primary);
 
-        &:nth-child(3):before{
-            background-image: url('../images/backgrounds/menu/abstraction-bg.png')
-        }
+            @include res-max-tablet{
+                --filter-grayscale: grayscale(1);
+                --nav__item-color: var(--color-white);
 
-        &:nth-child(4):before{
-            background-image: url('../images/backgrounds/menu/lettering-bg.png');
+            }
         }
 
         &:before{
@@ -108,7 +114,7 @@
             content: '';
             background-repeat: no-repeat;
             background-position: center;   
-            filter: blur($gap-l) grayscale(1);
+            filter: var(--filter-blur) var(--filter-grayscale);
             background-size: cover;
         }  
 
@@ -120,17 +126,26 @@
             content: '';
             width: 100%;
             height: 100%;
-            background: linear-gradient(to bottom, $color-black 10%, $color-trans 50%, $color-black 90%);    
-            z-index: 5;
+            background: linear-gradient(to bottom, var(--color-tb) 10%, $color-black--trans 50%, var(--color-tb) 90%);    
+            z-index: 5; 
         }
 
-        &:hover{
-            --nav__item-color: var(--color-primary);
+        &:nth-child(1):before{
 
-            &:before{
-                filter: blur(0) grayscale(0);
-            }
+            background-image: url('../images/backgrounds/menu/dotwork-bg.webp')
         }
+
+        &:nth-child(2):before{
+            background-image: url('../images/backgrounds/menu/handpoke-bg.webp')
+        }
+
+        &:nth-child(3):before{
+            background-image: url('../images/backgrounds/menu/abstraction-bg.webp')
+        }
+
+        &:nth-child(4):before{
+            background-image: url('../images/backgrounds/menu/lettering-bg.webp');
+        }    
 
         > a{
             --text-width: 50%;       
@@ -143,15 +158,27 @@
         }
 
         strong{
+            --item-font-size: xx-large;
             @include transition(color);
             position: absolute;
             bottom: $gap-xxl;
             left: $gap-xl;
             max-width: var(--text-width);
-            font-size: xx-large;
+            font-size: var(--item-font-size);
             color: var(--nav__item-color);
             white-space: break-spaces;
             z-index: 10;
+            @include res-max-laptop-l{
+                --item-font-size: x-large;
+            }
+
+            @include res-max-laptop-s{
+                --item-font-size: large;
+            }
+
+            @include res-max-tablet{
+                --item-font-size: xx-large;
+            }
         }
     }
 }

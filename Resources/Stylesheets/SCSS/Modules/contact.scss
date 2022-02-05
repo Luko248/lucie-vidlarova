@@ -16,6 +16,7 @@
         padding: 6vh 0;
         background-color: $color-footer-bg;
         color: $color-white;
+        z-index: 2;
 
         > .container {
             @include grid-columns(
