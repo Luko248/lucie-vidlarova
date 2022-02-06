@@ -1,69 +1,76 @@
 @import "../base/global";
-
 .contact {
     &__sec {
+        --sec-padding-y: 6vh;
+        --sec-padding-x: calc(calc(25% / 2) + #{$gap-xxl});
+        --sec-gap: #{$gap-xl};
         @include grid-columns(
             def,
-            minmax($gap-m, 1fr),
-            $gap-l,
-            stretch,
+            minmax($gap-l, 8fr) minmax($gap-l, 5fr),
+            var(--sec-gap),
+            flex-end,
             flex-start,
             stretch
         );
+    
         position: relative;
-        min-height: 70vh;
+        height: calc(100vh - var(--footer-height));
         max-height: 2048px;
-        padding: 6vh 0;
+        padding: var(--sec-padding-y) var(--sec-padding-x);
         background-color: $color-footer-bg;
         color: $color-white;
-        z-index: 2;
+        z-index: 2;  
 
-        > .container {
-            @include grid-columns(
-                def,
-                minmax($gap-l, 8fr) minmax($gap-l, 5fr),
-                $gap-xl,
-                stretch,
-                flex-start,
-                stretch
-            );
-            position: relative;
+        @include res-max-laptop-l {
+            --sec-padding-x: calc(10% + #{$gap-xxl});
+        }
+        
+        @include res-max-laptop-s {
+            --sec-padding-x: calc(calc(15% / 2) + #{$gap-xxl});
+        }
+        
+        @include res-max-tablet {
+            --sec-padding-x: #{$gap-xxl}
+        }
 
-         > .relative{
-                grid-column-start: 2;
-            }
+        @include res-max-mobile-l{
+            --sec-padding-x: #{$gap-xl};
+        }
+    
+        @include res-max-mobile-m{
+            --sec-padding-x: #{$gap-l};
         }
     }
-    
 
     &__map {
         position: absolute;
         width: 100%;
         height: 100%;
+        z-index: 1;
 
         .gmnoprint, .gm-style-cc, img[alt="Google"]{
             display: none;
         }
     }
+
     &__map-pop-up{
         color: var(--color-secondary);
     }
 
     &__title {
-        position: absolute;
-        bottom: $gap-l;
         margin: 0;
         font-size: 5rem;
+        z-index: 2;
     }
 
     &__form {
-        position: absolute;
-        top: 3vh;
-        width: 100%;
+        position: relative;
+        bottom: -22vh;
         padding: 6rem 4rem;
         background: $color-white;
         color: $color-black;
         overflow: hidden;
+        z-index: 2;
 
         >h3{
             margin-bottom: $gap-l;

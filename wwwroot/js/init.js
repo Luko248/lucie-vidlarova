@@ -10,14 +10,20 @@
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.setCopyright = void 0;
+exports.setFooterHeight = exports.setCopyright = void 0;
 const copy = document.getElementById('copy');
+const footer = document.querySelector('footer');
+const body = document.querySelector('body');
 function setCopyright() {
     if (copy) {
         copy.innerText = `© ${new Date().getFullYear()} Lucie Vidářová. All rights reserved.`;
     }
 }
 exports.setCopyright = setCopyright;
+function setFooterHeight() {
+    body.style.setProperty('--footer-height', `${footer.clientHeight}px`);
+}
+exports.setFooterHeight = setFooterHeight;
 
 
 /***/ }),
@@ -148,6 +154,7 @@ const footer_1 = __webpack_require__(/*! ./footer */ "./Resources/Scripts/footer
 document.addEventListener("DOMContentLoaded", function () {
     (0, navigation_1.initNav)();
     (0, footer_1.setCopyright)();
+    (0, footer_1.setFooterHeight)();
 });
 
 })();

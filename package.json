@@ -44,15 +44,14 @@
   },
   "scripts": {
     "bundle": "npm run bundle:css && npm run build-prod",
-    "build-dev": "webpack --mode=development",
-    "build-prod": "webpack --mode=production",
-    "build-watch": "webpack --mode=development --watch",
+    "dev": "webpack --mode=development",
+    "prod": "webpack --mode=production",
+    "watch": "webpack --mode=development --watch",
     "postcss": "npm run compile:scss && postcss wwwroot/css/style.css --config ./postcss.config.js -o wwwroot/css/style.css",
     "bundle:css": "npm run stylelint && npm run compile:scss && postcss wwwroot/css/style.css --config ./postcss.config.js | cleancss -o wwwroot/css/style.min.css",
     "compile:scss": "node-sass --source-map=true Resources/Stylesheets/Scss/style.scss wwwroot/css/style.css",
     "compile:ts": "tsc -p Resources",
     "stylelint": "stylelint --fix Resources/Stylesheets/Scss/**/*.scss --custom-syntax postcss-scss",
-    "watch": "npm run watch:scss && npm run build-watch",
     "watch:scss": "npm run bundle:css & watch \"npm run bundle:css\" Resources/Stylesheets/Scss",
     "browser-sync": "browser-sync start --proxy file:///C:/Projects/Personal/lucie-vidlarova/index.html --files=\"wwwroot/css/*.css\" \"wwwroot/js/*.js\""
   }

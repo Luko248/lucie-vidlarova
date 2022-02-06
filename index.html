@@ -489,39 +489,40 @@
 
         <section id="contact" class="contact__sec">
             <div id="map" class="contact__map"></div>
-            <div class="container">
                 <h2 class="title title--white contact__title">Kontaktuj mě</h2>
-                <div class="relative">
-                    <div class="contact__form">
-                        <h3>Potřebuješ poradit?</h3>
-                        <p>Pokud máš zaújem o tetování, nebo potřebuješ nejdřív probrat tvou představu tetování, ozvy
-                            se! Ráda ti poradím.</p>
-                        <form action="" class="form" autocomplete="on">
-                            <div class="form__item form__item--col-2">
-                                <label for="fullname" data-required="*">Jméno a příjmení</label>
-                                <input type="text" name="fullname" id="fullname" required autocomplete="family-name"
-                                    oninvalid="this.setCustomValidity('Zadejte vaše celé jméno.')"
-                                    oninput="this.setCustomValidity('')">
-                            </div>
-                            <div class="form__item">
-                                <label for="email" data-required="*">E-mail</label>
-                                <input type="email" name="email" id="email" required autocomplete="email"
-                                    oninvalid="this.setCustomValidity('Zadejte vaši platnou e-mailovou adresu')"
-                                    oninput="this.setCustomValidity('')">
-                            </div>
-                            <div class="form__item">
-                                <label for="phone">Telefon</label>
-                                <input type="tel" name="phone" id="phone" autocomplete="tel">
-                            </div>
-                            <div class="form__item form__item--col-2">
-                                <label for="message" data-required="*">Tvoje zpráva</label>
-                                <textarea name="message" id="message" rows="8" required minlength="10"
-                                    oninvalid="this.setCustomValidity('Zadejte vaši zprávu.')"
-                                    oninput="this.setCustomValidity('')"></textarea>
-                            </div>
-                            <input type="submit" class="button button--dark" value="Odeslat">
-                        </form>
+                <div class="contact__form">
+                    <h3>Potřebuješ poradit?</h3>
+                    <p>Pokud máš zaújem o tetování, nebo potřebuješ nejdřív probrat tvou představu tetování, ozvy
+                        se! Ráda ti poradím.</p>
+                    <form action="" class="form" autocomplete="on">
+                        <div class="form__item form__item--col-2">
+                            <label for="fullname" data-required="*">Jméno a příjmení</label>
+                            <input type="text" name="fullname" id="fullname" required autocomplete="family-name"
+                                oninvalid="this.setCustomValidity('Zadejte vaše celé jméno.')"
+                                oninput="this.setCustomValidity('')">
+                        </div>
+                        <div class="form__item">
+                            <label for="email" data-required="*">E-mail</label>
+                            <input type="email" name="email" id="email" required autocomplete="email"
+                                oninvalid="this.setCustomValidity('Zadejte vaši platnou e-mailovou adresu')"
+                                oninput="this.setCustomValidity('')">
+                        </div>
+                        <div class="form__item">
+                            <label for="phone">Telefon</label>
+                            <input type="tel" name="phone" id="phone" autocomplete="tel">
+                        </div>
+                        <div class="form__item form__item--col-2">
+                            <label for="message" data-required="*">Tvoje zpráva</label>
+                            <textarea name="message" id="message" rows="8" required minlength="10"
+                                oninvalid="this.setCustomValidity('Zadejte vaši zprávu.')"
+                                oninput="this.setCustomValidity('')"></textarea>
+                        </div>
+                        <input type="submit" class="button button--dark" value="Odeslat">
+                    </form>
+                   
 
+                    </div>
+                    
                         <!-- <a href="https://meet.google.com/" target="_blank" class="contact__item" 
                         rel="noreferer" aria-label="Google Meet" title="Google Meet">
                         <svg class="icon icon-meet">
@@ -542,9 +543,6 @@
                             <use xlink:href="#icon-skype"></use>
                         </svg>
                     </a> -->
-                    </div>
-                </div>
-            </div>
         </section>
         <footer class="footer">
             <div class="container">
@@ -621,7 +619,7 @@
                 }
 
                 const infowindow = new google.maps.InfoWindow({
-                    content: "<div class='contact__map-pop-up'><strong>Lucie Vidlářová</strong><span>Tatérka</span><address>Hybešova 308/61<br>602 00, Brno</address></div>",
+                    content: "<div class='contact__map-pop-up'><strong>Lucie Vidlářová</strong><br><span>Tatérka</span><address>Hybešova 308/61<br>602 00, Brno</address></div>",
                     anchor: new google.maps.Point(0, 0)
                 })
 

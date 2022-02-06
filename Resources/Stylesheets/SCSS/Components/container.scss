@@ -24,4 +24,8 @@
     @include res-max-mobile-l{
         --container-pad-x: #{$gap-xl};
     }
+
+    @include res-max-mobile-m{
+        --container-pad-x: #{$gap-l};
+    }
 }

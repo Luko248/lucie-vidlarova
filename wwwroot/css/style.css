@@ -389,6 +389,9 @@ p, span, small {
   @media only screen and (max-width: 425px) {
     .container {
       --container-pad-x: 2.4rem; } }
+  @media only screen and (max-width: 375px) {
+    .container {
+      --container-pad-x: 1.6rem; } }
 
 .form {
   --col-count: 2;
@@ -507,34 +510,44 @@ p, span, small {
       fill: var(--social-item-color); }
 
 .contact__sec {
+  --sec-padding-y: 6vh;
+  --sec-padding-x: calc(calc(25% / 2) + 3.2rem);
+  --sec-gap: 2.4rem;
   display: grid;
-  gap: 1.6rem;
-  align-items: stretch;
+  gap: var(--sec-gap);
+  align-items: flex-end;
   align-content: stretch;
   justify-content: flex-start;
-  grid-template-columns: minmax(0.8rem, 1fr);
+  grid-template-columns: minmax(1.6rem, 8fr) minmax(1.6rem, 5fr);
   position: relative;
-  min-height: 70vh;
+  height: calc(100vh - var(--footer-height));
   max-height: 2048px;
-  padding: 6vh 0;
+  padding: var(--sec-padding-y) var(--sec-padding-x);
   background-color: #1c1c1c;
   color: white;
   z-index: 2; }
-  .contact__sec > .container {
-    display: grid;
-    gap: 2.4rem;
-    align-items: stretch;
-    align-content: stretch;
-    justify-content: flex-start;
-    grid-template-columns: minmax(1.6rem, 8fr) minmax(1.6rem, 5fr);
-    position: relative; }
-    .contact__sec > .container > .relative {
-      grid-column-start: 2; }
+  @media only screen and (max-width: 1440px) {
+    .contact__sec {
+      --sec-padding-x: calc(10% + 3.2rem); } }
+  @media only screen and (max-width: 1024px) {
+    .contact__sec {
+      --sec-padding-x: calc(calc(15% / 2) + 3.2rem); } }
+  @media only screen and (max-width: 768px) {
+    .contact__sec {
+      --sec-padding-x: 3.2rem
+        ; } }
+  @media only screen and (max-width: 425px) {
+    .contact__sec {
+      --sec-padding-x: 2.4rem; } }
+  @media only screen and (max-width: 375px) {
+    .contact__sec {
+      --sec-padding-x: 1.6rem; } }
 
 .contact__map {
   position: absolute;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  z-index: 1; }
   .contact__map .gmnoprint, .contact__map .gm-style-cc, .contact__map img[alt="Google"] {
     display: none; }
 
@@ -542,19 +555,18 @@ p, span, small {
   color: var(--color-secondary); }
 
 .contact__title {
-  position: absolute;
-  bottom: 1.6rem;
   margin: 0;
-  font-size: 5rem; }
+  font-size: 5rem;
+  z-index: 2; }
 
 .contact__form {
-  position: absolute;
-  top: 3vh;
-  width: 100%;
+  position: relative;
+  bottom: -22vh;
   padding: 6rem 4rem;
   background: white;
   color: black;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 2; }
   .contact__form > h3 {
     margin-bottom: 1.6rem;
     font-size: x-large; }

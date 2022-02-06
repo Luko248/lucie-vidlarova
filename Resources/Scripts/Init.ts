@@ -1,7 +1,8 @@
 ﻿import {initNav} from './navigation'
-import {setCopyright} from './footer'
+import {setCopyright, setFooterHeight} from './footer'
 
 document.addEventListener("DOMContentLoaded", function () {
     initNav();
     setCopyright();
+    setFooterHeight();
 });
