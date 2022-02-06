@@ -19,20 +19,32 @@
       --gap: #{$gap-l};
     }
 
+    @include res-max-mobile-l{
+      --col-count: 1;
+    }
+
   &__sec {
-    --gallery-sec-padding-y: 0;
+    --gallery-sec-padding-top: 0;
+    --gallery-sec-padding-bottom: 0;
     --gallery-sec-max-height: 2048px;
+    --gallery-height: 100vh;
     @include grid-columns(def, minmax($gap-m, 1fr), $gap-l);
-    height: 100vh;
+    height: var(--gallery-height);
     max-height: var(--gallery-sec-max-height);
-    padding: var(--gallery-sec-padding-y) 0;
+    padding-top: var(--gallery-sec-padding-top);
+    padding-bottom: var(--gallery-sec-padding-bottom);
     background-color: $color-bg--light;
     overflow-y: hidden;
 
     @include res-max-mobile-l{
       --gallery-sec-max-height: unset;
-      --gallery-sec-padding-y: 5rem;
-      height: auto;
+      --gallery-sec-padding-top: 5rem;
+      --gallery-sec-padding-bottom: 5rem;
+      --gallery-height: auto;
+    }
+
+    @include res-max-tablet{
+      --gallery-sec-padding-bottom: 10vh;
     }
   }
 

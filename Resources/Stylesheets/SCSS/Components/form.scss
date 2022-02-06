@@ -2,9 +2,25 @@
 
 .form{
     --col-count: 2;
-    @include grid-columns(def, repeat(var(--col-count), minmax($gap-l, 1fr)), $gap-xxl);
+    --textarea-height: 18vh;
+    --form-gap: #{$gap-xxl};
+    --form-margi-top: 5rem;
+    @include grid-columns(def, repeat(var(--col-count), minmax($gap-l, 1fr)), var(--form-gap));
     width: 100%;
-    margin-top: 5rem;
+    margin-top: var(--form-margi-top);
+
+    @include res-max-laptop-l{
+        --form-gap: #{$gap-xl};
+        --form-margi-top: #{$gap-xxl};
+    }
+
+    @include res-max-laptop-m{
+        --textarea-height: 14vh;
+    }
+
+    @include res-max-laptop-s{
+        --textarea-height: 18vh;
+    }
 
     &__item{
         --border-color: currentColor;
@@ -36,8 +52,8 @@
             } 
         }   
         textarea{
-            min-height: 18.5rem;
-            max-height: 18.5rem;
+            min-height: var(--textarea-height);
+            max-height: var(--textarea-height);
             resize: vertical;
         } 
     }
