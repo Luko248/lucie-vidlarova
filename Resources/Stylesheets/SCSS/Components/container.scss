@@ -1,17 +1,27 @@
 @import "../base/global";
 
 .container {
-    width: 75%;
+    --container-pad-x: #{$gap-xxl};
+    --container-width: 75%;
+    width: var(--container-width);
     min-width: 115rem;
+    padding: 0 var(--container-pad-x);
     margin: 0 auto;
 
     @include res-max-laptop-l {
-        width: 80%;
+        --container-width: 80%;
+        min-width: 0;
     }
 
-    @include res-max-laptop-m {
-        width: 100%;
-        min-width: 0;
-        padding: 0 var(--pad-base);
+    @include res-max-laptop-s {
+        --container-width: 85%;  
+    }
+
+    @include res-max-tablet {
+        --container-width: 100%;
+    }
+
+    @include res-max-mobile-l{
+        --container-pad-x: #{$gap-xl};
     }
 }

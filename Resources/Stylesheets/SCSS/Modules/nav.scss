@@ -47,6 +47,12 @@
                 text-decoration: underline;      
             }
         }
+
+        >li{
+            @include res-max-mobile-l{
+                display: none;
+            }
+        }
     }
 
     &__menu{ 

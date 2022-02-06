@@ -2,15 +2,14 @@
 
 .gallery {
   --col-count: 2;
+  --align-items: flex-start;
+  --gap: #{$gap-xxl};
   @include grid-columns(
     def,
     repeat(var(--col-count), minmax($gap-m, 1fr)),
-    $gap-xxl
+    var(--gap),
+    var(--align-items)
   );
-
-  > div {
-    @include grid-columns(def, minmax($gap-m, 1fr), $gap-xxl);
-  }
 
   &__sec {
     @include grid-columns(def, minmax($gap-m, 1fr), $gap-l);
@@ -42,16 +41,19 @@
 }
 
 .gallery-item {
-  --grayscale-intensity: grayscale(.5);
+  // --grayscale-intensity: grayscale(.5);
   --aspect-ratio: 1 / 1;
-
-  &:hover{
-    --grayscale-intensity: grayscale(0);
-  }
-
+  --row-span: 6;
+  @include grid-row-span(var(--row-span)); 
+  
   &--2-3 {
     --aspect-ratio: 2 / 3;
+    --row-span: 8;
   }
+
+  // &:hover{
+  //   --grayscale-intensity: grayscale(0);
+  // }
 
   &__pic {
     position: relative;
@@ -60,9 +62,9 @@
    
     > picture > img {
       display: block;
-      width: 100%;
+      width: 100%; 
       aspect-ratio: var(--aspect-ratio);
-      filter: var(--grayscale-intensity);
+      // filter: var(--grayscale-intensity);
       border-width: 0;
       transition: filter $trans-time ease-in-out;
       cursor: pointer;

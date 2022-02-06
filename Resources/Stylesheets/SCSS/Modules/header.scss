@@ -20,45 +20,82 @@ header{
     }
 }
 
-.header {    
+.header {  
+    
     &__container{
         --col-count: 2;
-        --gap: 8rem;
-        @include grid-columns(def, repeat(var(--col-count), minmax($gap-l, 1fr)), var(--gap), stretch, center, stretch);
+        --col-gap: 5em;
+        --header-font-size: #{$gap-l};  
+        @include grid-columns(def, repeat(var(--col-count), minmax($gap-l, 1fr)), var(--col-gap), stretch, center, stretch);
         position: relative;
         height: 100vh;
-        max-height: $width-4k;
-        z-index: 10;  
+        max-height: $width-4k;  
+        font-size: var(--header-font-size);
+        overflow: hidden;
+        z-index: 10;
+
+        @include res-max-laptop-s{
+            --header-font-size: 1.2rem;  
+        }
+
+        @include res-max-tablet{
+            --col-gap: 2.4em;
+        }
+
+        @include res-max-mobile-l{
+            --col-gap: 0;
+            --col-count: 1;
+            --header-font-size: 1rem;  
+        }
     }
 
-    &__content{
-        @include flex-set(def, column, wrap, $gap-xxl, flex-start, center);     
+    &__content{      
+        --content-z-index: 2;
+        @include flex-set(def, column, wrap, 2em, flex-start, center);     
+        position: relative;
+        z-index: var(--content-z-index);
+
+        &:last-child{
+            --content-z-index: 1;
+        }      
     }
 
     &__title{
+        --title-margin-top: 0;
+        --title-max-width: 100%;
+        --title-font-size: 1em;
         @include grid-rows(def, auto, $gap-s, stretch);
-        font-size: 8rem;
+        max-width: var(--title-max-width);
+        margin-top: var(--title-margin-top);
+        font-size: 5em;
         line-height: 1;
         color: $color-primary;
+
+        @include res-max-mobile-l{
+            --title-max-width: 70%;
+            --title-font-size: .8em;
+            --title-margin-top: .4em;
+        }
 
         >*{
             line-height: inherit;
         }
 
-        >h1{
-            font-size: 1.1em;     
+        >h1{  
+            font-size: var(--title-font-size);     
             line-height: 1;   
         }
 
         >strong{
             font-family: $font-highlight;
-            font-size: .35em;
+            font-size: .3em;
+            color: $color-white;
             text-transform: uppercase;
         }
 
         >p{
-            margin-top: $gap-xl;
-            margin-bottom: $gap-xxl;
+            margin-top: 1.5em;
+            margin-bottom: 2em;
             font-size: .3em;   
             line-height: 1.5;
             color: $color-white;
@@ -71,7 +108,18 @@ header{
     }
 
     &__photo{
+        --photo-width: 100%;
         position: relative;
+        width:  var(--photo-width);
+
+        @include res-max-tablet{
+            --photo-width: 180%;
+        }
+
+        @include res-max-mobile-l{
+            --photo-width: 120%;
+            @include center-item(100%, 0, 28%, -90%);
+        }
 
         &:before{
             position: absolute;

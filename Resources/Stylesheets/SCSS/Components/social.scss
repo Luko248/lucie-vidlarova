@@ -8,6 +8,10 @@
     right: $gap-xl;
     transform: translateY(-50%);
     z-index: 999;
+
+    @include res-max-tablet{
+        display: none;
+    }
     
     &--dark{
         --social-item-color: var(--color-black);
