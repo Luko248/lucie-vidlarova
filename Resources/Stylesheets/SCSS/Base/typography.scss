@@ -16,12 +16,21 @@ p, span, small{
 }
 
 .title{
+    --title-font-size: 5.6em;
     --title-color: #{$color-black};
     @include flex-set;
     margin-bottom: $gap-xxl;
     font-family: $font-title;
-    font-size: 5.6rem;
+    font-size: var(--title-font-size);
     color: var(--title-color);
+
+    @include res-max-laptop-l{
+        --title-font-size: 4.8em;
+    }
+
+    @include res-max-laptop-s{
+        --title-font-size: 4em;
+    }
 
     &--white{
         --title-color: #{$color-white};
@@ -30,17 +39,22 @@ p, span, small{
 
 .desc{
     --border-width: 0;
-    --padding: 0;
+    --desc-padding: 0;
+    --desc-font-size: large;
     @include border('left', .2rem, var(--color-black));
-    padding: var(--padding);
     padding-right: 0;
+    padding-left: var(--desc-padding);
     margin-bottom: 5rem;
     font-family:  $font-text;
-    font-size: large;
+    font-size: var(--desc-font-size);
     line-height: 1.8;
+
+    @include res-max-laptop-s{
+        --desc-font-size: medium;
+    }
     
     &--line{
-        --padding: #{$gap-l};
+        --desc-padding: #{$gap-l};
         --border-width: .3rem;
     }
 }

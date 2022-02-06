@@ -60,10 +60,10 @@
 }
 
 .mobile-content {
-    display: none;
+    display: none !important;
 
     @include res-max-mobile-l {
-        display: block;
+        display: block !important;
     }
 }
 

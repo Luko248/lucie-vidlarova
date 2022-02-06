@@ -1,4 +1,8 @@
+@import "../base/global";
+
 .content-scroll{
+    overflow: auto;
+   @include res-min-tablet{
     max-height: 100vh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
@@ -6,4 +10,5 @@
     > *{
         scroll-snap-align: start;
     }
+   }
 }

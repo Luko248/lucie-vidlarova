@@ -5,8 +5,8 @@
 @import "Mixins/responsive";
 @import "Mixins/transition";
 
-@mixin center-item($top: 50%, $left: 50%, $transX: -50%, $transY: -50%) {
-    position: absolute;
+@mixin center-item($top: 50%, $left: 50%, $transX: -50%, $transY: -50%, $pos: absolute) {
+    position: $pos;
     top: $top;
     left: $left;
     transform: translate($transX, $transY);

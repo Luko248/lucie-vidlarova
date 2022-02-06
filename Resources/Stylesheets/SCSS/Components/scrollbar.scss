@@ -20,4 +20,11 @@
   ::-webkit-scrollbar-thumb:hover {
     background: $color-primary--hover;
   }
+
+  .gallery__layout{
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: $color-trans;
+    }
+  }
 }

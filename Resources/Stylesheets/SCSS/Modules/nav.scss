@@ -81,13 +81,17 @@
         --col-count: 4;
         --options-height: 100vh;
         --options-width: 90%;
-        @include grid-columns(def, repeat(var(--col-count), minmax($gap-l, 1fr)), 0, stretch, center, stretch);
+        --options-align-items: stretch;
+        --options-align-content: stretch;
+        @include grid-columns(def, repeat(var(--col-count), minmax($gap-l, 1fr)), 0, var(--options-align-items), center, var(--options-align-content));
         width: var(--options-width);
         height: var(--options-height);
         list-style: none;  
 
         @include res-max-tablet{
             --col-count: 1;
+            --options-align-items: flex-start;
+            --options-align-content: flex-start;
             --options-width: 100%;
         }
 
@@ -118,6 +122,7 @@
             --color-tb: #{$color-black--trans-dark}; 
             --filter-blur: blur(0);
             --item-font-size: xx-large;
+            --item-padding: #{$gap-xxl} #{$gap-xl};
         }
 
         @include res-max-mobile-l{
@@ -129,8 +134,7 @@
             --filter-grayscale: grayscale(0);
             --nav__item-color: var(--color-primary);
 
-            @include res-max-tablet{
-                --item-padding: #{$gap}
+            @include res-max-tablet{      
                 --filter-grayscale: grayscale(1);
                 --nav__item-color: var(--color-white);
             }
@@ -180,14 +184,13 @@
             background-image: url('../images/backgrounds/menu/lettering-bg.webp');
         }    
 
-        > a{
-           
+        > a{       
             --text-width: 50%;       
             position: relative;
             display: block;
             height: 100%;
-            color: currentColor;
             padding: var(--item-padding);
+            color: currentColor;
             text-decoration: none;    
             z-index: 10;
         }

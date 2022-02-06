@@ -34,6 +34,10 @@ header{
         overflow: hidden;
         z-index: 10;
 
+        @include res-max-laptop-l{
+            --header-font-size: 1.4rem;
+        }
+
         @include res-max-laptop-s{
             --header-font-size: 1.2rem;  
         }

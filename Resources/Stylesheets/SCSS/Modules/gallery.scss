@@ -11,28 +11,85 @@
     var(--align-items)
   );
 
+    @include res-max-laptop-m{
+      --gap: #{$gap-xl};
+    }
+
+    @include res-max-laptop-s{
+      --gap: #{$gap-l};
+    }
+
   &__sec {
+    --gallery-sec-padding-y: 0;
+    --gallery-sec-max-height: 2048px;
     @include grid-columns(def, minmax($gap-m, 1fr), $gap-l);
     height: 100vh;
-    max-height: 2048px;
+    max-height: var(--gallery-sec-max-height);
+    padding: var(--gallery-sec-padding-y) 0;
     background-color: $color-bg--light;
     overflow-y: hidden;
+
+    @include res-max-mobile-l{
+      --gallery-sec-max-height: unset;
+      --gallery-sec-padding-y: 5rem;
+      height: auto;
+    }
   }
 
   &__layout {
-    @include grid-columns(def, minmax($gap-m, 8fr) minmax($gap-m, 5fr), 8rem);
-    height: 90%;
+    --layout-height: 90%;
+    --layout-gap: 8rem;
+    --layout-template-columns: minmax(#{$gap-m}, 8fr) minmax(#{$gap-m}, 5fr);
+    @include grid-columns(def, var(--layout-template-columns), var(--layout-gap));
+    height: var(--layout-height);
     margin: auto;
+    overflow: hidden;
+
+    @include res-max-laptop-s{
+      --layout-gap: 5rem;
+    }
+
+    @include res-max-tablet{
+      --layout-gap: #{$gap-xxl};
+    }
+
+    @include res-max-mobile-l{
+      --layout-template-columns: minmax(#{$gap-m}, 1fr);
+      --layout-gap: 5rem;
+      --layout-height: unset;
+    }
+  }
+
+  &__wrapper{
+    --wraper-max-height: 100%;
+    --wrapper-padding-right: #{$gap-xl};
+    max-height: var(--wraper-max-height);
+    padding-right: var(--wrapper-padding-right);
     overflow: auto;
 
-    &::-webkit-scrollbar {
-      width: 0;
+    @include res-max-laptop-m{
+      --wrapper-padding-right: #{$gap-l};
+    }
+
+    @include res-max-mobile-l{
+      --wrapper-padding-right: 0;
+      --wrapper-padding-right: unset;
     }
   }
 
   &__info {
+    --info-top: 20%;
     position: sticky;
-    top: 20%;
+    top: var(--info-top);
+
+    @include res-max-laptop-s{
+      --info-top: 10%;
+    }
+
+    @include res-max-mobile-l{
+      --info-top: auto;
+      grid-row-start: 1;
+    }
   }
   
   #dotwork, #abstractions, #lettering, #handpoke{
@@ -43,12 +100,12 @@
 .gallery-item {
   // --grayscale-intensity: grayscale(.5);
   --aspect-ratio: 1 / 1;
-  --row-span: 6;
+  --row-span: 5;
   @include grid-row-span(var(--row-span)); 
   
   &--2-3 {
     --aspect-ratio: 2 / 3;
-    --row-span: 8;
+    --row-span: 7;
   }
 
   // &:hover{
