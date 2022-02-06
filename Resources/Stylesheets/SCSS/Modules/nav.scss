@@ -66,6 +66,10 @@
         opacity: 0;     
         z-index: -1;
 
+        @include res-max-tablet{
+            padding-top: var(--nav-height);
+        }
+
         &--open{
             --nav__menu-display: flex;
             animation: showMenu .5s forwards;
@@ -75,12 +79,20 @@
 
     &__options{
         --col-count: 4;
+        --options-height: 100vh;
+        --options-width: 90%;
         @include grid-columns(def, repeat(var(--col-count), minmax($gap-l, 1fr)), 0, stretch, center, stretch);
-        width: 90%;
-        height: 100vh;
+        width: var(--options-width);
+        height: var(--options-height);
         list-style: none;  
+
         @include res-max-tablet{
             --col-count: 1;
+            --options-width: 100%;
+        }
+
+        @include res-max-mobile-l{
+            --options-height: calc(100vh - var(--nav-height));
         }
     }
     
@@ -88,13 +100,28 @@
         --color-tb: #{$color-black}; 
         --filter-blur: blur(#{$gap-l});
         --filter-grayscale: grayscale(1);
+        --item-font-size: xx-large;
+        --item-padding: 0;
         position: relative;
         display: block;
         overflow: hidden;
 
+        @include res-max-laptop-l{
+            --item-font-size: x-large;
+        }
+
+        @include res-max-laptop-s{
+            --item-font-size: large;
+        }
+
         @include res-max-tablet{
             --color-tb: #{$color-black--trans-dark}; 
             --filter-blur: blur(0);
+            --item-font-size: xx-large;
+        }
+
+        @include res-max-mobile-l{
+            --item-font-size: xx-large;
         }
 
         &:hover{
@@ -103,9 +130,9 @@
             --nav__item-color: var(--color-primary);
 
             @include res-max-tablet{
+                --item-padding: #{$gap}
                 --filter-grayscale: grayscale(1);
                 --nav__item-color: var(--color-white);
-
             }
         }
 
@@ -136,54 +163,46 @@
             z-index: 5; 
         }
 
-        &:nth-child(1):before{
+        &:nth-last-child(4):before{
 
             background-image: url('../images/backgrounds/menu/dotwork-bg.webp')
         }
 
-        &:nth-child(2):before{
+        &:nth-last-child(3):before{
             background-image: url('../images/backgrounds/menu/handpoke-bg.webp')
         }
 
-        &:nth-child(3):before{
+        &:nth-last-child(2):before{
             background-image: url('../images/backgrounds/menu/abstraction-bg.webp')
         }
 
-        &:nth-child(4):before{
+        &:last-child:before{
             background-image: url('../images/backgrounds/menu/lettering-bg.webp');
         }    
 
         > a{
+           
             --text-width: 50%;       
             position: relative;
             display: block;
             height: 100%;
             color: currentColor;
+            padding: var(--item-padding);
             text-decoration: none;    
             z-index: 10;
         }
 
-        strong{
-            --item-font-size: xx-large;
+        strong{      
             @include transition(color);
-            position: absolute;
-            bottom: $gap-xxl;
-            left: $gap-xl;
+            @include center-item(100%, $gap-xl, 0, -200%);
             max-width: var(--text-width);
             font-size: var(--item-font-size);
             color: var(--nav__item-color);
             white-space: break-spaces;
-            z-index: 10;
-            @include res-max-laptop-l{
-                --item-font-size: x-large;
-            }
-
-            @include res-max-laptop-s{
-                --item-font-size: large;
-            }
-
+            z-index: 10;      
+            
             @include res-max-tablet{
-                --item-font-size: xx-large;
+                @include center-item(auto, auto, 0, 0, relative);
             }
         }
     }
