@@ -35,6 +35,10 @@ p, span, small{
     &--white{
         --title-color: #{$color-white};
     }
+
+    &--small{
+        --title-font-size: 4em;
+    }
 }
 
 .desc{

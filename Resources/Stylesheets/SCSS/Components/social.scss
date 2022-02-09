@@ -1,7 +1,7 @@
 @import "../base/global";
 
 .social{
-    --social-item-color: var(--color-white);
+    --social-item-color: var(--color-black);
     @include flex-set(def, column, wrap, $gap-xxl, center, center, center);
     position: fixed;
     top: 50%;

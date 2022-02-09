@@ -126,44 +126,7 @@
             <li>
                 <a href="#contact">Kontakt</a>
             </li>
-            <button class="burger" id="nebuBtn">
-                <span></span><span></span><span></span>
-            </button>
         </ul>
-        <div class="nav__menu">
-            <ul class="nav__options">
-                <li class="nav__item mobile-content">
-                    <a href="#gallery">
-                        <strong>Moje práce</strong>
-                    </a>
-                </li>
-                <li class="nav__item mobile-content">
-                    <a href="#contact">
-                        <strong>Kontakt</strong>
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="#abstraction">
-                        <strong>Abstrakce</strong>
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="#animals">
-                        <strong>Zvířátka</strong>
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="#dotwork">
-                        <strong>Dotwork</strong>
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="#minimalism">
-                        <strong>Minimalismus</strong>
-                    </a>
-                </li>
-            </ul>
-        </div>
     </nav>
 
     <div class="social">
@@ -187,41 +150,21 @@
         </a>
     </div>
 
-    <div class="content-scroll">
-        <header>
-            <div class="container header__container">
-                <div class="header__content">
-                    <div class="header__title">
-                        <h1>Jsem Lucie</h1>
-                        <strong>TATÉRKA</strong>
-                        <p>
-                            Ahoj! Jmenuji se Lucie Vidlářová a jsem tatérka.
-                            <br />
-                            Primárně se zaměřuji na
-                            <strong>dotwork</strong>
-                            ,
-                            <strong>minimalismus</strong>
-                            a
-                            <strong>abstrakce</strong>.
-                        </p>
-                    </div>
-                    <a href="#gallery" class="button">
-                        Moje Práce
-                    </a>
-                </div>
-                <div class="header__content">
-                    <div class="header__photo">
-                        <img src="wwwroot/images/profile/profile.png" alt="Profile photo" />
-                    </div>
-                </div>
-            </div>
-        </header>
 
+    <header>
+        <div class="container header__container">
+            <div class="header__content">
+                <h1 class="title">Lucie Tattoo</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
         <section id="gallery" class="gallery__sec">
-            <div class="container gallery__layout">
-                <div class="gallery__wrapper">
-                  <div class="gallery">
-                        <!-- Handpoke -->
+            <div class="container">
+                <h2 class="title title--small">Moje práce</h2>
+                <div class="gallery">
+                    <!-- Handpoke -->
                     <div class="gallery-item gallery-item--2-3" id="handpoke">
                         <a class="gallery-item__pic" data-type="image" data-caption="Fingers | #handpoke" data-srcset="./wwwroot/images/gallery/handpoke/fingers_320.webp 375px,
                                             ./wwwroot/images/gallery/handpoke/fingers_425.webp 768px,
@@ -375,7 +318,7 @@
                         </div>
                     </div>
 
-                    
+
 
                     <div class="gallery-item" id="lettering">
                         <a class="gallery-item__pic" data-type="image" data-caption="Inhale - Exale | #lettering"
@@ -469,173 +412,28 @@
                             </a>
                         </div>
                     </div>
-                  </div>
-                </div>
-                <div class="gallery__info">
-                    <h2 class="title">
-                        Moje práce
-                    </h2>
-                    <p class="desc desc--line">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry. Lorem Ipsum has been the industry's standard dummy text
-                        ever since the 1500s
-                    </p>
-                    <a href="#contact" class="button button--secondary">
-                        Chci tetování
-                    </a>
                 </div>
             </div>
         </section>
-
-        <section id="contact" class="contact__sec">
-            <div id="map" class="contact__map"></div>
-                <h2 class="title title--white contact__title">Kontaktuj mě</h2>
-                <div class="contact__form">
-                    <h3>Potřebuješ poradit?</h3>
-                    <p>Pokud máš zaújem o tetování, nebo potřebuješ nejdřív probrat tvou představu tetování, ozvy
-                        se! Ráda ti poradím.</p>
-                    <form action="" class="form" autocomplete="on">
-                        <div class="form__item form__item--col-2">
-                            <label for="fullname" data-required="*">Jméno a příjmení</label>
-                            <input type="text" name="fullname" id="fullname" required autocomplete="family-name"
-                                oninvalid="this.setCustomValidity('Zadejte vaše celé jméno.')"
-                                oninput="this.setCustomValidity('')">
-                        </div>
-                        <div class="form__item">
-                            <label for="email" data-required="*">E-mail</label>
-                            <input type="email" name="email" id="email" required autocomplete="email"
-                                oninvalid="this.setCustomValidity('Zadejte vaši platnou e-mailovou adresu')"
-                                oninput="this.setCustomValidity('')">
-                        </div>
-                        <div class="form__item">
-                            <label for="phone">Telefon</label>
-                            <input type="tel" name="phone" id="phone" autocomplete="tel">
-                        </div>
-                        <div class="form__item form__item--col-2">
-                            <label for="message" data-required="*">Tvoje zpráva</label>
-                            <textarea name="message" id="message" rows="8" required minlength="10"
-                                oninvalid="this.setCustomValidity('Zadejte vaši zprávu.')"
-                                oninput="this.setCustomValidity('')"></textarea>
-                        </div>
-                        <input type="submit" class="button button--dark" value="Odeslat">
-                    </form>
-                   
-
-                    </div>
-                    
-                        <!-- <a href="https://meet.google.com/" target="_blank" class="contact__item" 
-                        rel="noreferer" aria-label="Google Meet" title="Google Meet">
-                        <svg class="icon icon-meet">
-                            <use xlink:href="#icon-meet"></use>
-                        </svg>
-                    </a>
-
-                    <a href="https://zoom.us/join" target="_blank" class="contact__item" 
-                        rel="noreferer" aria-label="Zoom" title="Zoom">
-                        <svg class="icon icon-zoom">
-                            <use xlink:href="#icon-zoom"></use>
-                        </svg>
-                    </a>
-
-                    <a href="https://www.skype.com/en/free-conference-call/" target="_blank" class="contact__item" 
-                        rel="noreferer" aria-label="Skype" title="Skype">
-                        <svg class="icon icon-skype">
-                            <use xlink:href="#icon-skype"></use>
-                        </svg>
-                    </a> -->
-        </section>
-        <footer class="footer">
-            <div class="container">
-                <div class="footer__inner">
-                    <div>
-                        <h4>Adresa</h4>
-                        <address>
-                            Hybešova 308/61<br>
-                            602 00, Staré Brno<br>
-                            1. Patro, Dveře Adm 2.7
-                        </address>
-                    </div>
-                    <div>
-                        <h4>Kontakty</h4>
-                        <a class="link" href="mailto:vidlarova.lucie@gmail.com">vidlarova.lucie@gmail.com</a>
-                    </div>
-                </div>
-
-                <div class="footer__inner footer__inner--end">
-                    <div class="footer__social">
-                        <a href="https://www.instagram.com/lucie___________________/" target="_blank" rel="noreferrer"
-                            class="social__item" title="Instagram link">
-                            <svg class="icon icon-instagram">
-                                <use xlink:href="#icon-instagram"></use>
-                            </svg>
-                        </a>
-                        <a href="https://cs-cz.facebook.com/lucka.vidlarova" target="_blank" rel="noreferrer"
-                            class="social__item" title="Facebok link">
-                            <svg class="icon icon-facebook">
-                                <use xlink:href="#icon-facebook"></use>
-                            </svg>
-                        </a>
-                        <a href="https://www.linkedin.com/in/lucie-vidl%C3%A1%C5%99ov%C3%A1-757496203/?originalSubdomain=cz"
-                            target="_blank" rel="noreferrer" class="social__item" title="LinkedIn link">
-                            <svg class="icon icon-linkedin">
-                                <use xlink:href="#icon-linkedin"></use>
-                            </svg>
-                        </a>
-                    </div>
-                    <h4 class="lower text-to-right">
-                        - sleduj mě
-                    </h4>
-                </div>
+    </main>
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer__inner">
+               <div>
+                <h4>Kontakty</h4>
+                <a class="link" href="mailto:vidlarova.lucie@gmail.com">vidlarova.lucie@gmail.com</a>
+               </div>
             </div>
-            <div class="footer__copy">
-                <small id="copy"></small>
-            </div>
-        </footer>
-        </main>
+        </div>
+        <div class="footer__copy">
+            <small id="copy"></small>
+        </div>
+    </footer>
 
-        <script src="./wwwroot/js/init.js" type="text/javascript"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.17/dist/fancybox.umd.js" type="text/javascript"
-            async></script>
-        <script type="text/javascript">
-            let map;
 
-            function initMap() {
-                const myAddress = { lat: 49.18899, lng: 16.59914 };
-
-                let mapOptions = {
-                    mapId: "1406e53bf9ae68ff",
-                    center: { lat: 49.18900, lng: 16.60100 },
-                    zoom: 18,
-                    draggable: false,
-                    disableDefaultUI: true
-                }
-
-                map = new google.maps.Map(document.getElementById("map"), mapOptions);
-
-                let markerIcon = {
-                    url: 'wwwroot/images/icons/marker.png',
-                    origin: new google.maps.Point(0, 0),
-                    anchor: new google.maps.Point(54, 54)
-                }
-
-                const infowindow = new google.maps.InfoWindow({
-                    content: "<div class='contact__map-pop-up'><strong>Lucie Vidlářová</strong><br><span>Tatérka</span><address>Hybešova 308/61<br>602 00, Brno</address></div>",
-                    anchor: new google.maps.Point(0, 0)
-                })
-
-                let marker = new google.maps.Marker({
-                    position: myAddress,
-                    map: map,
-                    icon: markerIcon,
-                    title: "Lucie Vidlářová"
-                })
-
-                marker.addListener('click', () => { infowindow.open(map, marker); })
-            }
-        </script>
-        <script type="text/javascript"
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVGs8MwGzeMC71ifwhjRNyfMagjqyTbP8&callback=initMap&v=weekly"
-            async></script>
+    <script src="./wwwroot/js/init.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.17/dist/fancybox.umd.js" type="text/javascript"
+        async></script>
 </body>
 
 </html>

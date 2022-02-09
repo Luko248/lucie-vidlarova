@@ -1,7 +1,7 @@
 @import '../base/global';
 
 .gallery {
-  --col-count: 2;
+  --col-count: 4;
   --align-items: flex-start;
   --gap: #{$gap-xxl};
   @include grid-columns(
@@ -11,101 +11,28 @@
     var(--align-items)
   );
 
-    @include res-max-laptop-m{
-      --gap: #{$gap-xl};
-    }
-
-    @include res-max-laptop-s{
-      --gap: #{$gap-l};
-    }
-
-    @include res-max-mobile-l{
-      --col-count: 1;
-    }
-
-  &__sec {
-    --gallery-sec-padding-top: 0;
-    --gallery-sec-padding-bottom: 0;
-    --gallery-sec-max-height: 2048px;
-    --gallery-height: 100vh;
-    @include grid-columns(def, minmax($gap-m, 1fr), $gap-l);
-    height: var(--gallery-height);
-    max-height: var(--gallery-sec-max-height);
-    padding-top: var(--gallery-sec-padding-top);
-    padding-bottom: var(--gallery-sec-padding-bottom);
-    background-color: $color-bg--light;
-    overflow-y: hidden;
-
-    @include res-max-mobile-l{
-      --gallery-sec-max-height: unset;
-      --gallery-sec-padding-top: 5rem;
-      --gallery-sec-padding-bottom: 5rem;
-      --gallery-height: auto;
-    }
-
-    @include res-max-tablet{
-      --gallery-sec-padding-bottom: 10vh;
-    }
+  @include res-max-laptop-m {
+    --gap: #{$gap-xl};
   }
 
-  &__layout {
-    --layout-height: 90%;
-    --layout-gap: 8rem;
-    --layout-template-columns: minmax(#{$gap-m}, 8fr) minmax(#{$gap-m}, 5fr);
-    @include grid-columns(def, var(--layout-template-columns), var(--layout-gap));
-    height: var(--layout-height);
-    margin: auto;
-    overflow: hidden;
-
-    @include res-max-laptop-s{
-      --layout-gap: 5rem;
-    }
-
-    @include res-max-tablet{
-      --layout-gap: #{$gap-xxl};
-    }
-
-    @include res-max-mobile-l{
-      --layout-template-columns: minmax(#{$gap-m}, 1fr);
-      --layout-gap: 5rem;
-      --layout-height: unset;
-    }
+  @include res-max-laptop-s {
+    --gap: #{$gap-l};
   }
 
-  &__wrapper{
-    --wraper-max-height: 100%;
-    --wrapper-padding-right: #{$gap-xl};
-    max-height: var(--wraper-max-height);
-    padding-right: var(--wrapper-padding-right);
-    overflow: auto;
-
-    @include res-max-laptop-m{
-      --wrapper-padding-right: #{$gap-l};
-    }
-
-    @include res-max-mobile-l{
-      --wrapper-padding-right: 0;
-      --wrapper-padding-right: unset;
-    }
+  @include res-max-mobile-l {
+    --col-count: 1;
+  }
+  #dotwork,
+  #abstractions,
+  #lettering,
+  #handpoke {
+    scroll-margin-top: 5vh;
   }
 
-  &__info {
-    --info-top: 20%;
-    position: sticky;
-    top: var(--info-top);
-
-    @include res-max-laptop-s{
-      --info-top: 10%;
-    }
-
-    @include res-max-mobile-l{
-      --info-top: auto;
-      grid-row-start: 1;
-    }
-  }
-  
-  #dotwork, #abstractions, #lettering, #handpoke{
-      scroll-margin-top: 5vh;
+  &__sec{
+    padding: 5rem 0;
+    background-color: $color-bg;
+    scroll-margin-top: var(--nav-height);
   }
 }
 
@@ -113,8 +40,8 @@
   // --grayscale-intensity: grayscale(.5);
   --aspect-ratio: 1 / 1;
   --row-span: 5;
-  @include grid-row-span(var(--row-span)); 
-  
+  @include grid-row-span(var(--row-span));
+
   &--2-3 {
     --aspect-ratio: 2 / 3;
     --row-span: 7;
@@ -128,10 +55,10 @@
     position: relative;
     color: currentColor;
     text-decoration: none;
-   
+
     > picture > img {
       display: block;
-      width: 100%; 
+      width: 100%;
       aspect-ratio: var(--aspect-ratio);
       // filter: var(--grayscale-intensity);
       border-width: 0;
@@ -168,4 +95,3 @@
     }
   }
 }
-

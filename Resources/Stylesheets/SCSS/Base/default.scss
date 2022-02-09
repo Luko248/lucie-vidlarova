@@ -6,16 +6,13 @@ html {
     height: 100%;
     margin: 0;
     font-size: 62.5%;
-    // scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
     position: relative;
-    max-height: 100vh;
     padding: 0; 
     margin: 0;
-    overflow: hidden;
-
     
     &:before{
         position: absolute;
@@ -31,8 +28,6 @@ body {
         z-index: -1;
         background-size: cover;
     }
-    
-    
 }
 
 table {

@@ -2,7 +2,7 @@
 
 
 .nav{  
-    --nav-color: var(--color-white);
+    --nav-color: var(--color-black);
     --nav__menu-display: none;
     @include flex-set(def, row, nowrap, $gap-xl, center, space-between);
     position: fixed;
@@ -11,6 +11,7 @@
     width: 100%;
     height: var(--nav-height);
     padding: 0 $gap-xl;
+    background-color: hsla(0, 100%, 100%, .8);
     color: var(--nav-color);
     z-index: 999;
 
