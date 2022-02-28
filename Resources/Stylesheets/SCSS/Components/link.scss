@@ -6,7 +6,7 @@
     --icon-trans-x: 0;
     @include flex-set(inline, row, nowrap, 1.2rem);
     font-family: $font-text;
-    font-size: large;
+    font-size: 2rem;
     color: var(--link-color);
     text-decoration: var(--link-text-decor);
     text-transform: uppercase;

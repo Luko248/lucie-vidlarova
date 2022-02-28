@@ -3,14 +3,15 @@
 .container {
     --container-pad-x: #{$gap-xxl};
     --container-width: 75%;
+    --container-min-width: #{$width-laptop-l};
     width: var(--container-width);
-    min-width: 115rem;
+    min-width: var(--container-min-width);
     padding: 0 var(--container-pad-x);
     margin: 0 auto;
 
     @include res-max-laptop-l {
         --container-width: 80%;
-        min-width: 0;
+        --container-min-width: 0;
     }
 
     @include res-max-laptop-s {
@@ -27,5 +28,23 @@
 
     @include res-max-mobile-m{
         --container-pad-x: #{$gap-l};
+    }
+
+    &--s{
+        --container-width: 60%;
+        --container-min-width: #{$width-laptop-s};
+
+        @include res-max-laptop-l {
+            --container-width: 70%;
+            --container-min-width: 0;
+        }
+
+        @include res-max-laptop-s {
+            --container-width: 85%;  
+        }
+
+        @include res-max-tablet {
+            --container-width: 100%;
+        }
     }
 }

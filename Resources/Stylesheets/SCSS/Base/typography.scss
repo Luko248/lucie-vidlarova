@@ -16,49 +16,57 @@ p, span, small{
 }
 
 .title{
-    --title-font-size: 5.6em;
+    --title-font-size: 6.4em;
     --title-color: #{$color-black};
+    --title-mg-bottom: 4rem; 
     @include flex-set;
-    margin-bottom: $gap-xxl;
+    margin-bottom: var(--title-mg-bottom);
     font-family: $font-title;
     font-size: var(--title-font-size);
     color: var(--title-color);
 
     @include res-max-laptop-l{
-        --title-font-size: 4.8em;
+        --title-font-size: 5.6em;
+        --title-mg-bottom: #{$gap-xxl}; 
     }
 
     @include res-max-laptop-s{
+        --title-font-size: 4.8em;
+    }
+
+    @include res-max-tablet{
         --title-font-size: 4em;
+        --title-mg-bottom: #{$gap-xl}; 
     }
 
     &--white{
         --title-color: #{$color-white};
     }
 
-    &--small{
+    &--s{
         --title-font-size: 4em;
     }
 }
 
 .desc{
     --border-width: 0;
-    --desc-padding: 0;
+    --desc-pad-left: #{$gap-l};
     --desc-font-size: large;
+    --desc-bg-bottom: 5rem;
     @include border('left', .2rem, var(--color-black));
     padding-right: 0;
-    padding-left: var(--desc-padding);
-    margin-bottom: 5rem;
+    padding-left: var(--desc-pad-left);
+    margin-bottom: var(--desc-bg-bottom);
     font-family:  $font-text;
     font-size: var(--desc-font-size);
-    line-height: 1.8;
+    line-height: 1.7;
 
     @include res-max-laptop-s{
         --desc-font-size: medium;
     }
     
     &--line{
-        --desc-padding: #{$gap-l};
+        --desc-pad-left: #{$gap-l};
         --border-width: .3rem;
     }
 }

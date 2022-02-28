@@ -3,7 +3,7 @@ $color-black: hsla(0, 0%, 0%, 1);
 $color-black--trans: hsla(0, 0%, 0%, .5);
 $color-black--trans-dark: hsla(0, 0%, 0%, .75);
 $color-white: hsla(0, 0%, 100%, 1);
-$color-white--trans: hsla(0, 0%, 100%, .1);
+$color-white--trans: hsla(0, 0%, 100%, .7);
 $color-trans: hsla(0, 0%, 0%, 0);
 $color-nav: hsla(0, 0%, 100%, .9);
 $color-primary: hsl(28, 30%, 79%);
@@ -22,9 +22,9 @@ $gap-s: ($gap-m / 2);
 $gap-l: ($gap-m * 2);
 $gap-xl: ($gap-m * 3);
 $gap-xxl: ($gap-m * 4);
-$font-text: 'segoe-ui-light', sans-serif;
+$font-text: 'Sitka Banner', sans-serif;
 $font-highlight: 'times-new-roman';
-$font-title: 'times-new-roman-bold';
+$font-title: 'Vladimir Script';
 
 // All devices width for MediaQuery
 $width-mobile-s: 320px;
@@ -36,3 +36,4 @@ $width-laptop-m: 1366px;
 $width-laptop-l: 1440px;
 $width-laptop-xl: 1920px;
 $width-4k: 2560px;
+$height-4k: 2160px;

@@ -2,150 +2,68 @@
 
 header{
     position: relative;
-    padding-top: calc(var(--nav-height) + 5rem);
-    padding-bottom: 5rem;
-    background-color: $color-bg;
-    overflow: hidden;
-
-    // &:after{
-    //     position: absolute;
-    //     top: 50%;
-    //     left: 0;
-    //     content: '';
-    //     width: 50vw;
-    //     aspect-ratio: 1 / 1;
-    //     background-image: url('../images/backgrounds/butterfly-bg.png');
-    //     background-repeat: no-repeat;
-    //     background-position: center center;
-    //     transform: translate(-50%, -50%);
-    //     background-size: contain;
-    // }
 }
 
-.header {  
-    
+.header {    
     &__container{
         --col-count: 2;
-        --col-gap: 5em;
-        --header-font-size: #{$gap-l};  
+        --col-gap: 0;
         @include grid-columns(def, repeat(var(--col-count), minmax($gap-l, 1fr)), var(--col-gap), stretch, center, stretch);
-        position: relative;
-        max-height: $width-4k;  
-        // font-size: var(--header-font-size);
-        overflow: hidden;
-        z-index: 10;
-
-        @include res-max-laptop-l{
-            --header-font-size: 1.4rem;
-        }
-
-        @include res-max-laptop-s{
-            --header-font-size: 1.2rem;  
-        }
-
-        @include res-max-tablet{
-            --col-gap: 2.4em;
-        }
-
-        @include res-max-mobile-l{
-            --col-gap: 0;
-            --col-count: 1;
-            --header-font-size: 1rem;  
-        }
+        position: relative; 
+        min-height: 100vh;
+        max-height: $height-4k;
+        background-image: linear-gradient(to right, $color-black 50%, $color-primary 50%, $color-primary 100%); 
+        overflow: hidden;      
     }
 
-    &__content{      
+    &__content{    
+        --content-gap: 10vh;
+        --content-color: #{$color-white};  
         --content-z-index: 2;
-        @include flex-set(def, column, wrap, 2em, flex-start, center);     
+        --bg-opacity: .5;
+        --bg-blur: #{$gap-l};
+        @include flex-set(def, column, wrap, var(--content-gap), center, center, center);     
         position: relative;
-        z-index: var(--content-z-index);
+        color: var(--content-color);
+        z-index: var(--content-z-index);  
 
-        &:last-child{
-            --content-z-index: 1;
-        }      
-    }
-
-    &__title{
-        --title-margin-top: 0;
-        --title-max-width: 100%;
-        --title-font-size: 1em;
-        @include grid-rows(def, auto, $gap-s, stretch);
-        max-width: var(--title-max-width);
-        margin-top: var(--title-margin-top);
-        font-size: 5em;
-        line-height: 1;
-        color: $color-primary;
-
-        @include res-max-mobile-l{
-            --title-max-width: 70%;
-            --title-font-size: .8em;
-            --title-margin-top: .4em;
+        &:hover{
+            --bg-opacity: .6;
+            --bg-blur: 2px;
+        }
+        &--tattoo{
+            --content-bg: url('../images/backgrounds/bg-tattoo.png');
         }
 
-        >*{
-            line-height: inherit;
+        &--visuals{
+            --content-bg: url('../images/backgrounds/bg-visuals.png');
         }
 
-        >h1{  
-            font-size: var(--title-font-size);     
-            line-height: 1;   
-        }
-
-        >strong{
-            font-family: $font-highlight;
-            font-size: .3em;
-            color: $color-white;
-            text-transform: uppercase;
+        &:after{
+            @include center-item;
+            display: block;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-image: var(--content-bg);
+            opacity: var(--bg-opacity);
+            filter: blur(var(--bg-blur));
+            transition: opacity .5s ease-in-out, filter .5s ease-in-out;
+            z-index: -1;
         }
 
         >p{
-            margin-top: 1.5em;
-            margin-bottom: 2em;
-            font-size: .3em;   
-            line-height: 1.5;
-            color: $color-white;
-
-            > strong{
-                font-family: $font-text;
-                color: $color-primary;
-            }
-        }
+            margin-bottom: var(--content-gap);
+            font-size: x-large;
+            font-weight: 300;
+        }        
     }
 
-    &__photo{
-        --photo-width: 100%;
-        position: relative;
-        width:  var(--photo-width);
-
-        @include res-max-tablet{
-            --photo-width: 180%;
-        }
-
-        @include res-max-mobile-l{
-            --photo-width: 120%;
-            @include center-item(100%, 0, 28%, -90%);
-        }
-
-        &:before{
-            position: absolute;
-            bottom: .3%;
-            left: 50%;
-            content: '';
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            margin: 0 auto;
-            background: radial-gradient($color-primary--lighten, $color-primary);
-            border-radius: 50%;
-            transform: translateX(-50%);
-            z-index: 1;
-            box-shadow: 0 0 10rem 0 $color-bg;
-        }
-
-        > img{  
-            position: relative;
-            display: block;
-            width: 100%;      
-            z-index: 2;
-        }
+    &__title{
+        @include border('tb', 1px, currentColor);
+        padding: $gap-l 4.8rem $gap-l $gap-xxl;
+        font-size: 10rem;
+        font-weight: 100;
+        color: currentColor;
     }
 }

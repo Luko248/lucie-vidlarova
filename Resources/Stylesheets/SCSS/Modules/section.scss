@@ -1,0 +1,15 @@
+@import "../base/global";
+
+.sec{
+    --sec-pad-y: 8rem;
+    padding: var(--sec-pad-y) 0;
+    background-color: $color-white--trans;
+
+    @include res-max-laptop-m{
+        --sec-pad-y: 5rem;
+    }
+
+    @include res-max-tablet{
+        --sec-pad-y: #{$gap-xxl};
+    }
+}
