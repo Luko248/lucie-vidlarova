@@ -10,8 +10,8 @@ $color-primary: hsl(28, 30%, 79%);
 $color-primary--hover: darken($color-primary, 10%);
 $color-primary--lighten: lighten($color-primary, 15%);
 $color-secondary: hsla(120, 2%, 17%, 1);
-$color-bg: hsla(0, 100%, 100%, .5);
-$color-bg--light: hsla(0, 0%, 100%, .7);
+$color-bg: hsl(200, 18%, 10%);
+$color-bg--light: hsla(200, 18%, 10%, .85);
 $color-footer-bg: hsl(0, 0%, 11%);
 $color-footer: hsl(0, 0%, 84%);
 
@@ -24,7 +24,7 @@ $gap-xl: ($gap-m * 3);
 $gap-xxl: ($gap-m * 4);
 $font-text: 'Sitka Banner', sans-serif;
 $font-highlight: 'times-new-roman';
-$font-title: 'Vladimir Script';
+$font-title: 'p22-marcel-script-pro', sans-serif;
 
 // All devices width for MediaQuery
 $width-mobile-s: 320px;

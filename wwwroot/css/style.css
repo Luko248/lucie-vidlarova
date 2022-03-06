@@ -17,7 +17,7 @@
   --pad-s: 0.4rem;
   --font-text: Sitka Banner, sans-serif;
   --font-highlight: times-new-roman;
-  --font-title: Vladimir Script;
+  --font-title: p22-marcel-script-pro, sans-serif;
   --border-width: 1px;
   --nav-height: 7rem; }
 
@@ -186,7 +186,9 @@ h1, h2, h3, h4, h5, h6, p, ul {
   margin: 0; }
 
 h1, h2, h3, h4, h5, h6, strong {
-  font-family: "Vladimir Script"; }
+  font-family: "p22-marcel-script-pro", sans-serif;
+  font-weight: 400;
+  font-style: normal; }
 
 p, span, small {
   font-family: "Sitka Banner", sans-serif; }
@@ -204,7 +206,7 @@ p, span, small {
   justify-content: flex-start;
   gap: 0;
   margin-bottom: var(--title-mg-bottom);
-  font-family: "Vladimir Script";
+  font-family: "p22-marcel-script-pro", sans-serif;
   font-size: var(--title-font-size);
   color: var(--title-color); }
   @media only screen and (max-width: 1440px) {
@@ -791,7 +793,7 @@ p, span, small {
     scroll-margin-top: 5vh; }
   .gallery__sec {
     padding: 5rem 0;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #151b1e;
     scroll-margin-top: var(--nav-height); }
 
 .gallery-item {
