@@ -3,7 +3,7 @@
   --color-white: white;
   --color-border: var(--color-white);
   --color-trans: rgba(0, 0, 0, 0);
-  --color-nav: rgba(255, 255, 255, 0.9);
+  --color-nav: rgba(0, 0, 0, 0.5);
   --color-primary: #dac8b9;
   --color-primary--hover: #c8ae98;
   --color-secondary: #2a2c2a;
@@ -87,6 +87,11 @@ body {
     font-family: var(--font-text);
     z-index: -1;
     background-size: cover; }
+
+section {
+  --sec-pad-y: 5rem;
+  padding: var(--sec-pad-y);
+  background-color: rgba(17, 22, 24, 0.93); }
 
 table {
   border-collapse: collapse;
@@ -197,8 +202,8 @@ p, span, small {
 
 .title {
   --title-font-size: 6.4em;
-  --title-color: black;
-  --title-mg-bottom: 4rem;
+  --title-color: #d6d6d6;
+  --title-mg-bottom: 2.4rem;
   display: flex;
   flex-flow: row nowrap;
   align-items: stretch;
@@ -230,13 +235,14 @@ p, span, small {
   --desc-pad-left: 1.6rem;
   --desc-font-size: large;
   --desc-bg-bottom: 5rem;
-  border-left: 0.2rem solid var(--color-black);
+  border-left: 0.2rem solid #d6d6d6;
   padding-right: 0;
   padding-left: var(--desc-pad-left);
   margin-bottom: var(--desc-bg-bottom);
   font-family: "Sitka Banner", sans-serif;
   font-size: var(--desc-font-size);
-  line-height: 1.7; }
+  line-height: 1.7;
+  color: #d6d6d6; }
   @media only screen and (max-width: 1024px) {
     .desc {
       --desc-font-size: medium; } }
@@ -381,15 +387,15 @@ p, span, small {
 
 .container {
   --container-pad-x: 3.2rem;
-  --container-width: 75%;
-  --container-min-width: 1440px;
+  --container-width: 65%;
+  --container-min-width: 1200px;
   width: var(--container-width);
   min-width: var(--container-min-width);
   padding: 0 var(--container-pad-x);
   margin: 0 auto; }
   @media only screen and (max-width: 1440px) {
     .container {
-      --container-width: 80%;
+      --container-width: 75%;
       --container-min-width: 0; } }
   @media only screen and (max-width: 1024px) {
     .container {
@@ -790,7 +796,7 @@ p, span, small {
     scroll-margin-top: 5vh; }
   .gallery__sec {
     padding: 5rem 0;
-    background-color: #151b1e;
+    background-color: rgba(17, 22, 24, 0.93);
     scroll-margin-top: var(--nav-height); }
 
 .gallery-item {
@@ -869,7 +875,7 @@ header {
   z-index: var(--content-z-index); }
   .header__content:hover {
     --bg-opacity: .6;
-    --bg-blur: 2px; }
+    --bg-blur: 4px; }
   .header__content--tattoo {
     --content-bg: url('../images/backgrounds/bg-tattoo.png'); }
   .header__content--visuals {
@@ -902,188 +908,53 @@ header {
   color: currentColor; }
 
 .nav {
-  --nav-color: var(--color-black);
-  --nav__menu-display: none;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  align-content: normal;
-  justify-content: space-between;
-  gap: 2.4rem;
+  --nav-color: white;
+  --nav-bg-color: {--color-trans};
+  --nav-menu-display: flex;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: var(--nav-height);
   padding: 0 2.4rem;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0);
   color: var(--nav-color);
   z-index: 999; }
-  .nav--dark {
-    --nav-color: var(--color-black); }
   .nav--menu-open {
     --nav-color: var(--color-white); }
-  .nav ul {
-    padding: 0;
-    list-style: none; }
-  .nav__right {
-    --menu-gap: 2.4rem;
-    display: inline-flex;
-    flex-flow: row wrap;
-    align-items: center;
-    align-content: normal;
-    justify-content: flex-start;
-    gap: var(--menu-gap);
-    list-style: none; }
-    .nav__right a {
-      transition: color var(--trans-time) var(--trans-fnc) 0s;
-      display: block;
-      font-family: "Sitka Banner", sans-serif;
-      font-size: medium;
-      color: var(--nav__item-color);
-      text-decoration: none;
-      text-transform: uppercase;
-      white-space: nowrap; }
-      .nav__right a:hover {
-        --nav__item-color: var(--color-primary);
-        text-decoration: underline; }
-    @media only screen and (max-width: 425px) {
-      .nav__right > li {
-        display: none; } }
+  .nav__logo {
+    border: var(--border-width) solid var(--color-border);
+    height: 5rem;
+    aspect-ratio: 4 / 1.5;
+    background: #d6d6d6; }
   .nav__menu {
-    display: flex;
-    flex-flow: column nowrap;
+    --menu-gap: 3.2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    gap: var(--menu-gap);
     align-items: center;
     align-content: center;
     justify-content: center;
-    gap: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: var(--nav__menu-display);
-    width: 100vw;
-    background: black;
-    opacity: 0;
-    z-index: -1; }
-    @media only screen and (max-width: 768px) {
-      .nav__menu {
-        padding-top: var(--nav-height); } }
-    .nav__menu--open {
-      --nav__menu-display: flex;
-      animation: showMenu .5s forwards;
-      animation-delay: .1s; }
-  .nav__options {
-    --col-count: 4;
-    --options-height: 100vh;
-    --options-width: 90%;
-    --options-align-items: stretch;
-    --options-align-content: stretch;
-    display: grid;
-    align-items: var(--options-align-items);
-    align-content: var(--options-align-content);
-    justify-content: center;
-    grid-template-columns: repeat(var(--col-count), minmax(1.6rem, 1fr));
-    width: var(--options-width);
-    height: var(--options-height);
+    grid-template-columns: repeat(auto-fit, minmax(130px, auto));
+    width: 100%;
+    padding-left: 0;
     list-style: none; }
-    @media only screen and (max-width: 768px) {
-      .nav__options {
-        --col-count: 1;
-        --options-align-items: flex-start;
-        --options-align-content: flex-start;
-        --options-width: 100%; } }
-    @media only screen and (max-width: 425px) {
-      .nav__options {
-        --options-height: calc(100vh - var(--nav-height)); } }
-  .nav__item {
-    --color-tb: black;
-    --filter-blur: blur(1.6rem);
-    --filter-grayscale: grayscale(1);
-    --item-font-size: xx-large;
-    --item-padding: 0;
-    position: relative;
-    display: block;
-    overflow: hidden; }
-    @media only screen and (max-width: 1440px) {
-      .nav__item {
-        --item-font-size: x-large; } }
-    @media only screen and (max-width: 1024px) {
-      .nav__item {
-        --item-font-size: large; } }
-    @media only screen and (max-width: 768px) {
-      .nav__item {
-        --color-tb: rgba(0, 0, 0, 0.75);
-        --filter-blur: blur(0);
-        --item-font-size: xx-large;
-        --item-padding: 3.2rem 2.4rem; } }
-    @media only screen and (max-width: 425px) {
-      .nav__item {
-        --item-font-size: xx-large; } }
-    .nav__item:hover {
-      --filter-blur: blur(0);
-      --filter-grayscale: grayscale(0);
-      --nav__item-color: var(--color-primary); }
-      @media only screen and (max-width: 768px) {
-        .nav__item:hover {
-          --filter-grayscale: grayscale(1);
-          --nav__item-color: var(--color-white); } }
-    .nav__item:before {
-      transition: filter var(--trans-time) var(--trans-fnc) 0s;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      display: block;
-      content: '';
-      background-repeat: no-repeat;
-      background-position: center;
-      filter: var(--filter-blur) var(--filter-grayscale);
-      background-size: cover; }
-    .nav__item:after {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      content: '';
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to bottom, var(--color-tb) 10%, rgba(0, 0, 0, 0.5) 50%, var(--color-tb) 90%);
-      z-index: 5; }
-    .nav__item:nth-last-child(4):before {
-      background-image: url("../images/backgrounds/menu/dotwork-bg.webp"); }
-    .nav__item:nth-last-child(3):before {
-      background-image: url("../images/backgrounds/menu/handpoke-bg.webp"); }
-    .nav__item:nth-last-child(2):before {
-      background-image: url("../images/backgrounds/menu/abstraction-bg.webp"); }
-    .nav__item:last-child:before {
-      background-image: url("../images/backgrounds/menu/lettering-bg.webp"); }
-    .nav__item > a {
-      --text-width: 50%;
-      position: relative;
-      display: block;
-      height: 100%;
-      padding: var(--item-padding);
-      color: currentColor;
-      text-decoration: none;
-      z-index: 10; }
-    .nav__item strong {
+    .nav__menu a {
       transition: color var(--trans-time) var(--trans-fnc) 0s;
-      position: absolute;
-      top: 100%;
-      left: 2.4rem;
-      transform: translate(0, -200%);
-      max-width: var(--text-width);
-      font-size: var(--item-font-size);
-      color: var(--nav__item-color);
-      white-space: break-spaces;
-      z-index: 10; }
-      @media only screen and (max-width: 768px) {
-        .nav__item strong {
-          position: relative;
-          top: auto;
-          left: auto;
-          transform: translate(0, 0); } }
+      display: block;
+      font-family: "times-new-roman";
+      font-size: large;
+      color: var(--nav-color);
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      white-space: nowrap; }
+      .nav__menu a:hover {
+        --nav__item-color: var(--color-primary);
+        text-decoration: underline; }
 
 @keyframes showMenu {
   from {

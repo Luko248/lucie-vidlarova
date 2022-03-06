@@ -2,15 +2,15 @@
 
 .container {
     --container-pad-x: #{$gap-xxl};
-    --container-width: 75%;
-    --container-min-width: #{$width-laptop-l};
+    --container-width: 65%;
+    --container-min-width: 1200px;
     width: var(--container-width);
     min-width: var(--container-min-width);
     padding: 0 var(--container-pad-x);
     margin: 0 auto;
 
     @include res-max-laptop-l {
-        --container-width: 80%;
+        --container-width: 75%;
         --container-min-width: 0;
     }
 

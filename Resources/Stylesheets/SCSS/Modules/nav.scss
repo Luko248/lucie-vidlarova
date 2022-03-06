@@ -2,43 +2,48 @@
 
 
 .nav{  
-    --nav-color: var(--color-black);
-    --nav__menu-display: none;
-    @include flex-set(def, row, nowrap, $gap-xl, center, space-between);
+    --nav-color: #{$color-white};
+    --nav-bg-color: {--color-trans};
+    --nav-menu-display: flex;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: var(--nav-height);
     padding: 0 $gap-xl;
-    background-color: hsla(0, 100%, 100%, .8);
+    background-color: $color-trans;
     color: var(--nav-color);
     z-index: 999;
-
-    &--dark{
-        --nav-color: var(--color-black);
-    }
 
     &--menu-open{
         --nav-color: var(--color-white);
     }
 
-    ul{
-        padding: 0;
-        list-style: none;
+    &__logo{
+        @include border;
+        height: 5rem;
+        aspect-ratio: 4 / 1.5;
+        background: $color-font;
     }
 
-    &__right{
-        --menu-gap: #{$gap-xl};
-        @include flex-set(inline, row, wrap, var(--menu-gap), center);
+    &__menu{
+        --menu-gap: #{$gap-xxl};
+        @include center-item;
+        @include grid-columns(def, repeat(auto-fit, minmax(130px, auto)), var(--menu-gap), center, center, center);
+        width: 100%;
+        padding-left: 0;
         list-style: none;
-
-        a {
+            &--open{
+                
+            }
+                    
+            a {
             @include transition(color);
             display: block;
-            font-family: $font-text;
-            font-size: medium;
-            color: var(--nav__item-color);
+            font-family: $font-highlight;
+            font-size: large;
+            color: var(--nav-color);
+            text-align: center;
             text-decoration: none;
             text-transform: uppercase;
             white-space: nowrap;   
@@ -50,164 +55,9 @@
         }
 
         >li{
-            @include res-max-mobile-l{
-                display: none;
-            }
-        }
-    }
-
-    &__menu{ 
-        @include flex-set(def, column, nowrap, 0, center, center, center);
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: var(--nav__menu-display);    
-        width: 100vw;
-        background: $color-black;
-        opacity: 0;     
-        z-index: -1;
-
-        @include res-max-tablet{
-            padding-top: var(--nav-height);
-        }
-
-        &--open{
-            --nav__menu-display: flex;
-            animation: showMenu .5s forwards;
-            animation-delay: .1s;  
-        }
-    }
-
-    &__options{
-        --col-count: 4;
-        --options-height: 100vh;
-        --options-width: 90%;
-        --options-align-items: stretch;
-        --options-align-content: stretch;
-        @include grid-columns(def, repeat(var(--col-count), minmax($gap-l, 1fr)), 0, var(--options-align-items), center, var(--options-align-content));
-        width: var(--options-width);
-        height: var(--options-height);
-        list-style: none;  
-
-        @include res-max-tablet{
-            --col-count: 1;
-            --options-align-items: flex-start;
-            --options-align-content: flex-start;
-            --options-width: 100%;
-        }
-
-        @include res-max-mobile-l{
-            --options-height: calc(100vh - var(--nav-height));
-        }
-    }
-    
-    &__item {
-        --color-tb: #{$color-black}; 
-        --filter-blur: blur(#{$gap-l});
-        --filter-grayscale: grayscale(1);
-        --item-font-size: xx-large;
-        --item-padding: 0;
-        position: relative;
-        display: block;
-        overflow: hidden;
-
-        @include res-max-laptop-l{
-            --item-font-size: x-large;
-        }
-
-        @include res-max-laptop-s{
-            --item-font-size: large;
-        }
-
-        @include res-max-tablet{
-            --color-tb: #{$color-black--trans-dark}; 
-            --filter-blur: blur(0);
-            --item-font-size: xx-large;
-            --item-padding: #{$gap-xxl} #{$gap-xl};
-        }
-
-        @include res-max-mobile-l{
-            --item-font-size: xx-large;
-        }
-
-        &:hover{
-            --filter-blur: blur(0);
-            --filter-grayscale: grayscale(0);
-            --nav__item-color: var(--color-primary);
-
-            @include res-max-tablet{      
-                --filter-grayscale: grayscale(1);
-                --nav__item-color: var(--color-white);
-            }
-        }
-
-        &:before{
-            @include transition(filter);
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            display: block;
-            content: '';
-            background-repeat: no-repeat;
-            background-position: center;   
-            filter: var(--filter-blur) var(--filter-grayscale);
-            background-size: cover;
-        }  
-
-        &:after{
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: block;
-            content: '';
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, var(--color-tb) 10%, $color-black--trans 50%, var(--color-tb) 90%);    
-            z-index: 5; 
-        }
-
-        &:nth-last-child(4):before{
-
-            background-image: url('../images/backgrounds/menu/dotwork-bg.webp')
-        }
-
-        &:nth-last-child(3):before{
-            background-image: url('../images/backgrounds/menu/handpoke-bg.webp')
-        }
-
-        &:nth-last-child(2):before{
-            background-image: url('../images/backgrounds/menu/abstraction-bg.webp')
-        }
-
-        &:last-child:before{
-            background-image: url('../images/backgrounds/menu/lettering-bg.webp');
-        }    
-
-        > a{       
-            --text-width: 50%;       
-            position: relative;
-            display: block;
-            height: 100%;
-            padding: var(--item-padding);
-            color: currentColor;
-            text-decoration: none;    
-            z-index: 10;
-        }
-
-        strong{      
-            @include transition(color);
-            @include center-item(100%, $gap-xl, 0, -200%);
-            max-width: var(--text-width);
-            font-size: var(--item-font-size);
-            color: var(--nav__item-color);
-            white-space: break-spaces;
-            z-index: 10;      
-            
-            @include res-max-tablet{
-                @include center-item(auto, auto, 0, 0, relative);
-            }
+            // @include res-max-mobile-l{
+            //     display: none;
+            // }
         }
     }
 }

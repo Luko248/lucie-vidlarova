@@ -19,8 +19,8 @@ p, span, small{
 
 .title{
     --title-font-size: 6.4em;
-    --title-color: #{$color-black};
-    --title-mg-bottom: 4rem; 
+    --title-color: #{$color-font};
+    --title-mg-bottom: #{$gap-xl}; 
     @include flex-set;
     margin-bottom: var(--title-mg-bottom);
     font-family: $font-title;
@@ -55,13 +55,14 @@ p, span, small{
     --desc-pad-left: #{$gap-l};
     --desc-font-size: large;
     --desc-bg-bottom: 5rem;
-    @include border('left', .2rem, var(--color-black));
+    @include border('left', .2rem, $color-font);
     padding-right: 0;
     padding-left: var(--desc-pad-left);
     margin-bottom: var(--desc-bg-bottom);
     font-family:  $font-text;
     font-size: var(--desc-font-size);
     line-height: 1.7;
+    color: $color-font;
 
     @include res-max-laptop-s{
         --desc-font-size: medium;
