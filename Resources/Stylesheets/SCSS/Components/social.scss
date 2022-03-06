@@ -1,24 +1,14 @@
 @import "../base/global";
 
 .social{
-    --social-item-color: var(--color-black);
-    @include flex-set(def, column, wrap, $gap-xxl, center, center, center);
+    --social-item-color: #{$color-primary};
+    @include flex-set(def, column, wrap, $gap-xl, center, center, center);
+    @include center-item(100%, $gap-xl, 0, calc(-140%));
     position: fixed;
-    top: 50%;
-    right: $gap-xl;
-    transform: translateY(-50%);
     z-index: 999;
 
     @include res-max-tablet{
         display: none;
-    }
-    
-    &--dark{
-        --social-item-color: var(--color-black);
-    }
-
-    &--menu-open{
-        --social-item-color: var(--color-white);
     }
 
     &__item{
@@ -37,7 +27,7 @@
         }
         
         > .icon{
-            --icon-size: #{$gap-xl};
+            --icon-size: #{$gap-xxl};
             @include center-item;
             @include transition(fill);
             fill: var(--social-item-color);       
