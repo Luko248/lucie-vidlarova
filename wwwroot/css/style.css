@@ -91,7 +91,8 @@ body {
 section {
   --sec-pad-y: 5rem;
   padding: var(--sec-pad-y);
-  background-color: rgba(17, 22, 24, 0.93); }
+  background-color: rgba(17, 22, 24, 0.93);
+  scroll-margin-top: var(--sec-pad-y); }
 
 table {
   border-collapse: collapse;
@@ -925,7 +926,7 @@ header {
   .nav__logo {
     border: var(--border-width) solid var(--color-border);
     height: 5rem;
-    aspect-ratio: 4 / 1.5;
+    aspect-ratio: 4 / 1;
     background: #d6d6d6; }
   .nav__menu {
     --menu-gap: 3.2rem;
@@ -953,7 +954,7 @@ header {
       text-transform: uppercase;
       white-space: nowrap; }
       .nav__menu a:hover {
-        --nav__item-color: var(--color-primary);
+        --nav-color: var(--color-primary);
         text-decoration: underline; }
 
 @keyframes showMenu {

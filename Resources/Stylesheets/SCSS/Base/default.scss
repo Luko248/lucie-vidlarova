@@ -34,6 +34,7 @@ section{
     --sec-pad-y: 5rem;
     padding: var(--sec-pad-y);
     background-color: $color-bg;
+    scroll-margin-top: var(--sec-pad-y);
 }
 
 table {

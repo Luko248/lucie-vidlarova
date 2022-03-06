@@ -22,7 +22,7 @@
     &__logo{
         @include border;
         height: 5rem;
-        aspect-ratio: 4 / 1.5;
+        aspect-ratio: 4 / 1;
         background: $color-font;
     }
 
@@ -49,7 +49,7 @@
             white-space: nowrap;   
 
             &:hover{
-                --nav__item-color: var(--color-primary);
+                --nav-color: var(--color-primary);
                 text-decoration: underline;      
             }
         }
