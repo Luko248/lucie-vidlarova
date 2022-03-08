@@ -55,6 +55,7 @@
         "background-clip",
         "background-repeat",
         "background-position",
+        "background-size",
         "background-origin",
         "background-color",
         "background-attachment",
