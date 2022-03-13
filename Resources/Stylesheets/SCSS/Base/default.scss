@@ -25,16 +25,8 @@ body {
         background-size: cover;
         background-attachment: fixed;
         opacity: .6;
-        font-family: var(--font-text);
         z-index: -1;
     }
-}
-
-section{
-    --sec-pad-y: 5rem;
-    padding: var(--sec-pad-y);
-    background-color: $color-bg;
-    scroll-margin-top: var(--sec-pad-y);
 }
 
 table {

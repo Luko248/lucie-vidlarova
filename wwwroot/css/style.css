@@ -5,7 +5,8 @@
   --color-white: white;
   --color-border: var(--color-white);
   --color-trans: rgba(0, 0, 0, 0);
-  --color-bg-nav: rgba(255, 255, 255, 0.3);
+  --color-bg: rgba(17, 22, 24, 0.87);
+  --color-bg-nav: rgba(17, 22, 24, 0.87);
   --color-primary: #dac8b9;
   --color-primary--hover: #c8ae98;
   --color-secondary: #2a2c2a;
@@ -92,14 +93,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     opacity: .6;
-    font-family: var(--font-text);
     z-index: -1; }
-
-section {
-  --sec-pad-y: 5rem;
-  padding: var(--sec-pad-y);
-  background-color: rgba(17, 22, 24, 0.93);
-  scroll-margin-top: var(--sec-pad-y); }
 
 table {
   border-collapse: collapse;
@@ -823,7 +817,7 @@ p, span, small {
     scroll-margin-top: 5vh; }
   .gallery__sec {
     padding: 5rem 0;
-    background-color: rgba(17, 22, 24, 0.93);
+    background-color: rgba(17, 22, 24, 0.87);
     scroll-margin-top: var(--nav-height); }
 
 .gallery-item {
@@ -1043,15 +1037,16 @@ header {
   to {
     opacity: 1; } }
 
-.sec {
+section {
   --sec-pad-y: 8rem;
   padding: var(--sec-pad-y) 0;
-  background-color: rgba(255, 255, 255, 0.7); }
+  background-color: rgba(17, 22, 24, 0.87);
+  scroll-margin-top: var(--sec-pad-y); }
   @media only screen and (max-width: 1366px) {
-    .sec {
+    section {
       --sec-pad-y: 5rem; } }
   @media only screen and (max-width: 768px) {
-    .sec {
+    section {
       --sec-pad-y: 3.2rem; } }
 
 .ac__title {

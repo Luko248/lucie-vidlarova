@@ -1,9 +1,10 @@
 @import "../base/global";
 
-.sec{
+section{
     --sec-pad-y: 8rem;
     padding: var(--sec-pad-y) 0;
-    background-color: $color-white--trans;
+    background-color: $color-bg;
+    scroll-margin-top: var(--sec-pad-y);
 
     @include res-max-laptop-m{
         --sec-pad-y: 5rem;
