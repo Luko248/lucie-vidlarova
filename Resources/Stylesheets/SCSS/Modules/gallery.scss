@@ -8,14 +8,20 @@
 
   @include res-max-laptop-m {
     --gap: #{$gap-xl};
+    --col-count: 4;
   }
 
   @include res-max-laptop-s {
     --gap: #{$gap-l};
   }
 
+  @include res-max-tablet {
+    --col-count: 2;
+  }
+
   @include res-max-mobile-l {
     --col-count: 1;
+    --gap: #{$gap-xl};
   }
 }
 

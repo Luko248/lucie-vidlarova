@@ -37,7 +37,7 @@ p, span, small{
     }
 
     @include res-max-tablet{
-        --title-font-size: 4em;
+        --title-font-size: 7em;
         --title-mg-bottom: #{$gap-xl}; 
     }
 
@@ -66,7 +66,7 @@ p, span, small{
     color: $color-font;
 
     @include res-max-laptop-s{
-        --desc-font-size: medium;
+        --desc-font-size: large;
     }
     
     &--line{

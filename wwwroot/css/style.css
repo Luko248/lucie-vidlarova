@@ -216,7 +216,7 @@ p, span, small {
       --title-font-size: 4.8em; } }
   @media only screen and (max-width: 768px) {
     .title {
-      --title-font-size: 4em;
+      --title-font-size: 7em;
       --title-mg-bottom: 2.4rem; } }
   .title--center {
     --title-justify-content: center; }
@@ -237,7 +237,7 @@ p, span, small {
   color: #e6e6e6; }
   @media only screen and (max-width: 1024px) {
     .desc {
-      --desc-font-size: medium; } }
+      --desc-font-size: large; } }
   .desc--line {
     --desc-pad-left: 1.6rem;
     --border-width: .2rem; }
@@ -550,13 +550,18 @@ footer {
   gap: var(--gap); }
   @media only screen and (max-width: 1366px) {
     .gallery {
-      --gap: 2.4rem; } }
+      --gap: 2.4rem;
+      --col-count: 4; } }
   @media only screen and (max-width: 1024px) {
     .gallery {
       --gap: 1.6rem; } }
+  @media only screen and (max-width: 768px) {
+    .gallery {
+      --col-count: 2; } }
   @media only screen and (max-width: 425px) {
     .gallery {
-      --col-count: 1; } }
+      --col-count: 1;
+      --gap: 2.4rem; } }
 
 .gallery-item {
   display: block;
