@@ -28,12 +28,15 @@
         --btn-width: 16rem;
     }
 
-    @include res-max-tablet{
-        
-    }
-
     &:hover{
         --btn-bg-color: #{$color-bg-dark};
         --btn-color: var(--color-primary);
+    }
+
+    > .icon{
+        transform: translateY(8%);
+        fill: currentColor;
+        stroke: currentColor;
+        stroke-width: .5px;
     }
 }

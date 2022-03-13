@@ -90,3 +90,12 @@
     line-height: $gap-xl;
     text-transform: lowercase;
 }
+
+.invisible{
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    font-size: 0;
+    z-index: -999;
+}

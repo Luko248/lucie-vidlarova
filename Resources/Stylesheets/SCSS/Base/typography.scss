@@ -27,9 +27,7 @@ p, span, small{
     font-size: var(--title-font-size);
     color: var(--title-color);
 
-    &--left{
-        --title-justify-content: flex-start;
-    }
+    
 
     @include res-max-laptop-l{
         --title-font-size: 5.6em;
@@ -43,6 +41,10 @@ p, span, small{
     @include res-max-tablet{
         --title-font-size: 4em;
         --title-mg-bottom: #{$gap-xl}; 
+    }
+    
+    &--left{
+        --title-justify-content: flex-start;
     }
 
     &--white{

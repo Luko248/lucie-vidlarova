@@ -1,5 +1,7 @@
 @import "../base/global";
 
+
+
 section{
     --sec-bg: #{$color-bg};
     --sec-pad-y: 8rem;
@@ -26,4 +28,9 @@ section{
             @include position;
         }
     }
+}
+
+
+.nav + main > section:first-of-type{
+    padding-top: calc(var(--sec-pad-y) + var(--nav-height));
 }

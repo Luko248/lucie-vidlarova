@@ -19,7 +19,7 @@
   --gap-l: 1.6rem;
   --gap-m: 0.8rem;
   --gap-s: 0.4rem;
-  --font-text: Calibri light, sans-serif;
+  --font-text: calibri, sans-serif;
   --font-title: p22-allyson-pro, sans-serif;
   --border-width: 1px;
   --nav-height: 8rem; }
@@ -190,6 +190,14 @@ body {
   line-height: 2.4rem;
   text-transform: lowercase; }
 
+.invisible {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  font-size: 0;
+  z-index: -999; }
+
 h1, h2, h3, h4, h5, h6, p, ul {
   margin: 0; }
 
@@ -199,7 +207,7 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal; }
 
 p, span, small {
-  font-family: "Calibri light", sans-serif;
+  font-family: "calibri", sans-serif;
   font-weight: 100; }
 
 .title {
@@ -218,8 +226,6 @@ p, span, small {
   font-family: "p22-allyson-pro", sans-serif;
   font-size: var(--title-font-size);
   color: var(--title-color); }
-  .title--left {
-    --title-justify-content: flex-start; }
   @media only screen and (max-width: 1440px) {
     .title {
       --title-font-size: 5.6em;
@@ -231,6 +237,8 @@ p, span, small {
     .title {
       --title-font-size: 4em;
       --title-mg-bottom: 2.4rem; } }
+  .title--left {
+    --title-justify-content: flex-start; }
   .title--white {
     --title-color: white; }
   .title--s {
@@ -244,7 +252,7 @@ p, span, small {
   border-left: var(--border-width) solid #e6e6e6;
   padding-left: var(--desc-pad-left);
   margin-bottom: var(--desc-mg-bottom);
-  font-family: "Calibri light", sans-serif;
+  font-family: "calibri", sans-serif;
   font-size: var(--desc-font-size);
   line-height: 1.7;
   color: #e6e6e6; }
@@ -274,7 +282,7 @@ p, span, small {
   min-width: var(--btn-width);
   padding: var(--btn-padding-y) var(--btn-padding-y);
   background-color: var(--btn-bg-color);
-  font-family: "Calibri light", sans-serif;
+  font-family: "calibri", sans-serif;
   font-size: var(--btn-font-size);
   font-weight: 400;
   line-height: 1;
@@ -292,6 +300,11 @@ p, span, small {
   .button:hover {
     --btn-bg-color: #111618;
     --btn-color: var(--color-primary); }
+  .button > .icon {
+    transform: translateY(8%);
+    fill: currentColor;
+    stroke: currentColor;
+    stroke-width: .5px; }
 
 .burger {
   width: 80px;
@@ -464,7 +477,7 @@ p, span, small {
       padding: 0.8rem 0;
       border-radius: 0;
       border-bottom-width: 1px;
-      font-family: "Calibri light", sans-serif;
+      font-family: "calibri", sans-serif;
       font-size: medium; }
       .form__item > input:focus, .form__item > textarea:focus {
         --border-color: var(--color-primary);
@@ -494,7 +507,7 @@ p, span, small {
   align-content: normal;
   justify-content: flex-start;
   gap: 1.2rem;
-  font-family: "Calibri light", sans-serif;
+  font-family: "calibri", sans-serif;
   font-size: 2rem;
   color: var(--link-color);
   text-decoration: var(--link-text-decor);
@@ -718,7 +731,7 @@ footer {
     width: 100%;
     text-align: center; }
     footer > .footer__copy small {
-      font-family: "Calibri light", sans-serif;
+      font-family: "calibri", sans-serif;
       font-size: small;
       color: #e6e6e6; }
 
@@ -984,7 +997,7 @@ header {
     .nav__menu > li > a {
       transition: color var(--trans-time) var(--trans-fnc) 0s;
       display: block;
-      font-family: "Calibri light", sans-serif;
+      font-family: "calibri", sans-serif;
       font-size: clamp(16px, 2vh, 2.4rem);
       color: var(--nav-color);
       text-align: center;
@@ -1021,6 +1034,9 @@ section {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); }
+
+.nav + main > section:first-of-type {
+  padding-top: calc(var(--sec-pad-y) + var(--nav-height)); }
 
 .ac__title {
   display: flex;
