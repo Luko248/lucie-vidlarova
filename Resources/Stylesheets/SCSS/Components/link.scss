@@ -3,13 +3,23 @@
 .link{
     --link-color: currentColor;
     --link-text-decor: none;
+    --link-text-trans: none;
     --icon-trans-x: 0;
     @include flex-set(inline-flex, row, nowrap, 1.2rem);
     font-family: $font-text;
     font-size: 2rem;
     color: var(--link-color);
     text-decoration: var(--link-text-decor);
-    text-transform: uppercase;
+    text-transform: var(--link-text-trans);
+
+    &--uppercase{
+        --link-text-trans: uppercase;
+    }
+
+    &--primary{
+        --link-color: var(--color-primary);
+        --link-text-decor: underline;
+    }
 
     &:hover{
         // --link-color: #{$color-primary};

@@ -65,6 +65,7 @@ header{
         @include border('tb', 1px, currentColor);
         min-width: 33%;
         padding: 4.8rem $gap-xxl $gap-l $gap-xxl;
+        font-family: $font-title;
         font-size: 10rem;
         font-weight: 100;
         line-height: 1;

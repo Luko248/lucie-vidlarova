@@ -4,7 +4,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
     margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6, strong {
+h1, h2, h3, h4, h5, h6 {
     font-family: $font-title;
     font-weight: 400;
     font-style: normal;
@@ -18,14 +18,20 @@ p, span, small{
 }
 
 .title{
+    --title-justify-content: center;
     --title-font-size: 6.4em;
     --title-color: #{$color-font};
     --title-mg-bottom: #{$gap-xl}; 
-    @include flex-set;
+    --title-justify-content: center;
+    @include flex-set(flex, row, wrap, 0, center, var(--title-justify-content));
     margin-bottom: var(--title-mg-bottom);
     font-family: $font-title;
     font-size: var(--title-font-size);
     color: var(--title-color);
+
+    &--left{
+        --title-justify-content: flex-start;
+    }
 
     @include res-max-laptop-l{
         --title-font-size: 5.6em;
@@ -52,13 +58,12 @@ p, span, small{
 
 .desc{
     --border-width: 0;
-    --desc-pad-left: #{$gap-l};
+    --desc-pad-left: 0;
     --desc-font-size: large;
-    --desc-bg-bottom: 5rem;
-    @include border('left', .2rem, $color-font);
-    padding-right: 0;
+    --desc-mg-bottom: 5rem;
+    @include border('left', var(--border-width), $color-font);
     padding-left: var(--desc-pad-left);
-    margin-bottom: var(--desc-bg-bottom);
+    margin-bottom: var(--desc-mg-bottom);
     font-family:  $font-text;
     font-size: var(--desc-font-size);
     line-height: 1.7;
@@ -70,6 +75,11 @@ p, span, small{
     
     &--line{
         --desc-pad-left: #{$gap-l};
-        --border-width: .3rem;
+        --border-width: .2rem;
+    }
+
+    strong, a:not(.button), b, span{
+        font-family: inherit;
+        font-size: inherit;
     }
 }

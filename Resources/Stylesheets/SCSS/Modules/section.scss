@@ -1,9 +1,10 @@
 @import "../base/global";
 
 section{
+    --sec-bg: #{$color-bg};
     --sec-pad-y: 8rem;
     padding: var(--sec-pad-y) 0;
-    background-color: $color-bg;
+    background-color: var(--sec-bg);
     scroll-margin-top: var(--sec-pad-y);
 
     @include res-max-laptop-m{
@@ -12,5 +13,9 @@ section{
 
     @include res-max-tablet{
         --sec-pad-y: #{$gap-xxl};
+    }
+
+    &.dark{
+        --sec-bg: #{$color-bg-darken};
     }
 }
