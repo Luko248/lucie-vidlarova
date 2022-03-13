@@ -8,7 +8,7 @@ header{
     &__container{
         --col-count: 2;
         --col-gap: 0;
-        @include grid-columns(def, repeat(var(--col-count), minmax($gap-l, 1fr)), var(--col-gap), stretch, center, stretch);
+        @include grid-columns(grid, repeat(var(--col-count), minmax($gap-l, 1fr)), var(--col-gap), stretch, center, stretch);
         position: relative; 
         min-height: 100vh;
         max-height: $height-4k;
@@ -22,7 +22,7 @@ header{
         --content-z-index: 2;
         --bg-opacity: .5;
         --bg-blur: #{$gap-l};
-        @include flex-set(def, column, wrap, var(--content-gap), center, center, center);     
+        @include flex-set(flex, column, wrap, var(--content-gap), center, center, center);     
         position: relative;
         color: var(--content-color);
         z-index: var(--content-z-index);  
@@ -40,7 +40,7 @@ header{
         }
 
         &:after{
-            @include center-item;
+            @include position;
             display: block;
             content: '';
             width: 100%;

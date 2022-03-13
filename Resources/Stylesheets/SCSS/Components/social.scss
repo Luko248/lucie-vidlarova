@@ -2,8 +2,8 @@
 
 .social{
     --social-item-color: #{$color-primary};
-    @include flex-set(def, column, wrap, $gap-xl, center, center, center);
-    @include center-item(100%, $gap-xl, 0, calc(-140%));
+    @include flex-set(flex, column, wrap, $gap-xl, center, center, center);
+    @include position(100%, $gap-xl, 0, calc(-140%));
     position: fixed;
     z-index: 999;
 
@@ -28,7 +28,7 @@
         
         > .icon{
             --icon-size: #{$gap-xxl};
-            @include center-item;
+            @include position;
             @include transition(fill);
             fill: var(--social-item-color);       
         }

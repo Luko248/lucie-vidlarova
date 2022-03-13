@@ -1,0 +1,28 @@
+@import "../base/global";
+
+.logo {
+    --logo-display: block;
+    --logo-pad-x: #{$gap-xl};
+    --logo-hieght: 4rem;
+    display: var(--logo-display);
+    padding: 0 var(--logo-pad-x);
+
+    @include res-max-laptop-s {
+        --logo-pad-x: #{$gap-m};
+        --logo-hieght: #{$gap-xxl};
+    }
+
+    &--mobile{
+        --logo-display: none;
+        --logo-hieght: #{$gap-xl};
+        
+        @include res-max-tablet {
+            --logo-display: block;
+        }
+    }
+
+    > img {
+        display: block;
+        height: var(--logo-hieght);
+    }
+}

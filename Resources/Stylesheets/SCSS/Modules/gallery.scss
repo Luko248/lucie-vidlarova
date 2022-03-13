@@ -68,7 +68,7 @@
   }
 
   &__detail {
-    @include grid-columns(def, minmax($gap-m, 1fr) auto);
+    @include grid-columns(grid, minmax($gap-m, 1fr) auto);
     padding: $gap-m;
     column-gap: $gap-l;
 

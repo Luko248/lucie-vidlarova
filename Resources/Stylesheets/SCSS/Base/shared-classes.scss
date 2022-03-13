@@ -1,7 +1,7 @@
 @import "mixins";
 
 .element-to-middle {
-    @include center-item;
+    @include position;
 }
 
 .text-to-center {

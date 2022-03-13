@@ -78,7 +78,7 @@
   }
 
   &__social {
-    @include grid-columns(def, repeat(3, minmax($gap-l, auto)), $gap-xl);
+    @include grid-columns(grid, repeat(3, minmax($gap-l, auto)), $gap-xl);
     > a {
       width: $gap-xl;
       aspect-ratio: 1 / 1;

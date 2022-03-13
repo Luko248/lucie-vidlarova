@@ -1,11 +1,11 @@
 ﻿//colors
 $color-black: hsla(0, 0%, 0%, 1);
-$color-black--trans: hsla(0, 0%, 0%, .5);
-$color-black--trans-dark: hsla(0, 0%, 0%, .75);
+$color-black--trans: hsla(0, 0%, 0%, .6);
+$color-black--trans-dark: hsla(0, 0%, 0%, .9);
 $color-white: hsla(0, 0%, 100%, 1);
 $color-white--trans: hsla(0, 0%, 100%, .7);
 $color-trans: hsla(0, 0%, 0%, 0);
-$color-nav: $color-black--trans;
+$color-bg-nav: hsla(0, 0%, 100%, .3);
 $color-primary: hsl(28, 30%, 79%);
 $color-primary--hover: darken($color-primary, 10%);
 $color-primary--lighten: lighten($color-primary, 15%);

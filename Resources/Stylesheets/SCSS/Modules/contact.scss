@@ -134,7 +134,7 @@
 
         > .icon {
             --icon-size: 50%;
-            @include center-item;
+            @include position;
         }
     }
 }

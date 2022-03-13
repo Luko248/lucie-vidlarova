@@ -5,7 +5,7 @@
     --textarea-height: 18vh;
     --form-gap: #{$gap-xxl};
     --form-margi-top: 5rem;
-    @include grid-columns(def, repeat(var(--col-count), minmax($gap-l, 1fr)), var(--form-gap));
+    @include grid-columns(grid, repeat(var(--col-count), minmax($gap-l, 1fr)), var(--form-gap));
     width: 100%;
     margin-top: var(--form-margi-top);
 
@@ -29,7 +29,7 @@
         }
 
         >label{
-            @include flex-set(def, row, nowrap, $gap-s, center);
+            @include flex-set(flex, row, nowrap, $gap-s, center);
             font-size: small;
             color: currentColor;
             text-transform: uppercase;
