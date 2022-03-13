@@ -266,7 +266,7 @@ p, span, small {
   --btn-padding-y: 1.6rem;
   --btn-width: 20rem;
   --btn-font-size: large;
-  display: inline;
+  display: inline-flex;
   flex-flow: row nowrap;
   align-items: center;
   align-content: center;
@@ -499,7 +499,7 @@ p, span, small {
   --link-color: currentColor;
   --link-text-decor: none;
   --icon-trans-x: 0;
-  display: inline;
+  display: inline-flex;
   flex-flow: row nowrap;
   align-items: stretch;
   align-content: normal;
@@ -882,15 +882,15 @@ header {
   position: relative;
   min-height: 100vh;
   max-height: 2160px;
-  background-image: linear-gradient(to right, black 50%, #dac8b9 50%, #dac8b9 100%);
+  background-image: linear-gradient(to right, black 50%, var(--color-white) 50%, var(--color-white) 100%);
   overflow: hidden; }
 
 .header__content {
   --content-gap: 10vh;
   --content-color: white;
   --content-z-index: 2;
-  --bg-opacity: .5;
-  --bg-blur: 1.6rem;
+  --bg-opacity: .65;
+  --bg-blur: 0.8rem;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -901,12 +901,12 @@ header {
   color: var(--content-color);
   z-index: var(--content-z-index); }
   .header__content:hover {
-    --bg-opacity: .6;
+    --bg-opacity: .75;
     --bg-blur: 4px; }
   .header__content--tattoo {
-    --content-bg: url('../images/backgrounds/bg-tattoo.png'); }
+    --content-bg: url('../images/backgrounds/header/tattoo.webp'); }
   .header__content--visuals {
-    --content-bg: url('../images/backgrounds/bg-visuals.png'); }
+    --content-bg: url('../images/backgrounds/header/visuals.webp'); }
   .header__content:after {
     position: absolute;
     top: 50%;
@@ -917,6 +917,8 @@ header {
     width: 100%;
     height: 100%;
     background-image: var(--content-bg);
+    background-position: center center;
+    background-size: cover;
     opacity: var(--bg-opacity);
     filter: blur(var(--bg-blur));
     transition: opacity .5s ease-in-out, filter .5s ease-in-out;
@@ -958,15 +960,6 @@ header {
   @media only screen and (max-width: 768px) {
     .nav {
       --nav-justify-content: space-between; } }
-  .nav:before {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    content: "";
-    width: 100%;
-    height: 100%;
-    filter: blur(0.8rem); }
   .nav__logo {
     --logo-display: block;
     display: var(--logo-display); }
@@ -1034,6 +1027,7 @@ header {
     .nav__menu > li > a {
       transition: color var(--trans-time) var(--trans-fnc) 0s;
       display: block;
+      font-family: "rig-sans", sans-serif;
       font-size: large;
       color: var(--nav-color);
       text-align: center;

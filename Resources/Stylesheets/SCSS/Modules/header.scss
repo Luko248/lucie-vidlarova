@@ -12,7 +12,7 @@ header{
         position: relative; 
         min-height: 100vh;
         max-height: $height-4k;
-        background-image: linear-gradient(to right, $color-black 50%, $color-primary 50%, $color-primary 100%); 
+        background-image: linear-gradient(to right, $color-black 50%, var(--color-white) 50%, var(--color-white) 100%); 
         overflow: hidden;      
     }
 
@@ -20,23 +20,23 @@ header{
         --content-gap: 10vh;
         --content-color: #{$color-white};  
         --content-z-index: 2;
-        --bg-opacity: .5;
-        --bg-blur: #{$gap-l};
+        --bg-opacity: .65;
+        --bg-blur: #{$gap-m};
         @include flex-set(flex, column, wrap, var(--content-gap), center, center, center);     
         position: relative;
         color: var(--content-color);
         z-index: var(--content-z-index);  
 
         &:hover{
-            --bg-opacity: .6;
+            --bg-opacity: .75;
             --bg-blur: 4px;
         }
         &--tattoo{
-            --content-bg: url('../images/backgrounds/bg-tattoo.png');
+            --content-bg: url('../images/backgrounds/header/tattoo.webp');
         }
 
         &--visuals{
-            --content-bg: url('../images/backgrounds/bg-visuals.png');
+            --content-bg: url('../images/backgrounds/header/visuals.webp');
         }
 
         &:after{
@@ -46,6 +46,8 @@ header{
             width: 100%;
             height: 100%;
             background-image: var(--content-bg);
+            background-position: center center;
+            background-size: cover;
             opacity: var(--bg-opacity);
             filter: blur(var(--bg-blur));
             transition: opacity .5s ease-in-out, filter .5s ease-in-out;

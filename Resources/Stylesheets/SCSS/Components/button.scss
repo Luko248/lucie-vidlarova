@@ -8,7 +8,7 @@
     --btn-padding-y: #{$gap-l};
     --btn-width: 20rem;
     --btn-font-size: large;
-    @include flex-set(inline, row, nowrap, $gap-m, center, center, center);
+    @include flex-set(inline-flex, row, nowrap, $gap-m, center, center, center);
     @include border('def', var(--border-width), var(--btn-border-color));
     min-width: var(--btn-width);
     padding: var(--btn-padding-y) var(--btn-padding-y);
