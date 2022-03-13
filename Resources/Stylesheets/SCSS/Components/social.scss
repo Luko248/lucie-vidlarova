@@ -1,7 +1,7 @@
 @import "../base/global";
 
 .social{
-    --social-item-color: #{$color-primary};
+    --social-item-color: #{$color-font};
     @include flex-set(flex, column, wrap, $gap-xl, center, center, center);
     @include position(100%, $gap-xl, 0, calc(-140%));
     position: fixed;
@@ -23,6 +23,7 @@
         
         &:hover{
             --item-scale: 1.1;
+            --social-item-color: #{$color-primary};
             --item-color: var(--color-primary);
         }
         

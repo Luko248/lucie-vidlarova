@@ -1,26 +1,24 @@
 @import "../base/global";
 
 .button{
-    --btn-color: var(--color-primary);
-    --btn-bg-color: var(--color-trans);
-    --btn-border-color: var(--color-white);
+    --btn-color: var(--color-white);
+    --btn-bg-color: #{$color-bg-darken};
     --btn-padding-x: #{$gap-xl};
     --btn-padding-y: #{$gap-l};
     --btn-width: 20rem;
     --btn-font-size: large;
     @include flex-set(inline-flex, row, nowrap, $gap-m, center, center, center);
-    @include border('def', var(--border-width), var(--btn-border-color));
     min-width: var(--btn-width);
     padding: var(--btn-padding-y) var(--btn-padding-y);
     background-color: var(--btn-bg-color);
-    font-family: var(--font-highlight);
+    font-family: $font-text;
     font-size: var(--btn-font-size);
     font-weight: 400;
     line-height: 1;
     color: var(--btn-color);
     text-decoration: none;
     text-transform: uppercase;
-    transition: background-color var(--trans-time) var(--trans-fnc), color var(--trans-time) var(--trans-fnc);
+    transition: background-color var(--trans-time) var(--trans-fnc), color var(--trans-time) var(--trans-fnc), border-color var(--trans-time) var(--trans-fnc);
     cursor: pointer;
 
     @include res-max-laptop-s{
@@ -35,26 +33,7 @@
     }
 
     &:hover{
-        --btn-bg-color: #{$color-white--trans};
-    }
-
-    &--secondary{
-        --btn-color: var(--color-black);
-        --btn-border-color: var(--color-black);
-        
-        &:hover{
-            --btn-bg-color: var(--color-primary);
-
-        }
-    }
-
-    &--dark{
-        --btn-color: var(--color-white);
-        --btn-bg-color: var(--color-secondary); 
-
-        &:hover{
-            --btn-color: var(--color-primary);
-            --btn-bg-color: var(--color-secondary);
-        }
+        --btn-bg-color: #{$color-bg-dark};
+        --btn-color: var(--color-primary);
     }
 }

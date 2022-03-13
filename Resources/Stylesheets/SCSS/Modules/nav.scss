@@ -1,7 +1,7 @@
 @import "../Base/global";
 
 .nav {
-    --nav-color: #{$color-white};
+    --nav-color: #{$color-font};
     --nav-menu-display: flex;
     --nav-justify-content: center;
     @include flex-set(flex, row, nowrap, 0, center, var(--nav-justify-content), center);
@@ -17,6 +17,7 @@
 
     @include res-max-tablet {
         --nav-justify-content: space-between;
+        --color-bg-nav: #{$color-bg-nav-mobile};
     }
 
     &__logo {
@@ -45,7 +46,7 @@
         > .icon {
             --icon-size: #{$gap-xl};
             @include position;
-            fill: $color-white;
+            fill: $color-font;
         }
     }
 
@@ -74,7 +75,7 @@
             --menu-height: calc(100vh - var(--nav-height));
             --menu-gap: #{$gap-xxl};
             --menu-align-ceontent: flex-start;
-            --menu-bg: var(--color-black--trans-dark);
+            --menu-bg: #{$color-bg-darken};
             --menu-pad-top: 15vh;
             @include position(100%, 50%, -50%, 0);
         }
@@ -90,11 +91,10 @@
             @include transition(color);
             display: block;
             font-family: $font-text;
-            font-size: medium;
+            font-size: clamp(16px, 2vh, $gap-xl);
             color: var(--nav-color);
             text-align: center;
             text-decoration: none;
-            text-transform: uppercase;
             white-space: nowrap;
 
             &:hover {

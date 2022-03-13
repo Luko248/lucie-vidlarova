@@ -13,18 +13,19 @@ header{
         min-height: 100vh;
         max-height: $height-4k;
         // background-image: linear-gradient(to right, $color-black 50%, var(--color-white) 50%, var(--color-white) 100%); 
-        background-color: $color-bg;
+        background-color: $color-bg-darken;
         overflow: hidden;      
     }
 
     &__content{    
         --content-gap: 10vh;
-        --content-color: #{$color-white};  
+        --content-color: #{$color-font};  
         --content-z-index: 2;
-        --bg-opacity: .65;
+        --bg-opacity: .55;
         --bg-blur: #{$gap-m};
-        @include flex-set(flex, column, wrap, var(--content-gap), center, center, center);     
-        position: relative;
+        @include flex-set(flex, column, wrap, var(--content-gap), center, center, center);
+        position: relative;     
+        padding: 0 $gap-l;
         color: var(--content-color);
         z-index: var(--content-z-index);  
 
@@ -63,11 +64,13 @@ header{
     }
 
     &__title{
+        --title-min-width: 36rem;
+        --title-font-size: 36rem;
         @include border('tb', 1px, currentColor);
-        min-width: 33%;
-        padding: 4.8rem $gap-xxl $gap-l $gap-xxl;
+        min-width: var(--title-min-width);
+        padding: $gap-xl  $gap-xxl $gap-xl $gap-xxl;
         font-family: $font-title;
-        font-size: 10rem;
+        font-size: clamp($gap-xxl, 10vh, 10rem);
         font-weight: 100;
         line-height: 1;
         color: currentColor;
