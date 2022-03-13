@@ -714,10 +714,10 @@ p, span, small {
 footer {
   padding: 1.6rem;
   background-color: rgba(17, 22, 24, 0.95); }
-  footer .footer__copy {
+  footer > .footer__copy {
     width: 100%;
     text-align: center; }
-    footer .footer__copy small {
+    footer > .footer__copy small {
       font-family: "Calibri light", sans-serif;
       font-size: small;
       color: #e6e6e6; }
@@ -797,6 +797,7 @@ header {
 .header__container {
   --col-count: 2;
   --col-gap: 0;
+  --header-height: 100vh;
   display: grid;
   align-items: stretch;
   align-content: stretch;
@@ -804,10 +805,15 @@ header {
   grid-template-columns: repeat(var(--col-count), minmax(1.6rem, 1fr));
   gap: var(--col-gap);
   position: relative;
-  min-height: 100vh;
+  height: var(--header-height);
   max-height: 2160px;
   background-color: rgba(17, 22, 24, 0.95);
   overflow: hidden; }
+  @media only screen and (max-width: 768px) {
+    .header__container {
+      --col-count: 1;
+      --header-height: calc(100vh - var(--nav-height));
+      margin-top: var(--nav-height); } }
 
 .header__content {
   --content-gap: 10vh;
@@ -825,6 +831,9 @@ header {
   padding: 0 1.6rem;
   color: var(--content-color);
   z-index: var(--content-z-index); }
+  @media only screen and (max-width: 768px) {
+    .header__content {
+      --content-gap: 6vh; } }
   .header__content:hover {
     --bg-opacity: .65;
     --bg-blur: 0; }
@@ -849,23 +858,41 @@ header {
     transition: opacity .5s ease-in-out, filter .5s ease-in-out;
     z-index: -1; }
   .header__content > p {
-    margin-bottom: var(--content-gap);
-    font-size: x-large;
-    font-weight: 300; }
+    --desc-mg-bottom: var(--content-gap);
+    margin-bottom: var(--desc-mg-bottom);
+    font-size: clamp(16px, 2.5vh, 2.4rem);
+    font-weight: 100;
+    text-align: center; }
+    @media only screen and (max-width: 768px) {
+      .header__content > p {
+        --desc-mg-bottom: 2.4rem; } }
 
 .header__title {
   --title-min-width: 36rem;
-  --title-font-size: 36rem;
+  --title-font-size: 10vh;
   border-top: 1px solid currentColor;
   border-bottom: 1px solid currentColor;
   min-width: var(--title-min-width);
   padding: 2.4rem 3.2rem 2.4rem 3.2rem;
   font-family: "p22-allyson-pro", sans-serif;
-  font-size: clamp(3.2rem, 10vh, 10rem);
+  font-size: clamp(3.2rem, var(--title-font-size), 10rem);
   font-weight: 100;
   line-height: 1;
   color: currentColor;
   text-align: center; }
+  @media only screen and (max-width: 1366px) {
+    .header__title {
+      --title-min-width: 30rem; } }
+  @media only screen and (max-width: 1024px) {
+    .header__title {
+      --title-min-width: 25rem; } }
+  @media only screen and (max-width: 768px) {
+    .header__title {
+      --title-min-width: 36rem; } }
+  @media only screen and (max-width: 425px) {
+    .header__title {
+      --title-min-width: 26rem;
+      --title-font-size: 8vh; } }
 
 .nav {
   --nav-color: #e6e6e6;

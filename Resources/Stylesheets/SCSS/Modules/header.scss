@@ -8,13 +8,20 @@ header{
     &__container{
         --col-count: 2;
         --col-gap: 0;
+        --header-height: 100vh;
         @include grid-columns(grid, repeat(var(--col-count), minmax($gap-l, 1fr)), var(--col-gap), stretch, center, stretch);
         position: relative; 
-        min-height: 100vh;
+        height: var(--header-height);
         max-height: $height-4k;
         // background-image: linear-gradient(to right, $color-black 50%, var(--color-white) 50%, var(--color-white) 100%); 
         background-color: $color-bg-darken;
-        overflow: hidden;      
+        overflow: hidden; 
+        
+        @include res-max-tablet{
+            --col-count: 1;
+            --header-height: calc(100vh - var(--nav-height));
+            margin-top: var(--nav-height);
+        }
     }
 
     &__content{    
@@ -29,10 +36,15 @@ header{
         color: var(--content-color);
         z-index: var(--content-z-index);  
 
+        @include res-max-tablet{
+            --content-gap: 6vh;
+        }
+
         &:hover{
             --bg-opacity: .65;
             --bg-blur: 0;
         }
+
         &--tattoo{
             --content-bg: url('../images/backgrounds/header/tattoo.webp');
         }
@@ -57,23 +69,46 @@ header{
         }
 
         >p{
-            margin-bottom: var(--content-gap);
-            font-size: x-large;
-            font-weight: 300;
+            --desc-mg-bottom: var(--content-gap);
+            margin-bottom: var(--desc-mg-bottom);
+            font-size: clamp(16px, 2.5vh, $gap-xl);
+            font-weight: 100;
+            text-align: center;
+
+            @include res-max-tablet{
+                --desc-mg-bottom: #{$gap-xl};
+            }
         }        
     }
 
     &__title{
         --title-min-width: 36rem;
-        --title-font-size: 36rem;
+        --title-font-size: 10vh;
         @include border('tb', 1px, currentColor);
         min-width: var(--title-min-width);
         padding: $gap-xl  $gap-xxl $gap-xl $gap-xxl;
         font-family: $font-title;
-        font-size: clamp($gap-xxl, 10vh, 10rem);
+        font-size: clamp($gap-xxl, var(--title-font-size), 10rem);
         font-weight: 100;
         line-height: 1;
         color: currentColor;
         text-align: center;
+
+        @include res-max-laptop-m{
+            --title-min-width: 30rem;
+        }
+
+        @include res-max-laptop-s{
+            --title-min-width: 25rem;
+        }
+
+        @include res-max-tablet{
+            --title-min-width: 36rem;
+        }
+
+        @include res-max-mobile-l{
+            --title-min-width: 26rem;
+            --title-font-size: 8vh;
+        }
     }
 }
