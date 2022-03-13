@@ -24,23 +24,6 @@
     text-transform: uppercase;
 }
 
-.base-space {
-    display: block;
-    width: 100%;
-    margin-bottom: 5rem;
-
-    @include res-max-laptop-s {
-        margin-bottom: 3rem;
-    }
-}
-
-.elipsis-text {
-    display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
 .relative {
     position: relative;
 }
@@ -83,12 +66,6 @@
 
 .inline-block {
     display: inline-block;
-}
-
-.lower{
-    font-size: medium;
-    line-height: $gap-xl;
-    text-transform: lowercase;
 }
 
 .invisible{
