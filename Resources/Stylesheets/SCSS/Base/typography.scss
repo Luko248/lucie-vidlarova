@@ -41,6 +41,10 @@ p, span, small{
         --title-mg-bottom: #{$gap-xl}; 
     }
 
+    @include res-max-mobile-l{
+        --title-font-size: 5em;
+    }
+
     &--center{
         --title-justify-content: center;
     }
@@ -67,7 +71,7 @@ p, span, small{
     color: $color-font;
 
     @include res-max-laptop-s{
-        --desc-font-size: large;
+        --desc-font-size: medium;
     }
     
     &--line{

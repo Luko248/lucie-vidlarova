@@ -79,15 +79,20 @@ header{
             @include res-max-tablet{
                 --desc-mg-bottom: #{$gap-xl};
             }
+
+            @include res-max-mobile-s{
+                --desc-mg-bottom: 0;
+            }
         }        
     }
 
     &__title{    
         --title-min-width: 36rem;
         --title-font-size: 10vh;
+        --title-pad-y: #{$gap-xl};
         position: relative;      
         min-width: var(--title-min-width);
-        padding: $gap-xl $gap-xxl;
+        padding: var(--title-pad-y) $gap-xxl;
         opacity: 0;
         font-family: $font-title;
         font-size: clamp($gap-xxl, var(--title-font-size), 10rem);
@@ -114,6 +119,11 @@ header{
         @include res-max-mobile-l{
             --title-min-width: 26rem;
             --title-font-size: 8vh;
+            --title-pad-y: #{$gap-l};
+        }
+
+        @include res-max-mobile-m{
+            --title-min-width: 22rem;
         }
 
         &:after{

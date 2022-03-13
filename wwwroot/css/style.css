@@ -218,6 +218,9 @@ p, span, small {
     .title {
       --title-font-size: 7em;
       --title-mg-bottom: 2.4rem; } }
+  @media only screen and (max-width: 425px) {
+    .title {
+      --title-font-size: 5em; } }
   .title--center {
     --title-justify-content: center; }
   .title--white {
@@ -238,7 +241,7 @@ p, span, small {
   color: #e6e6e6; }
   @media only screen and (max-width: 1024px) {
     .desc {
-      --desc-font-size: large; } }
+      --desc-font-size: medium; } }
   .desc--line {
     --desc-pad-left: 1.6rem;
     --border-width: .2rem; }
@@ -433,6 +436,7 @@ p, span, small {
   --link-text-decor: none;
   --link-text-trans: none;
   --icon-trans-x: 0;
+  --link-font-size: 2rem;
   display: inline-flex;
   flex-flow: row nowrap;
   align-items: stretch;
@@ -440,10 +444,16 @@ p, span, small {
   justify-content: flex-start;
   gap: 1.2rem;
   font-family: "calibri", sans-serif;
-  font-size: 2rem;
+  font-size: var(--link-font-size);
   color: var(--link-color);
   text-decoration: var(--link-text-decor);
   text-transform: var(--link-text-trans); }
+  @media only screen and (max-width: 425px) {
+    .link {
+      --link-font-size: large; } }
+  @media only screen and (max-width: 375px) {
+    .link {
+      --link-font-size: medium; } }
   .link--uppercase {
     --link-text-trans: uppercase; }
   .link--primary {
@@ -461,6 +471,9 @@ p, span, small {
     --icon-size: 2.4rem;
     transform: translateX(var(--icon-trans-x));
     transition: transform 0.25s ease-in-out; }
+    @media only screen and (max-width: 375px) {
+      .link > .icon {
+        --icon-size: 1.6rem; } }
 
 .logo {
   --logo-display: block;
@@ -713,13 +726,17 @@ header {
     @media only screen and (max-width: 768px) {
       .header__content > p {
         --desc-mg-bottom: 2.4rem; } }
+    @media only screen and (max-width: 320px) {
+      .header__content > p {
+        --desc-mg-bottom: 0; } }
 
 .header__title {
   --title-min-width: 36rem;
   --title-font-size: 10vh;
+  --title-pad-y: 2.4rem;
   position: relative;
   min-width: var(--title-min-width);
-  padding: 2.4rem 3.2rem;
+  padding: var(--title-pad-y) 3.2rem;
   opacity: 0;
   font-family: "p22-allyson-pro", sans-serif;
   font-size: clamp(3.2rem, var(--title-font-size), 10rem);
@@ -742,7 +759,11 @@ header {
   @media only screen and (max-width: 425px) {
     .header__title {
       --title-min-width: 26rem;
-      --title-font-size: 8vh; } }
+      --title-font-size: 8vh;
+      --title-pad-y: 1.6rem; } }
+  @media only screen and (max-width: 375px) {
+    .header__title {
+      --title-min-width: 22rem; } }
   .header__title:after {
     position: absolute;
     top: 50%;

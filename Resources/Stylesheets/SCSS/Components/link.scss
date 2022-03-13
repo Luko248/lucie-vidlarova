@@ -5,12 +5,21 @@
     --link-text-decor: none;
     --link-text-trans: none;
     --icon-trans-x: 0;
+    --link-font-size: 2rem;
     @include flex-set(inline-flex, row, nowrap, 1.2rem);
     font-family: $font-text;
-    font-size: 2rem;
+    font-size: var(--link-font-size);
     color: var(--link-color);
     text-decoration: var(--link-text-decor);
     text-transform: var(--link-text-trans);
+
+    @include res-max-mobile-l{
+        --link-font-size: large;
+    }
+
+    @include res-max-mobile-m{
+        --link-font-size: medium;
+    }
 
     &--uppercase{
         --link-text-trans: uppercase;
@@ -39,5 +48,9 @@
         --icon-size: #{$gap-xl};
         transform: translateX(var(--icon-trans-x));
         transition: transform $trans-time ease-in-out;
+        
+        @include res-max-mobile-m{
+            --icon-size: #{$gap-l};
+        }
     }
 }
