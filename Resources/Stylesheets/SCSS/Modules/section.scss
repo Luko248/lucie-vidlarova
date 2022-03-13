@@ -5,7 +5,7 @@ section{
     --sec-pad-y: 8rem;
     padding: var(--sec-pad-y) 0;
     background-color: var(--sec-bg);
-    scroll-margin-top: var(--sec-pad-y);
+    scroll-margin-top: -8rem;
 
     @include res-max-laptop-m{
         --sec-pad-y: 5rem;
