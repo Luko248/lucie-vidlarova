@@ -1,109 +1,17 @@
 @import '../base/global';
 
-.footer {
-  --footer-pad-y: 8rem;
-  --footer-col-template: minmax(#{$gap-l}, 8fr) minmax(#{$gap-l}, 5fr);
-  position: relative;
-  padding: var(--footer-pad-y) 0;
-  background-color: $color-footer-bg;
-  font-family: $font-text;
-  color: $color-footer;
+footer {
+  padding: $gap-l;
+  background-color: $color-bg-darken;
 
-  @include res-max-laptop-l {
-    --footer-col-template: repeat(2, minmax(#{$gap-l}, 1fr));
-  }
-
-  @include res-max-laptop-s {
-    --footer-col-template: minmax(#{$gap-l}, 5fr) minmax(#{$gap-l}, 8fr);
-    --footer-pad-y: 5rem;
-  }
-
-  @include res-max-mobile-l {
-    --footer-col-template: minmax(#{$gap-l}, 1fr);
-  }
-
-  > .container {
-    @include grid-columns(
-      def,
-      var(--footer-col-template),
-      $gap-xl,
-      stretch,
-      flex-start,
-      stretch
-    );
-  }
-
-  &__inner {
-    --grid-col-count: 2;
-    --align-content: flex-start;
-    --gap: #{$gap-l};
-    @include grid-columns(
-      def,
-      repeat(var(--grid-col-count), minmax($gap-l, 1fr)),
-      var(--gap),
-      flex-start,
-      flex-start,
-      var(--align-content)
-    );
-
-    @include res-max-laptop-s {
-      --grid-col-count: 1;
-      --gap: #{$gap-xxl};
-    }
-    &--end {
-      --align-content: flex-end;
-    }
-
-    h4 {
-      font-family: inherit;
-      letter-spacing: 1.5px;
-     
-      &[class]{
-        @include res-max-laptop-s {
-          display: none;
-        }
-      }
-      
-      &:not([class]) {
-        margin-bottom: $gap-xl;
-        font-size: small;
-        text-transform: uppercase;
-      }
-    }
-
-    address {
-      font-size: large;
-      line-height: 1.8;
-    }
-  }
-
-  &__social {
-    @include grid-columns(grid, repeat(3, minmax($gap-l, auto)), $gap-xl);
-    > a {
-      width: $gap-xl;
-      aspect-ratio: 1 / 1;
-      background: darken($color-footer, 20%);
-      border-radius: 50%;
-      color: $color-footer-bg;
-    }
-
-    .icon {
-      --icon-size: #{$gap-l};
-    }
-  }
-
-  &__copy {
-    position: absolute;
-    bottom: $gap-l;
-    left: 50%;
+  > .footer__copy {
     width: 100%;
-    padding: 0 $gap-l;
-    padding: 0 $gap-l;
     text-align: center;
-    transform: translateX(-50%);
 
     small {
+      font-family: $font-text;
       font-size: small;
+      color: $color-font;
     }
   }
 }
