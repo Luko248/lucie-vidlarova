@@ -15,8 +15,7 @@
   --pad-l: 1.6rem;
   --pad-m: 0.8rem;
   --pad-s: 0.4rem;
-  --font-text: Sitka Banner, sans-serif;
-  --font-highlight: times-new-roman;
+  --font-text: rig-sans, sans-serif;
   --font-title: p22-marcel-script-pro, sans-serif;
   --border-width: 1px;
   --nav-height: 7rem; }
@@ -82,11 +81,11 @@ body {
     background-image: url("../images/backgrounds/main-bg.webp");
     background-repeat: no-repeat;
     background-position: center top;
+    background-size: cover;
     background-attachment: fixed;
     opacity: .6;
     font-family: var(--font-text);
-    z-index: -1;
-    background-size: cover; }
+    z-index: -1; }
 
 section {
   --sec-pad-y: 5rem;
@@ -197,7 +196,7 @@ h1, h2, h3, h4, h5, h6, strong {
   font-style: normal; }
 
 p, span, small {
-  font-family: "Sitka Banner", sans-serif; }
+  font-family: "rig-sans", sans-serif; }
   p *, span *, small * {
     font-weight: inherit; }
 
@@ -240,7 +239,7 @@ p, span, small {
   padding-right: 0;
   padding-left: var(--desc-pad-left);
   margin-bottom: var(--desc-bg-bottom);
-  font-family: "Sitka Banner", sans-serif;
+  font-family: "rig-sans", sans-serif;
   font-size: var(--desc-font-size);
   line-height: 1.7;
   color: #d6d6d6; }
@@ -469,7 +468,7 @@ p, span, small {
       padding: 0.8rem 0;
       border-radius: 0;
       border-bottom-width: 1px;
-      font-family: "Sitka Banner", sans-serif;
+      font-family: "rig-sans", sans-serif;
       font-size: medium; }
       .form__item > input:focus, .form__item > textarea:focus {
         --border-color: var(--color-primary);
@@ -498,7 +497,7 @@ p, span, small {
   align-content: normal;
   justify-content: flex-start;
   gap: 1.2rem;
-  font-family: "Sitka Banner", sans-serif;
+  font-family: "rig-sans", sans-serif;
   font-size: 2rem;
   color: var(--link-color);
   text-decoration: var(--link-text-decor);
@@ -696,7 +695,7 @@ p, span, small {
   position: relative;
   padding: var(--footer-pad-y) 0;
   background-color: #1c1c1c;
-  font-family: "Sitka Banner", sans-serif;
+  font-family: "rig-sans", sans-serif;
   color: #d6d6d6; }
   @media only screen and (max-width: 1440px) {
     .footer {
@@ -827,7 +826,6 @@ p, span, small {
     padding: 0.8rem;
     column-gap: 1.6rem; }
     .gallery-item__detail > small {
-      font-family: "times-new-roman";
       font-size: small;
       text-transform: uppercase; }
     .gallery-item__detail > strong {
@@ -903,10 +901,13 @@ header {
 .header__title {
   border-top: 1px solid currentColor;
   border-bottom: 1px solid currentColor;
-  padding: 1.6rem 4.8rem 1.6rem 3.2rem;
+  min-width: 33%;
+  padding: 4.8rem 3.2rem 1.6rem 3.2rem;
   font-size: 10rem;
   font-weight: 100;
-  color: currentColor; }
+  line-height: 1;
+  color: currentColor;
+  text-align: center; }
 
 .nav {
   --nav-color: white;
@@ -946,7 +947,6 @@ header {
     .nav__menu a {
       transition: color var(--trans-time) var(--trans-fnc) 0s;
       display: block;
-      font-family: "times-new-roman";
       font-size: large;
       color: var(--nav-color);
       text-align: center;

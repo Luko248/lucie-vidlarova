@@ -40,7 +40,6 @@
             a {
             @include transition(color);
             display: block;
-            font-family: $font-highlight;
             font-size: large;
             color: var(--nav-color);
             text-align: center;
