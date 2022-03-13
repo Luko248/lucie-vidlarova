@@ -20,6 +20,9 @@ section{
     &.dark{
         --sec-bg: #{$color-bg-darken};
     }
+    &.no-pt{
+        padding-top: 0;
+    }
 
     &.full-height{
         height: calc(100vh - var(--nav-height));

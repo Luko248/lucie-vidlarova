@@ -30,9 +30,9 @@
         --container-pad-x: #{$gap-l};
     }
 
-    &--s{
-        --container-width: 60%;
-        --container-min-width: #{$width-laptop-s};
+    &--gallery{
+        --container-width: 100%;
+        --container-min-width: 0;
 
         @include res-max-laptop-l {
             --container-width: 70%;

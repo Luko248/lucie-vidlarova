@@ -20,7 +20,7 @@ p, span, small{
     --title-font-size: 6.4em;
     --title-color: #{$color-font};
     --title-mg-bottom: #{$gap-xl}; 
-    --title-justify-content: center;
+    --title-justify-content: flex-start;
     @include flex-set(flex, row, wrap, 0, center, var(--title-justify-content));
     margin-bottom: var(--title-mg-bottom);
     font-family: $font-title;
@@ -42,9 +42,9 @@ p, span, small{
         --title-font-size: 4em;
         --title-mg-bottom: #{$gap-xl}; 
     }
-    
-    &--left{
-        --title-justify-content: flex-start;
+
+    &--center{
+        --title-justify-content: center;
     }
 
     &--white{

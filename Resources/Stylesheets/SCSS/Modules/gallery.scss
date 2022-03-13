@@ -1,15 +1,10 @@
-@import '../base/global';
+@import "../base/global";
 
 .gallery {
-  --col-count: 4;
+  --col-count: 5;
   --align-items: flex-start;
   --gap: #{$gap-xxl};
-  @include grid-columns(
-    def,
-    repeat(var(--col-count), minmax($gap-m, 1fr)),
-    var(--gap),
-    var(--align-items)
-  );
+  @include grid-columns(grid, repeat(var(--col-count), minmax($gap-m, 1fr)), var(--gap), var(--align-items));
 
   @include res-max-laptop-m {
     --gap: #{$gap-xl};
@@ -21,18 +16,6 @@
 
   @include res-max-mobile-l {
     --col-count: 1;
-  }
-  #dotwork,
-  #abstractions,
-  #lettering,
-  #handpoke {
-    scroll-margin-top: 5vh;
-  }
-
-  &__sec{
-    padding: 5rem 0;
-    background-color: $color-bg;
-    scroll-margin-top: var(--nav-height);
   }
 }
 

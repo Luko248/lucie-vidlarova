@@ -2,15 +2,16 @@
 
 .social{
     --social-item-color: #{$color-font};
-    @include flex-set(flex, column, wrap, $gap-xl, center, center, center);
+    --scial-gap: #{$gap-xl};
+    @include flex-set(flex, column, wrap, var(--scial-gap), center, center, center);
     @include position(100%, $gap-xl, 0, calc(-140%));
     position: fixed;
     z-index: 999;
 
-    @include res-max-tablet{
-        display: none;
+    @include res-max-laptop-s{
+        --scial-gap: #{$gap-l};
     }
-
+    
     &__item{
         --item-scale: 1;   
         @include transition(transform);
