@@ -12,7 +12,8 @@ header{
         position: relative; 
         min-height: 100vh;
         max-height: $height-4k;
-        background-image: linear-gradient(to right, $color-black 50%, var(--color-white) 50%, var(--color-white) 100%); 
+        // background-image: linear-gradient(to right, $color-black 50%, var(--color-white) 50%, var(--color-white) 100%); 
+        background-color: $color-bg;
         overflow: hidden;      
     }
 
@@ -28,8 +29,8 @@ header{
         z-index: var(--content-z-index);  
 
         &:hover{
-            --bg-opacity: .75;
-            --bg-blur: 4px;
+            --bg-opacity: .65;
+            --bg-blur: 0;
         }
         &--tattoo{
             --content-bg: url('../images/backgrounds/header/tattoo.webp');

@@ -6,7 +6,7 @@
   --color-border: var(--color-white);
   --color-trans: rgba(0, 0, 0, 0);
   --color-bg: rgba(17, 22, 24, 0.85);
-  --color-bg-nav: rgba(17, 22, 24, 0.85);
+  --color-bg-nav: rgba(255, 255, 255, 0.1);
   --color-primary: #dac8b9;
   --color-primary--hover: #c8ae98;
   --color-secondary: #2a2c2a;
@@ -887,7 +887,7 @@ header {
   position: relative;
   min-height: 100vh;
   max-height: 2160px;
-  background-image: linear-gradient(to right, black 50%, var(--color-white) 50%, var(--color-white) 100%);
+  background-color: rgba(17, 22, 24, 0.85);
   overflow: hidden; }
 
 .header__content {
@@ -906,8 +906,8 @@ header {
   color: var(--content-color);
   z-index: var(--content-z-index); }
   .header__content:hover {
-    --bg-opacity: .75;
-    --bg-blur: 4px; }
+    --bg-opacity: .65;
+    --bg-blur: 0; }
   .header__content--tattoo {
     --content-bg: url('../images/backgrounds/header/tattoo.webp'); }
   .header__content--visuals {
@@ -961,6 +961,7 @@ header {
   width: 100%;
   height: var(--nav-height);
   padding: 0 2.4rem;
+  background-color: var(--color-bg-nav);
   color: var(--nav-color);
   z-index: 999; }
   @media only screen and (max-width: 768px) {
