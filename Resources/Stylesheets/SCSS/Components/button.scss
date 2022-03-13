@@ -7,6 +7,7 @@
     --btn-padding-y: #{$gap-l};
     --btn-width: 20rem;
     --btn-font-size: large;
+    --icon-trans-x: 0;
     @include flex-set(inline-flex, row, nowrap, $gap-m, center, center, center);
     min-width: var(--btn-width);
     padding: var(--btn-padding-y) var(--btn-padding-y);
@@ -31,10 +32,12 @@
     &:hover{
         --btn-bg-color: #{$color-bg-dark};
         --btn-color: var(--color-primary);
+        --icon-trans-x: 50%;
     }
 
-    > .icon{
-        transform: translateY(8%);
+    > .icon{ 
+        transform: translate(var(--icon-trans-x), 8%);
+        transition: transform var(--trans-time) var(--trans-fnc);
         fill: currentColor;
         stroke: currentColor;
         stroke-width: .5px;

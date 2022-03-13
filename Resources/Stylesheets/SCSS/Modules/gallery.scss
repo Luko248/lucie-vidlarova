@@ -26,10 +26,26 @@
 }
 
 .gallery-item {
+  --image-scale: 1;
+  position: relative;
   display: block;
   aspect-ratio: 1 / 1;
+  overflow: hidden;
+  cursor: pointer;
   margin-block: 0;
   margin-inline: 0;
+  &:hover{
+    --image-scale: 1.05;
+  }
+
+  >amp-img{
+    @include position;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -50%) scale(var(--image-scale), var(--image-scale));
+    transition: transform $trans-time ease-in-out;
+  }
 
   &__pic {
     position: relative;

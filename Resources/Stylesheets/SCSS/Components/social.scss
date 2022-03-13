@@ -3,7 +3,8 @@
 .social{
     --social-item-color: #{$color-font};
     --scial-gap: #{$gap-xl};
-    @include flex-set(flex, column, wrap, var(--scial-gap), center, center, center);
+    --social-display: flex;
+    @include flex-set(var(--social-display), column, wrap, var(--scial-gap), center, center, center);
     @include position(100%, $gap-xl, 0, calc(-140%));
     position: fixed;
     z-index: 999;
@@ -11,7 +12,17 @@
     @include res-max-laptop-s{
         --scial-gap: #{$gap-l};
     }
-    
+
+    @include res-max-tablet{
+        --social-display: none;
+    }
+
+    &--visible{
+        @include res-max-tablet{
+            --social-display: flex;
+        }    
+    }
+
     &__item{
         --item-scale: 1;   
         @include transition(transform);

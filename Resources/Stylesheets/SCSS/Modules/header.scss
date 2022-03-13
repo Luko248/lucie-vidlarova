@@ -6,6 +6,7 @@ header{
 
 .header {    
     &__container{
+        --anim-length: .5s;
         --col-count: 2;
         --col-gap: 0;
         --header-height: 100vh;
@@ -81,18 +82,22 @@ header{
         }        
     }
 
-    &__title{
+    &__title{    
         --title-min-width: 36rem;
         --title-font-size: 10vh;
-        @include border('tb', 1px, currentColor);
+        position: relative;      
         min-width: var(--title-min-width);
-        padding: $gap-xl  $gap-xxl $gap-xl $gap-xxl;
+        padding: $gap-xl $gap-xxl;
+        opacity: 0;
         font-family: $font-title;
         font-size: clamp($gap-xxl, var(--title-font-size), 10rem);
         font-weight: 100;
         line-height: 1;
         color: currentColor;
         text-align: center;
+        animation: fadeIn var(--anim-length) forwards linear;
+        animation-delay: calc(var(--anim-length) / 2);
+        transform: translateY($gap-l);
 
         @include res-max-laptop-m{
             --title-min-width: 30rem;
@@ -110,5 +115,53 @@ header{
             --title-min-width: 26rem;
             --title-font-size: 8vh;
         }
+
+        &:after{
+            @include position;
+            @include border('tb', 1px, currentColor);
+            display: block;
+            content: "";
+            width: 100%;
+            height: 100%;
+            animation: showLines var(--anim-length) forwards linear;
+            animation-delay: var(--anim-length);
+            transform: translate(-50%, -50%) scaleX(0);
+        }
+
+        + p{
+            opacity: 0;
+            animation: fadeIn var(--anim-length) forwards linear;
+            animation-delay: calc(var(--anim-length) * 1.5);
+            transform: translateY($gap-m);
+            + .link{
+                opacity: 0;
+                animation: fadeIn var(--anim-length) forwards linear;
+                animation-delay: calc(var(--anim-length) * 2);
+                transform: translateY($gap-m);
+            }
+        }
+    }
+}
+
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY($gap-m);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes showLines{
+    from{
+        transform: translate(-50%, -50%) scaleX(0);
+    }
+
+    to{
+        transform: translate(-50%, -50%) scaleX(1);
     }
 }
