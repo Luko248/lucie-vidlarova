@@ -18,4 +18,12 @@ section{
     &.dark{
         --sec-bg: #{$color-bg-darken};
     }
+
+    &.full-height{
+        height: calc(100vh - var(--nav-height));
+
+        > .container{
+            @include position;
+        }
+    }
 }
