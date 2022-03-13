@@ -12,7 +12,7 @@
     text-transform: uppercase;
 
     &:hover{
-        --link-color: #{$color-primary};
+        // --link-color: #{$color-primary};
         --link-text-decor: underline;
         --icon-trans-x: #{$gap-s};
     }

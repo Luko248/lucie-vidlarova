@@ -511,7 +511,6 @@ p, span, small {
   text-decoration: var(--link-text-decor);
   text-transform: uppercase; }
   .link:hover {
-    --link-color: #dac8b9;
     --link-text-decor: underline;
     --icon-trans-x: 0.4rem; }
   .link > span {
@@ -1028,7 +1027,7 @@ header {
       transition: color var(--trans-time) var(--trans-fnc) 0s;
       display: block;
       font-family: "rig-sans", sans-serif;
-      font-size: large;
+      font-size: medium;
       color: var(--nav-color);
       text-align: center;
       text-decoration: none;
