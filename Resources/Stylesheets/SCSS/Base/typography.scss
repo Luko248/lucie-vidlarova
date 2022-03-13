@@ -27,8 +27,6 @@ p, span, small{
     font-size: var(--title-font-size);
     color: var(--title-color);
 
-    
-
     @include res-max-laptop-l{
         --title-font-size: 5.6em;
         --title-mg-bottom: #{$gap-xxl}; 
@@ -60,10 +58,8 @@ p, span, small{
     --border-width: 0;
     --desc-pad-left: 0;
     --desc-font-size: large;
-    --desc-mg-bottom: 5rem;
     @include border('left', var(--border-width), $color-font);
     padding-left: var(--desc-pad-left);
-    margin-bottom: var(--desc-mg-bottom);
     font-family:  $font-text;
     font-size: var(--desc-font-size);
     line-height: 1.7;

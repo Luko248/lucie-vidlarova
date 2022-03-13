@@ -229,10 +229,8 @@ p, span, small {
   --border-width: 0;
   --desc-pad-left: 0;
   --desc-font-size: large;
-  --desc-mg-bottom: 5rem;
   border-left: var(--border-width) solid #e6e6e6;
   padding-left: var(--desc-pad-left);
-  margin-bottom: var(--desc-mg-bottom);
   font-family: "calibri", sans-serif;
   font-size: var(--desc-font-size);
   line-height: 1.7;
@@ -807,7 +805,7 @@ header {
 
 section {
   --sec-bg: rgba(17, 22, 24, 0.85);
-  --sec-pad-y: 8rem;
+  --sec-pad-y: 10vh;
   padding: var(--sec-pad-y) 0;
   background-color: var(--sec-bg);
   scroll-margin-top: var(--nav-height); }

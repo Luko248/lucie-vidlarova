@@ -4,7 +4,7 @@
 
 section{
     --sec-bg: #{$color-bg};
-    --sec-pad-y: 8rem;
+    --sec-pad-y: 10vh;
     padding: var(--sec-pad-y) 0;
     background-color: var(--sec-bg);
     scroll-margin-top: var(--nav-height);
@@ -32,7 +32,6 @@ section{
         }
     }
 }
-
 
 .nav + main > section:first-of-type{
     padding-top: calc(var(--sec-pad-y) + var(--nav-height));
