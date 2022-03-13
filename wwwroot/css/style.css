@@ -399,7 +399,8 @@ p, span, small {
       --container-pad-x: 1.6rem; } }
   .container--gallery {
     --container-width: 100%;
-    --container-min-width: 0; }
+    --container-min-width: 0;
+    --container-pad-x: 4.5vw; }
     @media only screen and (max-width: 1440px) {
       .container--gallery {
         --container-width: 70%;
@@ -565,7 +566,9 @@ footer {
 
 .gallery-item {
   display: block;
-  aspect-ratio: 1 / 1; }
+  aspect-ratio: 1 / 1;
+  margin-block: 0;
+  margin-inline: 0; }
   .gallery-item__pic {
     position: relative;
     color: currentColor;

@@ -115,6 +115,7 @@
         src="https://cdn.ampproject.org/v0/amp-date-display-0.1.js"></script>
     <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
     <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
+    <script async custom-element="amp-image-lightbox" src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
 </head>
 
 <body>
@@ -179,6 +180,21 @@
         </button>
     </nav>
 
+    <div class="social">
+        <a href="https://www.instagram.com/thelucie.ink/" target="_blank" rel="noreferrer"
+            class="social__item" title="Instagram link">
+            <svg class="icon icon-instagram">
+                <use xlink:href="#icon-instagram"></use>
+            </svg>
+        </a>
+        <a href="https://cs-cz.facebook.com/lucka.vidlarova" target="_blank" rel="noreferrer" class="social__item"
+            title="Facebok link">
+            <svg class="icon icon-facebook">
+                <use xlink:href="#icon-facebook"></use>
+            </svg>
+        </a>
+    </div>
+
     <main>
         <section class="dark">
             <div class="container">
@@ -189,36 +205,95 @@
         <section class="dark no-pt">
             <div class="container container--gallery">
                 <div class="gallery">
-                    <div class="gallery-item" lightbox >
-                        <amp-img width="300" height="300" layout="responsive" src="./wwwroot/images/gallery/abstractions/triangle.webp"></amp-img>
-                    </div>      
-                    <div class="gallery-item">
-                        <amp-img lightbox src="./wwwroot/images/gallery/abstractions/line.webp" data-amp-auto-lightbox-disable width="300" height="300" layout="responsive"></amp-img>
-                    </div>      
-                    <div class="gallery-item">
-                        <amp-img lightbox src="./wwwroot/images/gallery/abstractions/triangle.webp" width="375" height="375" layout="responsive"></amp-img>
-                    </div>
-                    <div class="gallery-item">
-                        <amp-img lightbox src="./wwwroot/images/gallery/abstractions/line.webp" data-amp-auto-lightbox-disable width="300" height="300" layout="responsive"></amp-img>
-                    </div>      
-                    <div class="gallery-item">
-                        <amp-img lightbox src="./wwwroot/images/gallery/abstractions/line.webp" data-amp-auto-lightbox-disable width="300" height="300" layout="responsive"></amp-img>
-                    </div>      
-                    <div class="gallery-item">
-                        <amp-img lightbox src="./wwwroot/images/gallery/abstractions/triangle.webp" width="375" height="375" layout="responsive"></amp-img>
-                    </div>
-                    <div class="gallery-item">
-                        <amp-img lightbox src="./wwwroot/images/gallery/abstractions/line.webp" data-amp-auto-lightbox-disable width="300" height="300" layout="responsive"></amp-img>
-                    </div>      
-                    <div class="gallery-item">
-                        <amp-img lightbox src="./wwwroot/images/gallery/abstractions/triangle.webp" width="375" height="375" layout="responsive"></amp-img>
-                    </div>
-                    <div class="gallery-item">
-                        <amp-img lightbox src="./wwwroot/images/gallery/abstractions/line.webp" data-amp-auto-lightbox-disable width="300" height="300" layout="responsive"></amp-img>
-                    </div>      
-                    <div class="gallery-item">
-                        <amp-img lightbox src="./wwwroot/images/gallery/abstractions/triangle.webp" width="375" height="375" layout="responsive"></amp-img>
-                    </div>
+                    <figure class="gallery-item">
+                        <amp-img id="img0" srcset="
+                                ./wwwroot/images/gallery/abstractions/line_320.webp 320w,
+                                ./wwwroot/images/gallery/abstractions/line_375.webp 375w,
+                                ./wwwroot/images/gallery/abstractions/line_425.webp 425w,
+                                ./wwwroot/images/gallery/abstractions/line.webp 800w" width="500" height="500"  layout="responsive"
+                            alt="Line #abstrakce" lightbox="tattoo" role="button" tabindex="0">
+                        </amp-img>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <amp-img id="img1" srcset="
+                                ./wwwroot/images/gallery/abstractions/triangle_320.webp 320w,
+                                ./wwwroot/images/gallery/abstractions/triangle_375.webp 375w,
+                                ./wwwroot/images/gallery/abstractions/triangle_425.webp 425w,
+                                ./wwwroot/images/gallery/abstractions/triangle.webp 800w" width="500" height="500"  layout="responsive"
+                            alt="Triangle #abstrakce" lightbox="tattoo" role="button" tabindex="0">
+                        </amp-img>
+                    </figure> 
+                    
+                    <figure class="gallery-item">
+                        <amp-img id="img2" srcset="
+                            ./wwwroot/images/gallery/handpoke/fingers_320.webp 320w,
+                                ./wwwroot/images/gallery/handpoke/fingers_375.webp 375w,
+                                ./wwwroot/images/gallery/handpoke/fingers_425.webp 425w,
+                                ./wwwroot/images/gallery/handpoke/fingers.webp 800w" width="500" height="500"  layout="responsive"
+                            alt="Fingers - #handpoke" lightbox="tattoo" role="button" tabindex="0">
+                        </amp-img>
+                    </figure> 
+
+                    <figure class="gallery-item">
+                        <amp-img id="img3" srcset="
+                                ./wwwroot/images/gallery/lettering/inhale-exale_320.webp 320w,
+                                ./wwwroot/images/gallery/lettering/inhale-exale_375.webp 375w,
+                                ./wwwroot/images/gallery/lettering/inhale-exale_425.webp 425w,
+                                ./wwwroot/images/gallery/lettering/inhale-exale.webp 800w" width="500" height="500"  layout="responsive"
+                            alt="INHALE-EXALE #lettering" lightbox="tattoo" role="button" tabindex="0">
+                        </amp-img>
+                    </figure> 
+
+                    <figure class="gallery-item">
+                        <amp-img id="img4" srcset="
+                            ./wwwroot/images/gallery/minimalism/bee_320.webp 320w,
+                                ./wwwroot/images/gallery/minimalism/bee_375.webp 375w,
+                                ./wwwroot/images/gallery/minimalism/bee_425.webp 425w,
+                                ./wwwroot/images/gallery/minimalism/bee.webp 800w" width="500" height="500"  layout="responsive"
+                            alt="Bee #animals" lightbox="tattoo" role="button" tabindex="0">
+                        </amp-img>
+                    </figure> 
+
+                    <figure class="gallery-item">
+                        <amp-img id="img5" srcset="
+                                ./wwwroot/images/gallery/minimalism/circle-2_320.webp 320w,
+                                ./wwwroot/images/gallery/minimalism/circle-2_375.webp 375w,
+                                ./wwwroot/images/gallery/minimalism/circle-2_425.webp 425w,
+                                ./wwwroot/images/gallery/minimalism/circle-2.webp 800w" width="500" height="500"  layout="responsive"
+                            alt="Circle #minimalism" lightbox="tattoo" role="button" tabindex="0">
+                        </amp-img>
+                    </figure> 
+
+                    <figure class="gallery-item">
+                        <amp-img id="img6" srcset="
+                                ./wwwroot/images/gallery/minimalism/leafs_320.webp 320w,
+                                ./wwwroot/images/gallery/minimalism/leafs_375.webp 375w,
+                                ./wwwroot/images/gallery/minimalism/leafs_425.webp 425w,
+                                ./wwwroot/images/gallery/minimalism/leafs.webp 800w" width="500" height="500"  layout="responsive"
+                            alt="Leafs #minimalism" lightbox="tattoo" role="button" tabindex="0">
+                        </amp-img>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <amp-img id="img7" srcset="
+                                ./wwwroot/images/gallery/minimalism/mole_320.webp 320w,
+                                ./wwwroot/images/gallery/minimalism/mole_375.webp 375w,
+                                ./wwwroot/images/gallery/minimalism/mole_425.webp 425w,
+                                ./wwwroot/images/gallery/minimalism/mole.webp 800w" width="500" height="500"  layout="responsive"
+                            alt="Mole #animals" lightbox="tattoo" role="button" tabindex="0">
+                        </amp-img>
+                    </figure>
+                    
+                    <figure class="gallery-item">
+                        <amp-img id="img8" srcset="
+                                ./wwwroot/images/gallery/minimalism/sloth_320.webp 320w,
+                                ./wwwroot/images/gallery/minimalism/sloth_375.webp 375w,
+                                ./wwwroot/images/gallery/minimalism/sloth_425.webp 425w,
+                                ./wwwroot/images/gallery/minimalism/sloth.webp 800w" width="500" height="500"  layout="responsive"
+                            alt="Sloth #animals" lightbox="tattoo" role="button" tabindex="0">
+                        </amp-img>
+                    </figure>
                 </div>
             </div>
         </section>

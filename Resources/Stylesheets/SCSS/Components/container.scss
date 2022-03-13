@@ -33,6 +33,7 @@
     &--gallery{
         --container-width: 100%;
         --container-min-width: 0;
+        --container-pad-x: 4.5vw;
 
         @include res-max-laptop-l {
             --container-width: 70%;
