@@ -20,19 +20,8 @@
 }
 
 .gallery-item {
-  // --grayscale-intensity: grayscale(.5);
-  --aspect-ratio: 1 / 1;
-  --row-span: 5;
-  @include grid-row-span(var(--row-span));
-
-  &--2-3 {
-    --aspect-ratio: 2 / 3;
-    --row-span: 7;
-  }
-
-  // &:hover{
-  //   --grayscale-intensity: grayscale(0);
-  // }
+  display: block;
+  aspect-ratio: 1 / 1;
 
   &__pic {
     position: relative;

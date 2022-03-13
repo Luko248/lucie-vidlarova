@@ -561,12 +561,8 @@ footer {
       --col-count: 1; } }
 
 .gallery-item {
-  --aspect-ratio: 1 / 1;
-  --row-span: 5;
-  grid-row-end: span var(--row-span); }
-  .gallery-item--2-3 {
-    --aspect-ratio: 2 / 3;
-    --row-span: 7; }
+  display: block;
+  aspect-ratio: 1 / 1; }
   .gallery-item__pic {
     position: relative;
     color: currentColor;
