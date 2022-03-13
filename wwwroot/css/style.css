@@ -199,8 +199,6 @@ h1, h2, h3, h4, h5, h6 {
 
 p, span, small {
   font-family: "rig-sans", sans-serif; }
-  p *, span *, small * {
-    font-weight: inherit; }
 
 .title {
   --title-justify-content: center;
