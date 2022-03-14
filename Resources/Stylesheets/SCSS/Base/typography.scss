@@ -60,7 +60,7 @@ p, span, small{
 
 .desc{
     --border-width: 0;
-    --mg-b: 0;
+    --mg-b: 5rem;
     --desc-font-size: large;
     @include border('left', var(--border-width), $color-font);
     padding-left: var(--desc-pad-left);
@@ -69,9 +69,13 @@ p, span, small{
     font-size: var(--desc-font-size);
     line-height: 1.7;
     color: $color-font;
-
+    
     @include res-max-laptop-s{
         --desc-font-size: medium;
+    }
+
+    @include res-max-mobile-l{
+        --mg-b: #{$gap-xxl};
     }
     
     &--line{
@@ -79,11 +83,8 @@ p, span, small{
         --border-width: .2rem;
     }
 
-    &--mg-b{
-        --mg-b: 5rem;
-        @include res-max-mobile-l{
-            --mg-b: #{$gap-xxl};
-        }
+    &--no-mg{
+        --mg-b: 0;
     }
 
     strong, a:not(.button), b, span{

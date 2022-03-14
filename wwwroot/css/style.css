@@ -230,7 +230,7 @@ p, span, small {
 
 .desc {
   --border-width: 0;
-  --mg-b: 0;
+  --mg-b: 5rem;
   --desc-font-size: large;
   border-left: var(--border-width) solid #e6e6e6;
   padding-left: var(--desc-pad-left);
@@ -242,14 +242,14 @@ p, span, small {
   @media only screen and (max-width: 1024px) {
     .desc {
       --desc-font-size: medium; } }
+  @media only screen and (max-width: 425px) {
+    .desc {
+      --mg-b: 3.2rem; } }
   .desc--line {
     --desc-pad-left: 1.6rem;
     --border-width: .2rem; }
-  .desc--mg-b {
-    --mg-b: 5rem; }
-    @media only screen and (max-width: 425px) {
-      .desc--mg-b {
-        --mg-b: 3.2rem; } }
+  .desc--no-mg {
+    --mg-b: 0; }
   .desc strong, .desc a:not(.button), .desc b, .desc span {
     font-family: inherit;
     font-size: inherit; }
@@ -926,7 +926,7 @@ section {
   section.no-pt {
     padding-top: 0; }
   section.full-height {
-    height: calc(100vh - var(--nav-height)); }
+    min-height: 100vh; }
     section.full-height > .container {
       position: absolute;
       top: 50%;
