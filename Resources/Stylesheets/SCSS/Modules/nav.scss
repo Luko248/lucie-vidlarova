@@ -87,19 +87,78 @@
             }
         }
 
-        > li > a {
+        li a {
+            --nav-item-min-font-size: 16px;
             @include transition(color);
             display: block;
             font-family: $font-text;
-            font-size: clamp(16px, 2vh, $gap-xl);
+            font-size: clamp(var(--nav-item-min-font-size), 2vh, $gap-xl);
             color: var(--nav-color);
             text-align: center;
             text-decoration: none;
             white-space: nowrap;
 
+            @include res-max-tablet{
+                --nav-item-min-font-size: 18px;
+            }
+            
             &:hover {
                 --nav-color: var(--color-primary);
                 text-decoration: underline;
+            }
+        }
+    }
+
+    &__subparent{
+        --submenu-display: none;
+        position: relative;
+
+        &:hover{
+            --submenu-display: block;
+        }
+
+        @include res-max-tablet{
+            --submenu-display: block;
+        }
+    }
+
+    &__submenu{
+        --submenu-pad-top: #{$gap-l};
+        @include position(100%, 50%, -50%, -.5rem);
+        display: var(--submenu-display);
+        padding: var(--submenu-pad-top) 0 0 0;         
+        font-size: medium;
+        list-style: none;
+
+        @include res-max-tablet{
+            --submenu-pad-top: 0;
+            @include position(auto, auto, 0, 0, relative);
+        }
+
+        > li{
+            --sub-item-pad: #{$gap-s} #{$gap-xl};
+            --sub-item-custom: #{$gap-l};
+            padding: var(--sub-item-pad);
+            background-color: $color-bg--light;
+
+            @include res-max-tablet{
+                --sub-item-pad: #{$gap-l} 0;
+            }
+
+            &:first-child{
+                padding-top: var(--sub-item-custom);
+                
+                @include res-max-tablet{
+                    --sub-item-custom: #{$gap-xl};
+                }
+            }
+
+            &:last-child{
+                padding-bottom: var(--sub-item-custom);
+
+                @include res-max-tablet{
+                    --sub-item-custom: 0;
+                }
             }
         }
     }
