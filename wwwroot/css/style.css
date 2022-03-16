@@ -226,7 +226,7 @@ p, span, small {
   .title--white {
     --title-color: white; }
   .title--s {
-    --title-font-size: 4em; }
+    --title-font-size: 5em; }
 
 .desc {
   --border-width: 0;
