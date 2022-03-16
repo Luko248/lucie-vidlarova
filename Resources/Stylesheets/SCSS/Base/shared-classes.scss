@@ -28,34 +28,6 @@
     position: relative;
 }
 
-.tablet-content {
-    display: none;
-
-    @include res-max-tablet {
-        display: block;
-    }
-}
-
-.no-tablet-content {
-    @include res-max-tablet {
-        display: none;
-    }
-}
-
-.mobile-content {
-    display: none !important;
-
-    @include res-max-mobile-l {
-        display: block !important;
-    }
-}
-
-.no-mobile-content {
-    @include res-max-mobile-l {
-        display: none;
-    }
-}
-
 *.overflow-hidden {
     overflow: hidden;
 }
