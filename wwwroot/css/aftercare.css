@@ -142,26 +142,6 @@ body {
 .relative {
   position: relative; }
 
-.tablet-content {
-  display: none; }
-  @media only screen and (max-width: 768px) {
-    .tablet-content {
-      display: block; } }
-
-@media only screen and (max-width: 768px) {
-  .no-tablet-content {
-    display: none; } }
-
-.mobile-content {
-  display: none !important; }
-  @media only screen and (max-width: 425px) {
-    .mobile-content {
-      display: block !important; } }
-
-@media only screen and (max-width: 425px) {
-  .no-mobile-content {
-    display: none; } }
-
 *.overflow-hidden {
   overflow: hidden; }
 
