@@ -1,0 +1,21 @@
+// Base
+@import "../base/root";
+@import "../base/fonts";
+@import "../base/default";
+@import "../base/layout";
+@import "../Base/shared-classes";
+@import "../base/typography";
+
+// Components
+@import "../components/burger";
+@import "../components/container";
+@import "../components/icon";
+@import "../components/logo";
+@import "../components/scrollbar";
+@import "../components/social";
+
+// Modules
+@import "../modules/footer";
+@import "../modules/gallery";
+@import "../modules/nav";
+@import "../modules/section";
