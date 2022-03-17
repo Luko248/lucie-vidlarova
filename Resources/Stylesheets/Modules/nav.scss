@@ -149,7 +149,7 @@
                 padding-top: var(--sub-item-custom);
                 
                 @include res-max-tablet{
-                    --sub-item-custom: #{$gap-xl};
+                    --sub-item-custom: #{$gap-xxl};
                 }
             }
 
