@@ -3,26 +3,27 @@
 .logo {
     --logo-display: block;
     --logo-pad-x: #{$gap-xl};
-    --logo-hieght: 4rem;
+    --logo-max-width: none;
     display: var(--logo-display);
     padding: 0 var(--logo-pad-x);
 
     @include res-max-laptop-s {
         --logo-pad-x: #{$gap-m};
-        --logo-hieght: #{$gap-xxl};
+        --logo-max-width: 12rem;
     }
 
     &--mobile{
         --logo-display: none;
-        --logo-hieght: #{$gap-xl};
+        --logo-max-width: 10rem;
         
         @include res-max-tablet {
             --logo-display: block;
         }
     }
 
-    > img {
+    > amp-img {
         display: block;
-        height: var(--logo-hieght);
+        max-width: var(--logo-max-width);
+        height: auto;
     }
 }
