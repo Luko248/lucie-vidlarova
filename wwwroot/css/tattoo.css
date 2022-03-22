@@ -30,46 +30,6 @@
     :root {
       --nav-height: 5rem; } }
 
-@font-face {
-  font-family: "segoe-ui";
-  font-weight: 400;
-  font-display: fallback;
-  font-style: normal;
-  src: url("../fonts/segoe-ui/regular/segoe-ui.eot");
-  src: url("../fonts/segoe-ui/regular/segoe-ui.eot?#iefix") format("embedded-opentype"), url("../fonts/segoe-ui/regular/segoe-ui.woff2") format("woff2"), url("../fonts/segoe-ui/regular/segoe-ui.woff") format("woff"), url("../fonts/segoe-ui/regular/segoe-ui.ttf") format("truetype"), url("../fonts/segoe-ui/regular/segoe-ui.otf") format("opentype"), url("../fonts/segoe-ui/regular/segoe-ui.svg?#webfont") format("svg"); }
-
-@font-face {
-  font-family: "segoe-ui-bold";
-  font-weight: 700;
-  font-display: fallback;
-  font-style: normal;
-  src: url("../fonts/segoe-ui/bold/segoe-ui-bold.eot");
-  src: url("../fonts/segoe-ui/bold/segoe-ui-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/segoe-ui/bold/segoe-ui-bold.woff2") format("woff2"), url("../fonts/segoe-ui/bold/segoe-ui-bold.woff") format("woff"), url("../fonts/segoe-ui/bold/segoe-ui-bold.ttf") format("truetype"), url("../fonts/segoe-ui/bold/segoe-ui-bold.otf") format("opentype"), url("../fonts/segoe-ui/bold/segoe-ui-bold.svg?#webfont") format("svg"); }
-
-@font-face {
-  font-family: "segoe-ui-light";
-  font-weight: 100;
-  font-display: fallback;
-  font-style: normal;
-  src: url("../fonts/segoe-ui/light/segoe-ui-light.eot");
-  src: url("../fonts/segoe-ui/light/segoe-ui-light.eot?#iefix") format("embedded-opentype"), url("../fonts/segoe-ui/light/segoe-ui-light.woff2") format("woff2"), url("../fonts/segoe-ui/light/segoe-ui-light.woff") format("woff"), url("../fonts/segoe-ui/light/segoe-ui-light.ttf") format("truetype"), url("../fonts/segoe-ui/light/segoe-ui-light.otf") format("opentype"), url("../fonts/segoe-ui/light/segoe-ui-light.svg?#webfont") format("svg"); }
-
-@font-face {
-  font-family: "times-new-roman";
-  font-weight: 400;
-  font-display: fallback;
-  font-style: normal;
-  src: url("../fonts/times-new-roman/regular/times-new-roman.eot");
-  src: url("../fonts/times-new-roman/regular/times-new-roman.eot?#iefix") format("embedded-opentype"), url("../fonts/times-new-roman/regular/times-new-roman.woff2") format("woff2"), url("../fonts/times-new-roman/regular/times-new-roman.woff") format("woff"), url("../fonts/times-new-roman/regular/times-new-roman.ttf") format("truetype"), url("../fonts/times-new-roman/regular/times-new-roman.otf") format("opentype"), url("../fonts/times-new-roman/regular/times-new-roman.svg?#webfont") format("svg"); }
-
-@font-face {
-  font-family: "times-new-roman-bold";
-  font-weight: 700;
-  font-display: fallback;
-  font-style: normal;
-  src: url("../fonts/times-new-roman/bold/times-new-roman-bold.eot");
-  src: url("../fonts/times-new-roman/bold/times-new-roman-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/times-new-roman/bold/times-new-roman-bold.woff2") format("woff2"), url("../fonts/times-new-roman/bold/times-new-roman-bold.woff") format("woff"), url("../fonts/times-new-roman/bold/times-new-roman-bold.ttf") format("truetype"), url("../fonts/times-new-roman/bold/times-new-roman-bold.otf") format("opentype"), url("../fonts/times-new-roman/bold/times-new-roman-bold.svg?#webfont") format("svg"); }
-
 * {
   box-sizing: border-box; }
 
