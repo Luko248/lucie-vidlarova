@@ -427,7 +427,7 @@ p, span, small {
       --logo-max-width: 12rem; } }
   .logo--mobile {
     --logo-display: none;
-    --logo-max-width: 10rem; }
+    --logo-max-width: 14rem; }
     @media only screen and (max-width: 768px) {
       .logo--mobile {
         --logo-display: block; } }
@@ -473,6 +473,9 @@ p, span, small {
   @media only screen and (max-width: 768px) {
     .social {
       --social-display: none; } }
+  @media only screen and (max-width: 425px) {
+    .social {
+      --scial-gap: .8em; } }
   @media only screen and (max-width: 768px) {
     .social--visible {
       --social-display: flex; } }
@@ -552,10 +555,16 @@ header {
   z-index: var(--content-z-index); }
   @media only screen and (max-width: 768px) {
     .header__content {
-      --content-gap: 6vh; } }
+      --content-gap: 6vh;
+      --bg-blur: 2px;
+      --bg-opacity: .55; } }
   .header__content:hover {
     --bg-opacity: .65;
     --bg-blur: 0; }
+    @media only screen and (max-width: 768px) {
+      .header__content:hover {
+        --bg-blur: 2px;
+        --bg-opacity: .55; } }
   .header__content--tattoo {
     --content-bg: url('https://res.cloudinary.com/lukaschylik/image/upload/v1647496692/thelucie.ink/backgrounds/header/tattoo_jzini9.webp'); }
   .header__content--visuals {

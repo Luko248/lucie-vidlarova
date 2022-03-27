@@ -39,11 +39,18 @@ header{
 
         @include res-max-tablet{
             --content-gap: 6vh;
+            --bg-blur: 2px;
+            --bg-opacity: .55;
         }
 
         &:hover{
             --bg-opacity: .65;
             --bg-blur: 0;
+
+            @include res-max-tablet{
+                --bg-blur: 2px;
+                --bg-opacity: .55;
+            }
         }
 
         &--tattoo{

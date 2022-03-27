@@ -14,7 +14,7 @@
 
     &--mobile{
         --logo-display: none;
-        --logo-max-width: 10rem;
+        --logo-max-width: 14rem;
         
         @include res-max-tablet {
             --logo-display: block;
