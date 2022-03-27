@@ -19,7 +19,7 @@
   --gap-l: 1.6rem;
   --gap-m: 0.8rem;
   --gap-s: 0.4rem;
-  --font-text: calibri, sans-serif;
+  --font-text: system-ui;
   --font-title: p22-allyson-pro, sans-serif;
   --border-width: 1px;
   --nav-height: 8rem; }
@@ -128,7 +128,7 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal; }
 
 p, span, small {
-  font-family: "calibri", sans-serif;
+  font-family: system-ui;
   font-weight: 100; }
 
 .title {
@@ -175,7 +175,7 @@ p, span, small {
   border-left: var(--border-width) solid #e6e6e6;
   padding-left: var(--desc-pad-left);
   margin-bottom: var(--mg-b);
-  font-family: "calibri", sans-serif;
+  font-family: system-ui;
   font-size: var(--desc-font-size);
   line-height: 1.7;
   color: #e6e6e6; }
@@ -418,7 +418,7 @@ footer {
     width: 100%;
     text-align: center; }
     footer > .footer__copy small {
-      font-family: "calibri", sans-serif;
+      font-family: system-ui;
       font-size: small;
       color: #e6e6e6; }
 
@@ -592,7 +592,7 @@ footer {
       --nav-item-min-font-size: 16px;
       transition: color var(--trans-time) var(--trans-fnc) 0s;
       display: block;
-      font-family: "calibri", sans-serif;
+      font-family: system-ui;
       font-size: clamp(var(--nav-item-min-font-size), 2vh, 2.4rem);
       color: var(--nav-color);
       text-align: center;
