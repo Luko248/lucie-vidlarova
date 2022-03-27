@@ -14,8 +14,12 @@
         --container-min-width: 0;
     }
 
-    @include res-max-laptop-s {
+    @include res-max-laptop-m {
         --container-width: 85%;  
+    }
+
+    @include res-max-laptop-s {
+        --container-width: 90%;  
     }
 
     @include res-max-tablet {

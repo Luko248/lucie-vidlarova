@@ -7,12 +7,12 @@
   @include grid-columns(grid, repeat(var(--col-count), minmax($gap-m, 1fr)), var(--gap), var(--align-items));
 
   @include res-max-laptop-m {
-    --gap: #{$gap-xl};
-    --col-count: 4;
+    --gap: #{$gap-xl};  
   }
 
   @include res-max-laptop-s {
     --gap: #{$gap-l};
+    --col-count: 4;
   }
 
   @include res-max-tablet {
@@ -41,8 +41,10 @@
   >amp-img{
     @include position;
     display: block;
-    width: 100%;
-    height: auto;
+    // width: auto;
+    min-width: 100%;
+    // height: auto;
+    // min-height: 100%;
     transform: translate(-50%, -50%) scale(var(--image-scale), var(--image-scale));
     transition: transform $trans-time ease-in-out;
   }
