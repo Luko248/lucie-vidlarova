@@ -14,7 +14,6 @@ header{
         position: relative; 
         height: var(--header-height);
         max-height: $height-4k;
-        // background-image: linear-gradient(to right, $color-black 50%, var(--color-white) 50%, var(--color-white) 100%); 
         background-color: $color-bg-darken;
         overflow: hidden; 
         
@@ -87,7 +86,7 @@ header{
                 --desc-mg-bottom: #{$gap-xl};
             }
 
-            @include res-max-mobile-s{
+            @include res-max-mobile-l{
                 --desc-mg-bottom: 0;
             }
         }        
