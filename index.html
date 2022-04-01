@@ -166,7 +166,8 @@
         </a>
         <ul class="nav__menu" id="navMenu">
             <li class="nav__subparent">
-                <a href="#about" >Moje práce</a>
+                <a href="#about" 
+                   on="tap:menuBtn.toggleClass(class='nav__burger--open'),navMenu.toggleClass(class='nav__menu--open'),doc.toggleClass(class='overflow-hidden'), social.toggleClass(class='social--visible')">Moje práce</a>
                 <ul class="nav__submenu">
                     <li>
                         <a href="/tattoo" >Tetovaní</a>
@@ -185,10 +186,12 @@
                 </a>
             </li>
             <li>
-                <a href="#price-list">Ceník</a>
+                <a href="#price-list" 
+                   on="tap:menuBtn.toggleClass(class='nav__burger--open'),navMenu.toggleClass(class='nav__menu--open'),doc.toggleClass(class='overflow-hidden'), social.toggleClass(class='social--visible')">Ceník</a>
             </li>
             <li>
-                <a href="#contact">Kontakt</a>
+                <a href="#contact"
+                   on="tap:menuBtn.toggleClass(class='nav__burger--open'),navMenu.toggleClass(class='nav__menu--open'),doc.toggleClass(class='overflow-hidden'), social.toggleClass(class='social--visible')">Kontakt</a>
             </li>
         </ul>
         <button class="nav__burger" id="menuBtn" tabindex="1" role="button"
