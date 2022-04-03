@@ -476,9 +476,6 @@ p, span, small {
   @media only screen and (max-width: 768px) {
     .social {
       --social-display: none; } }
-  @media only screen and (max-width: 425px) {
-    .social {
-      --scial-gap: 0.8rem; } }
   @media only screen and (max-width: 768px) {
     .social--visible {
       --social-display: flex; } }

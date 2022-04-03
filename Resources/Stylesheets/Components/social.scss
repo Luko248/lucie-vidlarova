@@ -13,10 +13,6 @@
         --social-display: none;
     }
 
-    @include res-max-mobile-l{
-        --scial-gap: #{$gap-m};
-    }
-
     &--visible{
         @include res-max-tablet{
             --social-display: flex;
