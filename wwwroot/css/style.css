@@ -575,11 +575,10 @@ header {
         --content-bg: url('https://res.cloudinary.com/lukaschylik/image/upload/v1647496693/thelucie.ink/backgrounds/header/tattoo_768_x4wdff.webp'); } }
     @media only screen and (max-width: 425px) {
       .header__content--tattoo {
-        --content-bg: image-set( 
-                    "https://res.cloudinary.com/lukaschylik/image/upload/v1647496692/thelucie.ink/backgrounds/header/tattoo_375_t7pxqa.webp" 1x,
-                    "https://res.cloudinary.com/lukaschylik/image/upload/v1647496693/thelucie.ink/backgrounds/header/tattoo_425_zu3dou.webp" 2x,
-                    "https://res.cloudinary.com/lukaschylik/image/upload/v1647496693/thelucie.ink/backgrounds/header/tattoo_768_x4wdff.webp" 3x
-                  ); } }
+        --content-bg: url('https://res.cloudinary.com/lukaschylik/image/upload/v1647496693/thelucie.ink/backgrounds/header/tattoo_425_zu3dou.webp'); } }
+    @media only screen and (max-width: 375px) {
+      .header__content--tattoo {
+        --content-bg: url('https://res.cloudinary.com/lukaschylik/image/upload/v1647496692/thelucie.ink/backgrounds/header/tattoo_375_t7pxqa.webp'); } }
   .header__content--visuals {
     --content-bg: url('https://res.cloudinary.com/lukaschylik/image/upload/v1647496694/thelucie.ink/backgrounds/header/visuals_yazjik.webp'); }
     @media only screen and (max-width: 768px) {
@@ -587,11 +586,10 @@ header {
         --content-bg: url('https://res.cloudinary.com/lukaschylik/image/upload/v1647496694/thelucie.ink/backgrounds/header/visuals_768_ivsqtv.webp'); } }
     @media only screen and (max-width: 425px) {
       .header__content--visuals {
-        --content-bg: image-set( 
-                    "https://res.cloudinary.com/lukaschylik/image/upload/v1647496694/thelucie.ink/backgrounds/header/visuals_375_g1iogs.webp" 1x,
-                    "https://res.cloudinary.com/lukaschylik/image/upload/v1647496694/thelucie.ink/backgrounds/header/visuals_425_ozxq2k.webp" 2x,
-                    "https://res.cloudinary.com/lukaschylik/image/upload/v1647496694/thelucie.ink/backgrounds/header/visuals_768_ivsqtv.webp" 3x
-                  ); } }
+        --content-bg: url('https://res.cloudinary.com/lukaschylik/image/upload/v1647496694/thelucie.ink/backgrounds/header/visuals_425_ozxq2k.webp'); } }
+    @media only screen and (max-width: 375px) {
+      .header__content--visuals {
+        --content-bg: url('https://res.cloudinary.com/lukaschylik/image/upload/v1647496694/thelucie.ink/backgrounds/header/visuals_375_g1iogs.webp'); } }
   .header__content:after {
     position: absolute;
     top: 50%;
