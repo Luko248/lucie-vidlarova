@@ -48,7 +48,7 @@ body {
     content: '';
     width: 100%;
     height: 100%;
-    background-image: url("https://res.cloudinary.com/lukaschylik/image/upload/v1647496930/thelucie.ink/backgrounds/main-bg_bgxtab.webp");
+    background-image: url("wwwroot/images/backgrounds/main-bg.webp");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -372,7 +372,7 @@ p, span, small {
 
 .social {
   --social-item-color: #e6e6e6;
-  --scial-gap: 1rem;
+  --scial-gap: 1.6rem;
   --social-display: flex;
   display: var(--social-display);
   flex-flow: column wrap;
@@ -391,7 +391,7 @@ p, span, small {
       --social-display: none; } }
   @media only screen and (max-width: 425px) {
     .social {
-      --scial-gap: .5rem; } }
+      --scial-gap: 0.8rem; } }
   @media only screen and (max-width: 768px) {
     .social--visible {
       --social-display: flex; } }
@@ -400,8 +400,9 @@ p, span, small {
     transition: transform var(--trans-time) var(--trans-fnc) 0s;
     position: relative;
     display: block;
+    width: 3.2rem;
+    min-width: 3.2rem;
     aspect-ratio: 1 / 1;
-    padding: 1.6rem;
     text-decoration: none;
     transform: scale(var(--item-scale)); }
     .social__item:hover {

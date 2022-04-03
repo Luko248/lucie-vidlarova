@@ -2,7 +2,7 @@
 
 .social{
     --social-item-color: #{$color-font};
-    --scial-gap: 1rem;
+    --scial-gap: #{$gap-l};
     --social-display: flex;
     @include flex-set(var(--social-display), column, wrap, var(--scial-gap), center, center, center);
     @include position(100%, $gap-xl, 0, calc(-140%));
@@ -14,7 +14,7 @@
     }
 
     @include res-max-mobile-l{
-        --scial-gap: .5rem;
+        --scial-gap: #{$gap-m};
     }
 
     &--visible{
@@ -27,9 +27,10 @@
         --item-scale: 1;   
         @include transition(transform);
         position: relative;
-        display: block;  
+        display: block;
+        width: $gap-xxl;
+        min-width: $gap-xxl;  
         aspect-ratio: 1 / 1;
-        padding: $gap-l;
         text-decoration: none;
         transform: scale(var(--item-scale));
         
