@@ -556,6 +556,7 @@ header {
   position: relative;
   padding: 0 1.6rem;
   color: var(--content-color);
+  text-decoration: none;
   z-index: var(--content-z-index); }
   @media only screen and (max-width: 768px) {
     .header__content {
