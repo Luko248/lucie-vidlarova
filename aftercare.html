@@ -184,7 +184,7 @@
                 <a href="/">Aftercare</a>
             </li>
             <li class="nav__logo">
-                <a href="/index" class="logo">
+                <a href="/index" class="logo" aria-label="thelucie.ink">
                     <amp-img id="logo" src="wwwroot/images/logos/thelucie_logo_text.svg" width="226" height="40" layout="intrinsic" alt="thelucie.ink logo"></amp-img>
                 </a>
             </li>
@@ -195,7 +195,7 @@
                 <a href="/index#contact">Kontakt</a>
             </li>
         </ul>
-        <button class="nav__burger" id="menuBtn" tabindex="1" role="button" aria-label="Menu button"
+        <button class="nav__burger" id="menuBtn" tabindex="0" role="button" aria-label="Menu button"
             on="tap:menuBtn.toggleClass(class='nav__burger--open'),navMenu.toggleClass(class='nav__menu--open'),doc.toggleClass(class='overflow-hidden')">
             <svg class="icon icon-menu">
                 <use xlink:href="#icon-menu"></use>
