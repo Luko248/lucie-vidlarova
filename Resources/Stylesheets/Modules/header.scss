@@ -54,10 +54,34 @@ header{
 
         &--tattoo{
             --content-bg: url('https://res.cloudinary.com/lukaschylik/image/upload/v1647496692/thelucie.ink/backgrounds/header/tattoo_jzini9.webp');
+
+            @include res-max-tablet{
+                --content-bg: url('https://res.cloudinary.com/lukaschylik/image/upload/v1647496693/thelucie.ink/backgrounds/header/tattoo_768_x4wdff.webp');
+            }
+
+            @include res-max-mobile-l{
+                --content-bg: image-set( 
+                    "https://res.cloudinary.com/lukaschylik/image/upload/v1647496692/thelucie.ink/backgrounds/header/tattoo_375_t7pxqa.webp" 1x,
+                    "https://res.cloudinary.com/lukaschylik/image/upload/v1647496693/thelucie.ink/backgrounds/header/tattoo_425_zu3dou.webp" 2x,
+                    "https://res.cloudinary.com/lukaschylik/image/upload/v1647496693/thelucie.ink/backgrounds/header/tattoo_768_x4wdff.webp" 3x
+                  );
+            }
         }
 
         &--visuals{
             --content-bg: url('https://res.cloudinary.com/lukaschylik/image/upload/v1647496694/thelucie.ink/backgrounds/header/visuals_yazjik.webp');
+
+            @include res-max-tablet{
+                --content-bg: url('https://res.cloudinary.com/lukaschylik/image/upload/v1647496694/thelucie.ink/backgrounds/header/visuals_768_ivsqtv.webp');
+            }
+
+            @include res-max-mobile-l{
+                --content-bg: image-set( 
+                    "https://res.cloudinary.com/lukaschylik/image/upload/v1647496694/thelucie.ink/backgrounds/header/visuals_375_g1iogs.webp" 1x,
+                    "https://res.cloudinary.com/lukaschylik/image/upload/v1647496694/thelucie.ink/backgrounds/header/visuals_425_ozxq2k.webp" 2x,
+                    "https://res.cloudinary.com/lukaschylik/image/upload/v1647496694/thelucie.ink/backgrounds/header/visuals_768_ivsqtv.webp" 3x
+                  );
+            }
         }
 
         &:after{

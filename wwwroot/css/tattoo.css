@@ -372,7 +372,7 @@ p, span, small {
 
 .social {
   --social-item-color: #e6e6e6;
-  --scial-gap: 1.6em;
+  --scial-gap: 1rem;
   --social-display: flex;
   display: var(--social-display);
   flex-flow: column wrap;
@@ -391,7 +391,7 @@ p, span, small {
       --social-display: none; } }
   @media only screen and (max-width: 425px) {
     .social {
-      --scial-gap: .8em; } }
+      --scial-gap: .5rem; } }
   @media only screen and (max-width: 768px) {
     .social--visible {
       --social-display: flex; } }

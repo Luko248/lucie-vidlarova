@@ -324,6 +324,13 @@ p, span, small {
       .container--gallery {
         --container-width: 100%; } }
 
+.icon {
+  --icon-size: 1.6rem;
+  display: block;
+  width: var(--icon-size);
+  aspect-ratio: 1 / 1;
+  fill: currentColor; }
+
 .logo {
   --logo-display: block;
   --logo-pad-x: 2.4rem;

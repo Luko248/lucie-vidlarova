@@ -2,7 +2,7 @@
 
 .social{
     --social-item-color: #{$color-font};
-    --scial-gap: 1.6em;
+    --scial-gap: 1rem;
     --social-display: flex;
     @include flex-set(var(--social-display), column, wrap, var(--scial-gap), center, center, center);
     @include position(100%, $gap-xl, 0, calc(-140%));
@@ -14,7 +14,7 @@
     }
 
     @include res-max-mobile-l{
-        --scial-gap: .8em;
+        --scial-gap: .5rem;
     }
 
     &--visible{
