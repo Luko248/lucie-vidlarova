@@ -29,27 +29,6 @@
         }
     }
 
-    &__burger {
-        --burger-display: none;
-        position: relative;
-        display: var(--burger-display);
-        width: $gap-xxl;
-        aspect-ratio: 1 / 1;
-        padding: 0;
-        background: none;
-        border-width: 0;
-
-        @include res-max-tablet {
-            --burger-display: block;
-        }
-
-        > .icon {
-            --icon-size: #{$gap-xl};
-            @include position;
-            fill: $color-font;
-        }
-    }
-
     &__menu {
         --menu-display: grid;
         --menu-gap: #{$gap-xxl};

@@ -7,12 +7,13 @@
   @include grid-columns(grid, repeat(var(--col-count), minmax($gap-m, 1fr)), var(--gap), var(--align-items));
 
   @include res-max-laptop-m {
-    --gap: #{$gap-xl};  
+    --gap: #{$gap-xl}; 
+    --col-count: 4; 
   }
 
   @include res-max-laptop-s {
     --gap: #{$gap-l};
-    --col-count: 4;
+    --col-count: 3;
   }
 
   @include res-max-tablet {

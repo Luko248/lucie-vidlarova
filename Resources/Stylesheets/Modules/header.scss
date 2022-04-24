@@ -174,11 +174,14 @@ header{
             animation: fadeIn var(--anim-length) forwards linear;
             animation-delay: calc(var(--anim-length) * 1.5);
             transform: translateY($gap-m);
-            + .link{
+            + .link{            
                 opacity: 0;
                 animation: fadeIn var(--anim-length) forwards linear;
                 animation-delay: calc(var(--anim-length) * 2);
                 transform: translateY($gap-m);
+                &:hover{
+                    --link-color: #{$color-primary};
+                }
             }
         }
     }

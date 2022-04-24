@@ -12,6 +12,11 @@
     color: var(--link-color);
     text-decoration: var(--link-text-decor);
     text-transform: var(--link-text-trans);
+    transition: color var(--trans-time) var(--trans-fnc);
+
+    @include res-max-tablet{
+        --trans-time: 0;
+    }
 
     @include res-max-mobile-l{
         --link-font-size: large;
@@ -28,13 +33,16 @@
     &--primary{
         --link-color: var(--color-primary);
         --link-text-decor: underline;
+
+        &:hover{
+            --link-color: var(--color-primary--hover);
+        }
     }
     &--header{
         padding: $gap-m $gap-xxl;
     }
 
     &:hover{
-        // --link-color: #{$color-primary};
         --link-text-decor: underline;
         --icon-trans-x: #{$gap-s};
     }

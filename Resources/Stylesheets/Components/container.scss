@@ -35,21 +35,15 @@
     }
 
     &--gallery{
-        --container-width: 100%;
-        --container-min-width: 0;
         --container-pad-x: 4.5vw;
-
-        @include res-max-laptop-l {
-            --container-width: 70%;
-            --container-min-width: 0;
-        }
-
-        @include res-max-laptop-s {
-            --container-width: 85%;  
-        }
-
-        @include res-max-tablet {
+        
+        @include res-min-laptop-l{
             --container-width: 100%;
+            --container-min-width: 0;          
+        } 
+    
+        @include res-max-laptop-l {
+            --container-pad-x: #{$gap-xxl};
         }
     }
 }
