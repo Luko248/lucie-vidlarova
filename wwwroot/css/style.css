@@ -166,7 +166,21 @@ p, span, small {
   .title--white {
     --title-color: white; }
   .title--s {
-    --title-font-size: 5em; }
+    --title-font-size: 4em; }
+    @media only screen and (max-width: 1440px) {
+      .title--s {
+        --title-font-size: 3.5em;
+        --title-mg-bottom: 3.2rem; } }
+    @media only screen and (max-width: 1024px) {
+      .title--s {
+        --title-font-size: 3em; } }
+    @media only screen and (max-width: 768px) {
+      .title--s {
+        --title-font-size: 5em;
+        --title-mg-bottom: 2.4rem; } }
+    @media only screen and (max-width: 425px) {
+      .title--s {
+        --title-font-size: 4em; } }
 
 .desc {
   --border-width: 0;

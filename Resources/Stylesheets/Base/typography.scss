@@ -54,7 +54,25 @@ p, span, small{
     }
 
     &--s{
-        --title-font-size: 5em;
+        --title-font-size: 4em;
+
+        @include res-max-laptop-l{
+            --title-font-size: 3.5em;
+            --title-mg-bottom: #{$gap-xxl}; 
+        }
+    
+        @include res-max-laptop-s{
+            --title-font-size: 3em;
+        }
+    
+        @include res-max-tablet{
+            --title-font-size: 5em;
+            --title-mg-bottom: #{$gap-xl}; 
+        }
+    
+        @include res-max-mobile-l{
+            --title-font-size: 4em;
+        }
     }
 }
 
