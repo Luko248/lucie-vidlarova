@@ -118,8 +118,22 @@
 </head>
 
 <body>
-   <!-- Google Tag Manager -->
-<amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-WVXM8XG&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
+    <amp-analytics type="gtag" data-credentials="include">
+        <script type="application/json">
+            {
+                "vars": {
+                "gtag_id": "GTM-WVXM8XG",
+                "config": {
+                    "GTM-WVXM8XG": {
+                        "groups": "default",
+                        "page_title": "thelucie.ink",
+                        "page_location": "https://thelucie.ink/"
+                        }
+                    }
+                }
+            }
+        </script>
+    </amp-analytics>
 
     <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
