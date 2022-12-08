@@ -17,32 +17,32 @@ p, span, small{
 
 .title{
     --title-justify-content: center;
-    --title-font-size: 6.4em;
+    --title-font-size: 4em;
     --title-color: #{$color-font};
     --title-mg-bottom: #{$gap-xl}; 
     --title-justify-content: flex-start;
     @include flex-set(flex, row, wrap, 0, center, var(--title-justify-content));
     margin-bottom: var(--title-mg-bottom);
-    font-family: $font-title;
+    font-family: $font-text;
     font-size: var(--title-font-size);
     color: var(--title-color);
 
     @include res-max-laptop-l{
-        --title-font-size: 5.6em;
+        --title-font-size: 3.2em;
         --title-mg-bottom: #{$gap-xxl}; 
     }
 
     @include res-max-laptop-s{
-        --title-font-size: 4.8em;
+        --title-font-size: 2.4em;
     }
 
     @include res-max-tablet{
-        --title-font-size: 7em;
+        --title-font-size: 4em;
         --title-mg-bottom: #{$gap-xl}; 
     }
 
     @include res-max-mobile-l{
-        --title-font-size: 5em;
+        --title-font-size: 3.2em;
     }
 
     &--center{
@@ -54,24 +54,24 @@ p, span, small{
     }
 
     &--s{
-        --title-font-size: 4em;
+        --title-font-size: 3.2em;
 
         @include res-max-laptop-l{
-            --title-font-size: 3.5em;
+            --title-font-size: 2.4em;
             --title-mg-bottom: #{$gap-xxl}; 
         }
     
         @include res-max-laptop-s{
-            --title-font-size: 3em;
+            --title-font-size: 1.6em;
         }
     
         @include res-max-tablet{
-            --title-font-size: 5em;
+            --title-font-size: 3.2em;
             --title-mg-bottom: #{$gap-xl}; 
         }
     
         @include res-max-mobile-l{
-            --title-font-size: 4em;
+            --title-font-size: 2.4em;
         }
     }
 }

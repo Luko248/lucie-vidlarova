@@ -133,7 +133,7 @@ p, span, small {
 
 .title {
   --title-justify-content: center;
-  --title-font-size: 6.4em;
+  --title-font-size: 4em;
   --title-color: #e6e6e6;
   --title-mg-bottom: 2.4rem;
   --title-justify-content: flex-start;
@@ -144,43 +144,43 @@ p, span, small {
   justify-content: var(--title-justify-content);
   gap: 0;
   margin-bottom: var(--title-mg-bottom);
-  font-family: "p22-allyson-pro", sans-serif;
+  font-family: system-ui;
   font-size: var(--title-font-size);
   color: var(--title-color); }
   @media only screen and (max-width: 1440px) {
     .title {
-      --title-font-size: 5.6em;
+      --title-font-size: 3.2em;
       --title-mg-bottom: 3.2rem; } }
   @media only screen and (max-width: 1024px) {
     .title {
-      --title-font-size: 4.8em; } }
+      --title-font-size: 2.4em; } }
   @media only screen and (max-width: 768px) {
     .title {
-      --title-font-size: 7em;
+      --title-font-size: 4em;
       --title-mg-bottom: 2.4rem; } }
   @media only screen and (max-width: 425px) {
     .title {
-      --title-font-size: 5em; } }
+      --title-font-size: 3.2em; } }
   .title--center {
     --title-justify-content: center; }
   .title--white {
     --title-color: white; }
   .title--s {
-    --title-font-size: 4em; }
+    --title-font-size: 3.2em; }
     @media only screen and (max-width: 1440px) {
       .title--s {
-        --title-font-size: 3.5em;
+        --title-font-size: 2.4em;
         --title-mg-bottom: 3.2rem; } }
     @media only screen and (max-width: 1024px) {
       .title--s {
-        --title-font-size: 3em; } }
+        --title-font-size: 1.6em; } }
     @media only screen and (max-width: 768px) {
       .title--s {
-        --title-font-size: 5em;
+        --title-font-size: 3.2em;
         --title-mg-bottom: 2.4rem; } }
     @media only screen and (max-width: 425px) {
       .title--s {
-        --title-font-size: 4em; } }
+        --title-font-size: 2.4em; } }
 
 .desc {
   --border-width: 0;
