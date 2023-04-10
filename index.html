@@ -138,29 +138,22 @@
     </script>
 
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-    
-    <!-- AMP Analytics -->
-    <amp-analytics type="gtag" data-credentials="include">
-        <script type="application/json">
-          {
-            "vars": {
-              "gtag_id": "G-CR22B2YLDH",
-              "config": {
-                "G-CR22B2YLDH": {
-                  "groups": "default"
-                }
-              }
-            },
-            "triggers": {
-              "trackPageview": {
-                "on": "visible",
-                "request": "pageview"
-              }
-            }
+    <amp-analytics  type="googleanalytics"  config="https://amp.analytics-debugger.com/ga4.json"  data-credentials="include">
+        <script  type="application/json">
+        {
+          "vars": {
+            "GA4_MEASUREMENT_ID": "G-CR22B2YLDH",
+            "GA4_ENDPOINT_HOSTNAME": "www.google-analytics.com",
+            "GOOGLE_CONSENT_ENABLED": false,
+            "WEBVITALS_TRACKING": false,
+            "PERFORMANCE_TIMING_TRACKING": false,
+            "DEFAULT_PAGEVIEW_ENABLED": true,
+            "SEND_DOUBLECLICK_BEACON": false,
+            "ENABLE_REGIONAL_DATA_COLLECTION": true
           }
+        }
         </script>
-    </amp-analytics>
+        </amp-analytics>
 
     <script async custom-element="amp-date-display" src="https://cdn.ampproject.org/v0/amp-date-display-0.1.js"></script>
     <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
