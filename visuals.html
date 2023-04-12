@@ -109,33 +109,32 @@
     </style>
 
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <!-- AMP Analytics -->
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <amp-analytics  type="googleanalytics"  config="https://amp.analytics-debugger.com/ga4.json"  data-credentials="include">
+        <script type="application/json">
+        {
+        "vars": {
+            "GA4_MEASUREMENT_ID": "G-CR22B2YLDH",
+            "GA4_ENDPOINT_HOSTNAME": "www.google-analytics.com",
+            "GOOGLE_CONSENT_ENABLED": false,
+            "WEBVITALS_TRACKING": false,
+            "PERFORMANCE_TIMING_TRACKING": false,
+            "DEFAULT_PAGEVIEW_ENABLED": true,
+            "SEND_DOUBLECLICK_BEACON": false,
+            "ENABLE_REGIONAL_DATA_COLLECTION": true
+        }
+        }
+        </script>
+    </amp-analytics>
     <script async custom-element="amp-date-display"
         src="https://cdn.ampproject.org/v0/amp-date-display-0.1.js"></script>
     <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
     <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
     <script async custom-element="amp-image-lightbox" src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
-    <!-- AMP Analytics -->
-    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 </head>
 
 <body>
-    <amp-analytics type="gtag" data-credentials="include">
-        <script type="application/json">
-            {
-                "vars": {
-                "gtag_id": "GTM-WVXM8XG",
-                "config": {
-                    "GTM-WVXM8XG": {
-                        "groups": "default",
-                        "page_title": "thelucie.ink",
-                        "page_location": "https://thelucie.ink/"
-                        }
-                    }
-                }
-            }
-        </script>
-    </amp-analytics>
-
     <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
         <symbol id="icon-facebook" viewBox="0 0 32 32">
