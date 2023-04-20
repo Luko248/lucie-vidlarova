@@ -122,7 +122,7 @@
     <amp-analytics  type="googleanalytics"  config="https://amp.analytics-debugger.com/ga4.json"  data-credentials="include">
         <script type="application/json">
         {
-        "vars": {
+          "vars": {
             "GA4_MEASUREMENT_ID": "G-CR22B2YLDH",
             "GA4_ENDPOINT_HOSTNAME": "www.google-analytics.com",
             "GOOGLE_CONSENT_ENABLED": false,
@@ -131,6 +131,21 @@
             "DEFAULT_PAGEVIEW_ENABLED": true,
             "SEND_DOUBLECLICK_BEACON": false,
             "ENABLE_REGIONAL_DATA_COLLECTION": true
+          }
+        }
+        </script>
+    </amp-analytics>
+    <amp-analytics type="facebookpixel" id="facebook-pixel">
+        <script type="application/json">
+        {
+            "vars": {
+                "pixelId": "1413282392776218"
+            },
+            "triggers": {
+                "trackPageview": {
+                    "on": "visible",
+                    "request": "pageview"
+                }
             }
         }
         </script>

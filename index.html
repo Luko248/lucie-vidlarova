@@ -139,6 +139,11 @@
 
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async custom-element="amp-date-display" src="https://cdn.ampproject.org/v0/amp-date-display-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+</head>
+
+<body>
     <amp-analytics  type="googleanalytics"  config="https://amp.analytics-debugger.com/ga4.json"  data-credentials="include">
         <script type="application/json">
         {
@@ -155,12 +160,29 @@
         }
         </script>
     </amp-analytics>
-
-    <script async custom-element="amp-date-display" src="https://cdn.ampproject.org/v0/amp-date-display-0.1.js"></script>
-    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
-</head>
-
-<body>
+    <amp-analytics type="facebookpixel" id="facebook-pixel">
+        <script type="application/json">
+        {
+            "vars": {
+                "pixelId": "1413282392776218"
+            },
+            "triggers": {
+                "trackPageview": {
+                    "on": "visible",
+                    "request": "pageview"
+                },
+                "buttonClick": {
+                "selector":"#mailToButton",
+                    "on": "click",
+                    "request": "event",
+                    "vars": {
+                    "eventName": "Click on "Napiš mi" button."
+                    }
+                }
+            }
+        }
+        </script>
+    </amp-analytics>
     <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
         <symbol id="icon-gift" viewBox="0 0 32 32">
@@ -336,7 +358,7 @@
                     Pro objednání se na tetování prosím o co nejpřesnější popis představy, přibližný rozměr (vem si k
                     ruce metr) a umístění. Případně můžeš přiložit i pár fotek pro inspiraci.
                 </p>
-                <a href="mailto:vidlarova.lucie@gmail.com?subject=Nová zpráva z webu thelucie.ink" class="button">
+                <a href="mailto:vidlarova.lucie@gmail.com?subject=Nová zpráva z webu thelucie.ink" class="button" id="mailToButton">
                     Napiš mi
                     <svg class="icon icon-send">
                         <use xlink:href="#icon-send"></use>
