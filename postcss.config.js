@@ -1,10 +1,9 @@
-﻿module.exports = (context) => ({
-    map: context.options.map,
-    parser: context.options.parser,
-    plugins: [
-        require('autoprefixer')({
+module.exports = {
+    map: true,
+    plugins: {
+        'autoprefixer': {
             grid: true,
             flex: true
-        })
-    ]
-})
+        }
+    }
+}

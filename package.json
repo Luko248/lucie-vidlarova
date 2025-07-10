@@ -1,23 +1,22 @@
 {
-  "version": "3.1.0",
+  "version": "3.2.0",
   "name": "thelucie.ink",
-  "description": "Webpack with stylelint config. Updated on 17.3.2022",
+  "description": "Modern build system for CSS processing. Updated on 10.7.2025",
   "private": true,
   "main": "./postcss.config.js",
   "author": "Lukáš Chylík",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^10.4.4",
-    "clean-css-cli": "^5.5.2",
-    "node-sass": "^7.0.1",
-    "postcss": "^8.4.12",
-    "postcss-cli": "^9.1.0",
-    "postcss-loader": "^6.2.1",
-    "postcss-scss": "^4.0.3",
-    "postcss-value-parser": "^4.2.0",
-    "stylelint": "^14.3.0",
-    "stylelint-order": "^5.0.0",
-    "watch": "^0.13.0"
+    "autoprefixer": "^10.4.18",
+    "clean-css-cli": "^5.6.3",
+    "sass": "^1.72.0",
+    "postcss": "^8.4.35",
+    "postcss-cli": "^11.0.0",
+    "postcss-loader": "^8.1.1",
+    "postcss-scss": "^4.0.9",
+    "stylelint": "^16.3.0",
+    "stylelint-order": "^6.0.4",
+    "watch": "^1.0.2"
   },
   "browserslist": {
     "production": [
@@ -41,11 +40,13 @@
     "bundle:tattoo.css": "npm run compile:tattoo.scss && postcss wwwroot/css/tattoo.css --config ./postcss.config.js | cleancss -o wwwroot/css/tattoo.min.css",
     "bundle:aftercare.css": "npm run compile:aftercare.scss && postcss wwwroot/css/aftercare.css --config ./postcss.config.js | cleancss -o wwwroot/css/aftercare.min.css",
     "compile:scss": "npm run compile:global.scss && npm run compile:tattoo.scss && npm run compile:aftercare.scss",
-    "compile:global.scss": "node-sass --source-map=true Resources/Stylesheets/style.scss wwwroot/css/style.css",
-    "compile:tattoo.scss": "node-sass --source-map=true Resources/Stylesheets/Views/tattoo.scss wwwroot/css/tattoo.css",
-    "compile:aftercare.scss": "node-sass --source-map=true Resources/Stylesheets/Views/aftercare.scss wwwroot/css/aftercare.css",
+    "compile:global.scss": "sass --source-map Resources/Stylesheets/style.scss wwwroot/css/style.css",
+    "compile:tattoo.scss": "sass --source-map Resources/Stylesheets/Views/tattoo.scss wwwroot/css/tattoo.css",
+    "compile:aftercare.scss": "sass --source-map Resources/Stylesheets/Views/aftercare.scss wwwroot/css/aftercare.css",
     "compile:ts": "tsc -p Resources",
     "stylelint": "stylelint --fix Resources/**/*.scss --custom-syntax postcss-scss",
-    "watch:scss": "npm run bundle:css & watch \"npm run bundle:css\" Resources/Stylesheets"
+    "watch:scss": "npm run bundle:css & watch \"npm run bundle:css\" Resources/Stylesheets",
+    "build": "npm run bundle",
+    "start": "npm run watch:scss"
   }
 }
